@@ -1,10 +1,14 @@
 const express =require("express");
 const app=express();
-const Userservice=require("/services/UserservicesImpl")
 
+
+const Userservices=require("./services/Userservices")
 app.get("/",(req,res)=>{
-    res.send("Hello world");
-    console.log(Userservice.print("Welcome back hiran"))
+   
+    var Msg = new Userservices('James');
+    const result=Msg.print();
+    res.send(result);
+    //console.log(result);
 });
 app.listen(3000,()=>console.log("Server is listening ... "));
 
