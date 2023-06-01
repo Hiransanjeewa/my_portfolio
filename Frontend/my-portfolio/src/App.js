@@ -1,11 +1,16 @@
 
 import './App.css';
-import Footer from './components/footer';
+import MessageSender from './components/message_sender';
+
 
 
 function App() {
   return (
-   <Footer / >
+    <div>
+  
+  <MessageSender/>
+    </div>
+  
   );
 }
 

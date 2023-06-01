@@ -87,7 +87,7 @@
     font-size:13px;
     margin-bottom:0;
   }
-  .contact_details_table{
+  .contact_details{
     color:cadetblue;
   }
 
@@ -115,4 +115,12 @@
   }
 .social_media_list{
     text-align: center;
+}
+.homepage_body{
+    background-color: #007bb5;
+    height: 800px;
+}
+.contact_details_table{
+    text-align: justify;
+    
 }

@@ -37,16 +37,13 @@ export default function Footer() {
                     </div>
                     <div class="col-md-6 item text">
                         <h3>Contact Me</h3>
-                       <table className='contact_details_table'>
-                        <tr>
-                            <td>  Email : </td> <td>    hiransanjeewaa@gmail.com   </td>
-                        </tr>
-                        <tr>
-                            <td>  Mobile : </td> <td>    +94 702568106   </td>
-                        </tr>
-                        
-
-                       </table>
+                   
+                   <p >
+                   <label>Email &nbsp;&nbsp;: hiransanjeewaa@gmail.com </label><br/>
+                        <label>Mobile :  +94 702568106 </label>
+                   </p>
+                      
+                       
                     </div>
                 </div>
                 <p className='social_media_list'>
