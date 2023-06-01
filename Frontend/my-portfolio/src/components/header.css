@@ -1,5 +1,14 @@
+
+#navbarSupportedContent{
+  margin-right:1%;
+  
+}
 .mystyle{
-    padding-bottom: 100cm;
-    background-color: brown;
-  };
+  padding-bottom: 100cm;
+  background-color: rgb(24, 20, 20);
+};
+.header_main{
+  display: flex;
+}
+
 
