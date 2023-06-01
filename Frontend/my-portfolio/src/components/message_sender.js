@@ -10,7 +10,7 @@ export default function MessageSender() {
       <div class="container text-center">
         <div class="row">
         
-          <div class="col-sm-6 col-md-5 text-right scrollimation fade-up d1">
+          <div class="col-sm-6 col-md-12 text-right scrollimation fade-up d1" id='message_sender_details'>
           
             <h1 class="big-text">Drop Me a Message</h1>
           
@@ -18,11 +18,11 @@ export default function MessageSender() {
 
             <p>For more information, <a href="https://www.linkedin.com/in/hiran-sanjeewa-a672b4227/" target="blank">visit my Linkdin Account.</a></p>
           
-          </div>
+          
         
         
 
-          <form id="contact-form" class="col-sm-6 col-md-offset-1 scrollimation fade-left d3" action="contact.php" method="post" novalidate>
+          <form id="contact-form" class="col-sm-12 col-md-offset-1 scrollimation fade-left d3" action="contact.php" method="post" novalidate>
             
             <div class="form-group">
               <label class="control-label" for="contact-name">Name</label>
@@ -43,7 +43,7 @@ export default function MessageSender() {
             <div class="form-group">
               <label class="control-label" for="contact-message">Message</label>
               <div class="controls">
-                <textarea id="contact-message" name="comments"  placeholder="Your message" class="form-control requiredField" data-new-placeholder="Your message" rows="6" data-error-empty="Please enter your message"></textarea>
+                <textarea id="contact-message" name="comments"  placeholder="Your message" class="form-control requiredField" data-new-placeholder="Your message" rows="3" data-error-empty="Please enter your message"></textarea>
                 <i class="fa fa-comment"></i>
               </div>
             </div>
@@ -52,6 +52,7 @@ export default function MessageSender() {
             <input type="hidden" name="submitted" id="submitted" value="true" />
             
           </form>
+          </div>
           
         </div>
         

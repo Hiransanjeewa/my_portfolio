@@ -1,6 +1,6 @@
 
 import './App.css';
-import MessageSender from './components/message_sender';
+import Home from './pages/home';
 
 
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
   
-  <MessageSender/>
+  <Home/>
     </div>
   
   );

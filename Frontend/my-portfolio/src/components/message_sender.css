@@ -37,17 +37,18 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
 }
 
 .big-text{
-    font-size:58px;
+    font-size:15px;
     font-weight:300;
-    line-height:62px;
+    line-height:20px;
     letter-spacing:0.01em;
     word-spacing: 0.15em;
     text-transform:uppercase;
+    color: black;
 }
 
 .section-title{
     margin-top:-20px;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     text-align:center;
 }
 
@@ -56,8 +57,8 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
 -------------------------*/
 
 .add-padding {
-    padding-top:50px;
-    padding-bottom:50px;
+    padding-top:10px;
+    
 }
 
 /*-----------------------
@@ -121,7 +122,7 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
 .btn-color1,
 .btn-color2{
     padding: 10px 30px;
-    color:#fff;
+    color:#6d6d6d;
     font-size: 21px;
     font-weight: 300;
     background:#f9398c;
@@ -131,12 +132,12 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
 }
 
 .btn-color1{
-    background:#509B9E;
+    background:#ff0000
 }
 
 .btn-color1:hover,
 .btn-color2:hover{
-    color:#fff;
+    color:#f9398c;
     opacity: 0.9;
 }
 
@@ -144,7 +145,7 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
 .btn-color1:active,
 .btn-color2:focus,
 .btn-color2:active{
-    color:#fff;
+    color:#6d6d6d;
 }
 
 .btn-color1 .fa,
@@ -168,8 +169,8 @@ background-image:url('../images/bg-contact.png');
 
 #contact-form .form-group label{
     display:none;
-    font-size:18px;
-    line-height:24px;
+    font-size:14px;
+    line-height:16px;
     font-weight:100;
     text-transform:uppercase;
 }
@@ -180,7 +181,7 @@ background-image:url('../images/bg-contact.png');
 
 #contact-form .controls {
     padding:0;
-    margin-bottom:30px;
+    margin-bottom:5px;
     border:1px solid #ddd;
     border-radius:2px;
 }
@@ -192,11 +193,11 @@ background-image:url('../images/bg-contact.png');
     border-radius:0;
     outline:none;
     box-shadow:none;
-    height:56px;
+    height:30px;
     font-size:21px;
     line-height:32px;
     font-weight:100;
-    padding-left:64px;
+    padding-left:30px;
     -webkit-transition:border-color .3s ease-out;
     transition:border-color .3s ease-out;
     border-radius:2px;
@@ -208,7 +209,7 @@ background-image:url('../images/bg-contact.png');
 
 #contact-form .form-group [class*=fa] {
     display:block;
-    width:64px;
+    width:40px;
     position:absolute;
     top:0;
     left:5px;
@@ -287,7 +288,7 @@ background-image:url('../images/bg-contact.png');
     list-style:none;
     margin:0;
     padding:0;
-    margin-bottom:30px;
+    margin-bottom:20px;
 }
 
 .social-links li{
@@ -316,4 +317,8 @@ background-image:url('../images/bg-contact.png');
 .social-links li a:hover {
     color:#fff;
     background:#f9398c;
+}
+#message_sender_details{
+    font-size: 12;
+    color: black;
 }

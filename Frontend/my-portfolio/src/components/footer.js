@@ -3,6 +3,7 @@ import "./footer.css"
 
 import 'bootstrap/dist/css/bootstrap.css';
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import MessageSender from "./message_sender.js"
 
 
 export default function Footer() {
@@ -19,7 +20,7 @@ export default function Footer() {
         <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6 col-md-3 item">
+                    <div class="col-sm-6 col-md-2 item">
                         <h3>Blogs</h3>
                         <ul>
                             <li><a href="home.js">Cloud computing</a></li>
@@ -27,7 +28,7 @@ export default function Footer() {
                             <li><a href="home.js">All Blogs</a></li>
                         </ul>
                     </div>
-                    <div class="col-sm-6 col-md-3 item">
+                    <div class="col-sm-6 col-md-2 item">
                         <h3>Projects</h3>
                         <ul>
                             <li><a href="home.js">Book Mart (Web-Application)</a></li>
@@ -35,17 +36,23 @@ export default function Footer() {
                             
                         </ul>
                     </div>
-                    <div class="col-md-6 item text">
+                    <div class="col-md-3 item text">
                         <h3>Contact Me</h3>
                    
                    <p >
                    <label>Email &nbsp;&nbsp;: hiransanjeewaa@gmail.com </label><br/>
                         <label>Mobile :  +94 702568106 </label>
                    </p>
+                   
                       
-                       
                     </div>
+                    <div class="col-sm-6 col-md-5 item">
+                    {<MessageSender/> }
+                    </div>
+                    
+                    
                 </div>
+                
                 <p className='social_media_list'>
                 <a href="https://www.facebook.com/profile.php?id=100005292945788" class="fa fa-facebook">
                 </a>
