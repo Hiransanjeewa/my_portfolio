@@ -9,12 +9,10 @@ export default function Header() {
    
   return (
     <div className="header_main">
-
         <html>
             <head>
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-
     </head>
   <body>
 
@@ -26,7 +24,7 @@ export default function Header() {
     </button>
    
     <div class="collapse navbar-collapse mr-3 fs-5" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id='navbutton'>
       <li class="nav-item">
           <button class="btn btn-tertiary btn-sm fs-5 " id='nav_buttons'>
           <a class="nav-link" href="home.js">Home</a>
@@ -39,7 +37,7 @@ export default function Header() {
             Blogs
           </a>
           
-          <ul class="dropdown-menu ">
+          <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="home.js">Cloud Computing</a></li>
             <li><a class="dropdown-item" href="homne.js">Web development</a></li>
             <li><hr class="dropdown-divider" ></hr></li>
@@ -47,14 +45,14 @@ export default function Header() {
           </ul>
           </button>
         </li>
-        <li class="nav-item">
-          <button class="btn btn-tertiary fs-5">
+        <li class="nav-item" >
+          <button class="btn btn-tertiary fs-5" >
           <a class="nav-link" href="home.js">Projects</a>
           </button>
         </li>
         <li class="nav-item">
         <button class="btn btn-tertiary fs-5">
-          <a class="nav-link" href="home.js">Experence</a>
+          <a class="nav-link" href="home.js">Experience</a>
           </button>
         </li>
         <li class="nav-item" id="nav_item">
@@ -68,13 +66,8 @@ export default function Header() {
     </div>
   </div>
 </nav>
-
   </body>
   </html>
- 
-  <div className='mystyle'>
-      sd
-  </div>
 
     </div>
   )

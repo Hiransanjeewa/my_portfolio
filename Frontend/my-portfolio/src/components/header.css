@@ -1,8 +1,7 @@
 
 #navbarSupportedContent{
   margin-right:1%;
-
-  
+  height: auto;
 }
 .mystyle{
   padding-bottom: 100cm;
@@ -11,6 +10,7 @@
 .header_main{
   display: flex;
 }
+
 
 
 
