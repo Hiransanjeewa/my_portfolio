@@ -18,31 +18,34 @@ export default function Header() {
     </head>
   <body>
 
-
-
-
 <nav className="navbar navbar-expand-md bg-body-tertiary" data-bs-theme="dark">
-
   <div className="container-fluid ">
-    
+  <a class="navbar-brand" href="home.js"> </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
    
     <div class="collapse navbar-collapse mr-3 fs-5" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
       <li class="nav-item">
-          <button class="btn btn-primary btn-lg">
+          <button class="btn btn-tertiary btn-sm fs-5 " id='nav_buttons'>
           <a class="nav-link" href="home.js">Home</a>
           </button>
         </li>
+        
         <li class="nav-item dropdown">
+        <button class="btn btn-tertiary btn-sm fs-5">
           <a class="nav-link dropdown-toggle" href="home.js" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
             Blogs
           </a>
-          <ul class="dropdown-menu">
+          
+          <ul class="dropdown-menu ">
             <li><a class="dropdown-item" href="home.js">Cloud Computing</a></li>
             <li><a class="dropdown-item" href="homne.js">Web development</a></li>
             <li><hr class="dropdown-divider" ></hr></li>
             <li><a class="dropdown-item" href="home.js">All blogs</a></li>
           </ul>
+          </button>
         </li>
         <li class="nav-item">
           <button class="btn btn-tertiary fs-5">

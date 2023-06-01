@@ -1,14 +1,16 @@
 
 #navbarSupportedContent{
   margin-right:1%;
+
   
 }
 .mystyle{
   padding-bottom: 100cm;
-  background-color: rgb(24, 20, 20);
+  background-color:bisque;
 };
 .header_main{
   display: flex;
 }
+
 
 
