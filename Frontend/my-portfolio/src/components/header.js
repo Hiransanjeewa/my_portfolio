@@ -3,10 +3,9 @@ import React from 'react'
 
 import 'bootstrap/dist/css/bootstrap.css';
 import "bootstrap/dist/js/bootstrap.bundle.min";
-
+import "./header.css"
 
 export default function Header() {
-   
   return (
     <div className="header_main">
         <html>
@@ -15,9 +14,8 @@ export default function Header() {
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     </head>
  
-
 <nav className="navbar navbar-expand-md bg-body-tertiary" data-bs-theme="dark">
-  <div className="container-fluid ">
+  <div className="container-fluid " id='maindiv'>
   <a class="navbar-brand" href="home.js"> </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -34,7 +32,6 @@ export default function Header() {
           <a class="nav-link dropdown-toggle" href="home.js" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
             Blogs
           </a>
-          
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="home.js">Cloud Computing</a></li>
             <li><a class="dropdown-item" href="homne.js">Web development</a></li>
