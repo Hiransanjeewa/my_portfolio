@@ -23,7 +23,7 @@ export default function Header() {
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse mr-3 fs-5" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id='navbutton'>
+      <ul class="navbar-nav mb-2 mb-lg-0" id='navbutton'>
       <li class="nav-item">
         <button class="btn btn-tertiary btn-sm fs-5 " id='nav_buttons'>
           <a class="nav-link" href="home.js">Home</a>

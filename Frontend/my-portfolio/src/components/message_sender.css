@@ -322,3 +322,6 @@ background-image:url('../images/bg-contact.png');
     font-size: 12;
     color: black;
 }
+#message-send-button{
+    background-color:indianred
+}

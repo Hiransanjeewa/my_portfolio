@@ -23,17 +23,16 @@ export default function Footer() {
                     <div class="col-sm-6 col-md-2 item">
                         <h3>Blogs</h3>
                         <ul>
-                            <li><a href="home.js">Cloud computing</a></li>
-                            <li><a href="home.js">Web development</a></li>
-                            <li><a href="home.js">All Blogs</a></li>
+                            <li><a href="blogs?query=cloud-computing">Cloud computing</a></li>
+                            <li><a href="blogs?query=web-development">Web development</a></li>
+                            <li><a href="blogs">All Blogs</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-md-2 item">
                         <h3>Projects</h3>
                         <ul>
-                            <li><a href="home.js">Book Mart (Web-Application)</a></li>
-                            <li><a href="home.js">Kids Paradise </a></li>
-                            
+                            <li><a href="projects?book-mart">Book Mart (Web-Application)</a></li>
+                            <li><a href="projects?kids-paradise">Kids Paradise </a></li>
                         </ul>
                     </div>
                     <div class="col-md-3 item text">
