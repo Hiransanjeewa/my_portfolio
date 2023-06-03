@@ -25,7 +25,7 @@ export default function Home() {
   <div class="row ">
     <div class="col col-lg-6 " id='contents' >
       
-    <span>Hi , I'm Hiran.</span>
+    <span>Hi , I'm Hiran,</span>
               <p id='caption-1'>
                 I am a full stack Developer.
               </p>

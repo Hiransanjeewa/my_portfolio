@@ -5,7 +5,7 @@ export default function MessageSender() {
   return (
     <div>
        
-    <section id="contact" class="add-padding border-top-color2">
+    <section id="contact" class="add-padding border-top-color1">
     
       <div class="container text-center">
         <div class="row">
