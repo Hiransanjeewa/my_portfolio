@@ -124,3 +124,12 @@
     text-align: justify;
     
 }
+
+.footer-custom {  
+  background-color:black; 
+}  
+
+.footer-custom .navbar-brand,  
+.footer-custom .navbar-text {  
+  color:white;
+}  
