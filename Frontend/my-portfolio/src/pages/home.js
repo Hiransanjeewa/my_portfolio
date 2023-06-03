@@ -20,9 +20,15 @@ export default function Home() {
         </head>
  
           
-            <div className='homepage_body'>
-              
-              <span>Hi , I'm Hiran.</span>
+           
+
+
+
+<div class="container-fluid bg-color2 vh-100" >
+  <div class="row ">
+    <div class="col col-lg-8" >
+      
+    <span>Hi , I'm Hiran.</span>
               <h1>
                 I am a full stack Developer.
               </h1>
@@ -35,10 +41,14 @@ export default function Home() {
                 </a>
                 
               </span>
-              
-            
-            </div>
-            <img src={profile_img} class="img-fluid" alt="profile" />
+    </div>
+    <div class="col-md-auto bg-color1">
+    <img src={profile_img} class="img-fluid" alt="profile"/>
+    </div>
+    
+  </div>
+  
+</div>
 
           
  

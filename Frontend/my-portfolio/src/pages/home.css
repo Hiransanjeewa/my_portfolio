@@ -1,16 +1,21 @@
-.homepage_body{
+#homepage_body{
     background-color:black;
     color: white;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-right: 0%;
+    border-right: 0cap;
+
    
     
 }
-.homepage_contents{
+
+#contents{
    
-    
-    background-color: aqua;
 }
-.profile_img_div{
-  
-    background-color: blueviolet;
+
+#con1{
     
 }
+
