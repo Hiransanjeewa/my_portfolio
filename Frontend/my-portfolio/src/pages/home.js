@@ -2,6 +2,7 @@ import React from 'react'
 import Footer from '../components/footer';
 import Header from '../components/header';
 import "./home.css"
+import profile_img from "./my_profile_image.png"
 
 export default function Home() {
   return (
@@ -17,9 +18,10 @@ export default function Home() {
             </script>
 
         </head>
-        <body>
+ 
           
             <div className='homepage_body'>
+              
               <span>Hi , I'm Hiran.</span>
               <h1>
                 I am a full stack Developer.
@@ -34,8 +36,13 @@ export default function Home() {
                 
               </span>
               
+            
             </div>
-        </body>
+            <img src={profile_img} class="img-fluid" alt="profile" />
+
+          
+ 
+
     </html>
   <Footer / >
     </div>
