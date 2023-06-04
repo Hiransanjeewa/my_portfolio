@@ -39,13 +39,34 @@ width: 100%;
 }
 #image_div{
     text-align: left;
-
+    float: left;
     margin-left: 0%;
     padding-left: 0%;
     width: 100%;
+    
 }
 #contents_div{
-    background-color: aliceblue;
-    float: right;
+    color: aquamarine;
+    text-align: left;
+    
+    padding-left: 4%;
+    
+   
 }
+#content_caption{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 150%
+}
+#contents{
+    padding-top: 3%;
+    margin-left: 0%;
+    padding-left: 0%;
+}
+
+
+#temp{
+background-color: aliceblue;
+
+}
+
 

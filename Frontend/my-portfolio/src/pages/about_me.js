@@ -25,25 +25,49 @@ export default function AboutMe() {
       I'm Hiran Sanjeewa. Third year Software Engineering Undergraduate from University of Kelaniya. Full Stack developer 
     </div>
     </div>
-    
-  
-    <div class="col col-lg-6" id='image_div'>
-    <img src={profile_img} class="img-fluid " alt="profile" />
-    
-  
-    </div>
-    <div class="col col-lg-10" id='contents_div'>
-      About Me content **********************************
-    </div>
-    
-    
+
    
-    {/* <div class="col col-lg-2">
-      3 of 3
-    </div> */}
   </div>
 
-<Footer/>
+ 
+
+  <div class="container-fluid text-light" id='homepage_body' >
+  <div class="row ">
+    <div class="col col-lg-6" id=' ' >
+      
+   
+   
+    
+    
+    <img src={profile_img} class="img-fluid " alt="profile" id='image'/>
+
+
+
+    </div>
+    <div class="col-lg-6 d-flex " id=' '>
+  
+
+
+    <p id='contents'>
+    <span id='content_caption'>A Little About Myself</span><br/><br/>
+      Debbie had taken George for granted for more than fifteen years now. He wasn't sure what exactly had made him choose this time and place to address the issue, but he decided that now was the time.<br/><br/> He looked straight into her eyes and just as she was about to speak, turned away and walked out the door.
+Sarah watched the whirlpool mesmerized.<br/> <br/>She couldn't take her eyes off the water swirling around and around. She stuck in small twigs and leaves to watch the whirlpool catch them and then suck them down. It bothered her more than a little bit that this could also be used as a metaphor for her life.
+      </p>
+   
+
+
+    </div>
+    
+  </div>
+
+  
 </div>
+
+<Footer/>
+
+
+</div>
+
+
   )
 }
