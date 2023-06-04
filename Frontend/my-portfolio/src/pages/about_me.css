@@ -6,13 +6,22 @@
 
 }
 #main_caption{
-    font-size: 300%;
+    font-size: 350%;
     font-family: 'Courier New', Courier, monospace;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+   
     
 }
 #caption_span1{
     color: white;
+    
 }
 #caption_span2{
     color: gold;
+    
 }
+#second_caption{
+    color:cadetblue;
+}
+

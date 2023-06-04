@@ -19,9 +19,10 @@ export default function AboutMe() {
     </div>
   
   </div>
-
-  <div class="col-md-auto">
-      Captions
+  <div class="row justify-content-md-center">
+  <div class="col col-lg-6" id='second_caption'>
+      I'm Hiran Sanjeewa. Third year Software Engineering Undergraduate from University of Kelaniya. Full Stack developer 
+    </div>
     </div>
   <div class="row">
     <div class="col">
