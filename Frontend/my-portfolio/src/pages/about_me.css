@@ -58,9 +58,10 @@ width: 100%;
     font-size: 150%
 }
 #contents{
-    padding-top: 3%;
+    padding-top: 0%;
     margin-left: 0%;
     padding-left: 0%;
+    height: 100%;
 }
 
 
