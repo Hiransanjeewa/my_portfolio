@@ -26,18 +26,23 @@ export default function AboutMe() {
     </div>
     </div>
     
-  <div class="row">
+  
     <div class="col col-lg-6" id='image_div'>
     <img src={profile_img} class="img-fluid " alt="profile" />
+    
+  
     </div>
-    {/* <div class="col-md-auto">
-      About Me content
-    </div> */}
+    <div class="col col-lg-10" id='contents_div'>
+      About Me content **********************************
+    </div>
+    
+    
+   
     {/* <div class="col col-lg-2">
       3 of 3
     </div> */}
   </div>
-</div>
+
 <Footer/>
 </div>
   )
