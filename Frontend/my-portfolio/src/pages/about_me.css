@@ -3,6 +3,8 @@
     margin-left: 0%;
    
     padding-right: 0%;
+    margin-right: 0%;
+    border-right: 0ch;
 
 }
 #main_caption{
@@ -10,8 +12,18 @@
     font-family: 'Courier New', Courier, monospace;
     padding-bottom: 0%;
     margin-bottom: 0%;
+    
    
     
+}
+#second_main_div{
+
+margin-left: 1%;
+margin-right: 1%;
+padding-right: 0%;
+width: 100%;
+
+
 }
 #caption_span1{
     color: white;
@@ -23,5 +35,13 @@
 }
 #second_caption{
     color:cadetblue;
+    margin-bottom: 2%;
+}
+#image_div{
+    text-align: left;
+
+    margin-left: 0%;
+    padding-left: 0%;
+    width: 100%;
 }
 
