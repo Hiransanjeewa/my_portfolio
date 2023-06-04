@@ -1,0 +1,18 @@
+#main_div{
+    background-color:black;
+    margin-left: 0%;
+   
+    padding-right: 0%;
+
+}
+#main_caption{
+    font-size: 300%;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+#caption_span1{
+    color: white;
+}
+#caption_span2{
+    color: gold;
+}
