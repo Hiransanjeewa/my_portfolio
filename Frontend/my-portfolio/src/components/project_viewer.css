@@ -1,0 +1,39 @@
+#main_div{
+    background-color:black;
+    text-align: center;
+    padding-left: 0%;
+    margin-left: 0%;
+}
+#project_div{
+    border: 4%;
+    border-color: rgb(147, 230, 64);
+    text-align: center;
+    background-color: aliceblue;
+}
+#img_div{
+    text-align: center;
+
+   
+    
+}
+#main_caption{
+padding-left: 0%;
+
+}
+#second_main_div{
+    padding-left: 0%;
+    margin-left:0%;
+    
+}
+
+
+#main_caption{
+    text-align: left;
+    padding-left: 3%;
+}
+#contents{
+    text-align: left;
+}
+#li{
+    margin-bottom: 1%;
+}

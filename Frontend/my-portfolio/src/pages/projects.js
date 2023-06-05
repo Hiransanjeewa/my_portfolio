@@ -1,7 +1,10 @@
 import React from 'react'
+import ProjectViewer from '../components/project_viewer'
 
-export default function projects() {
+export default function Projects() {
   return (
-    <div>projects</div>
+    <div>
+        <ProjectViewer/>
+    </div>
   )
 }
