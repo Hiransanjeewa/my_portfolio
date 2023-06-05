@@ -20,8 +20,8 @@ export default function Home() {
         </head>
  
 <div class="container-fluid text-light" id='homepage_body' >
-  <div class="row ">
-    <div class="col col-lg-6" id='contents' >
+  <div class="row " >
+    <div class="col col-lg-6 md-6" id='contents' >
       
     <span>Hi , I'm Hiran,</span>
               <p id='caption-1'>

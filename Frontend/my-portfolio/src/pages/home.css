@@ -1,6 +1,8 @@
 #homepage_body{
     background-color:black;
-    height:14cm
+    height:14cm;
+    padding-left: 5%;
+    
     
     
 }
@@ -12,8 +14,12 @@
     padding-top: 7%;
     height: 100%;
     padding-bottom: 6%;
-    padding-left: 5%;
+   
+   
     
 }
-
+#img_div{
+    
+    padding-left: 0%;
+}
 
