@@ -4,35 +4,37 @@
     padding-left: 0%;
     margin-left: 0%;
 }
-#project_div{
-    border: 4%;
-    border-color: rgb(147, 230, 64);
-    text-align: center;
-    background-color: aliceblue;
-}
+
 #img_div{
     text-align: center;
-
-   
     
 }
 #main_caption{
-padding-left: 0%;
+
+text-align: center;
+
 
 }
 #second_main_div{
     padding-left: 0%;
+    text-align: center;
     margin-left:0%;
+    
+    
     
 }
 
 
 #main_caption{
-    text-align: left;
-    padding-left: 3%;
+    
+    padding-left: 0%;
+    text-align: center;
+
 }
 #contents{
     text-align: left;
+    
+   
 }
 #li{
     margin-bottom: 1%;

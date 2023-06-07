@@ -2,14 +2,15 @@ import React from 'react'
 import "./project_viewer.css"
 import profile_img from "../pages/my_profile_image.jpg"
 
-export default function ProjectViewer() {
+export default function ProjectViewer(props) {
+  var name=props.name;
   return (
+    
     <div id="main_div">
-
-
+      {name}
       <div class="container  mw-100" id="second_main_div">
         <div class="row ">
-          <div class="col col-lg-6">
+          <div class="col col-lg-12">
             <p id="main_caption">
               <strong>
                 <span id="caption_span1"> Book </span>{" "}
@@ -27,9 +28,8 @@ export default function ProjectViewer() {
       </div>
 
 <div>
-      <div class="container-fluid text-light" id=" ">
-        <div class="row ">
-          <div class="col col-lg-5">
+      <div class="container-fluid text-light">
+      <div class="col col-lg-12 p-3" >
             <img
               src={profile_img}
               class="img-fluid "
@@ -37,7 +37,10 @@ export default function ProjectViewer() {
               id="image"
             />
           </div>
-          <div class="col-lg-7 d-flex " id=" ">
+          
+        <div class="row ">
+        
+          <div class="col-lg-12 d-flex  p-3" >
             <p id="contents">
               <span id="content_caption">An E-Commerce Website Using React + Springboot + MySQL</span>
               <br />
