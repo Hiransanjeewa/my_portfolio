@@ -2,16 +2,35 @@ import React from 'react'
 import "./project_viewer.css"
 import profile_img from "../pages/my_profile_image.jpg"
 
+
 export default function ProjectViewer(props) {
   var name=props.name;
+  var styles = { }
+  if (name==='desktop') {
+    styles = {
+      secondMain:{
+        padding:"10px",
+      },
+      contentCaption:{
+        fontSize:"40px",
+      },
+      contents:{
+       fontSize:"20px",
+       paddingLeft:"20px",
+      },
+
+      
+  
+  }
+}
   return (
     
     <div id="main_div">
-      {name}
-      <div class="container  mw-100" id="second_main_div">
+     
+      <div class="container  mw-100" id="second_main_div" style={styles.secondMain}>
         <div class="row ">
           <div class="col col-lg-12">
-            <p id="main_caption">
+            <p id="main_caption" >
               <strong>
                 <span id="caption_span1"> Book </span>{" "}
                 <span id="caption_span2"> Mart</span>
@@ -41,8 +60,8 @@ export default function ProjectViewer(props) {
         <div class="row ">
         
           <div class="col-lg-12 d-flex  p-3" >
-            <p id="contents">
-              <span id="content_caption">An E-Commerce Website Using React + Springboot + MySQL</span>
+            <p id="contents" style={styles.contents}>
+              <span id="content_caption" style={styles.contentCaption}>An E-Commerce Website Using React + Springboot + MySQL</span>
               <br />
               <br />
               Debbie had taken George for granted for more than fifteen years
