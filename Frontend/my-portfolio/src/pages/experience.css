@@ -1,15 +1,18 @@
-#main_div{
+#main_div {
     background-color: black;
-    
+
 }
-#img_div{
+
+#img_div {
     background-color: antiquewhite;
 
-    
+
 }
-#contents{
+
+#contents {
     padding-top: 4%;
 }
-#content_caption{
+
+#content_caption {
     font-size: 220%;
 }

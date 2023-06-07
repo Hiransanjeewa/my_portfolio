@@ -1,22 +1,17 @@
-import React from 'react'
-import "./experience.css"
-import Header from '../components/header';
-import Footer from '../components/footer';
+import React from "react";
+import "./experience.css";
+import Header from "../components/header";
+import Footer from "../components/footer";
 import profile_img from "./my_profile_image.jpg";
 
 export default function Experience() {
   return (
-   
-     
-
-    
-
-<div id='main_div'>
-      <div class="container-fluid text-light" >
-      <Header />
-      <br/>
+    <div id="main_div">
+      <div class="container-fluid text-light">
+        <Header />
+        <br />
         <div class="row" id="main_div">
-          <div class="col col-lg-6" >
+          <div class="col col-lg-6">
             <img
               src={profile_img}
               class="img-fluid "
@@ -41,18 +36,21 @@ export default function Experience() {
               around. She stuck in small twigs and leaves to watch the whirlpool
               catch them and then suck them down. It bothered her more than a
               little bit that this could also be used as a metaphor for her
-              life. <br/><br/>
-              <button type="button" class="btn btn-secondary btn-lg">Download CV</button>
-              
+              life. <br />
+              <br />
+              <button type="button" class="btn btn-secondary btn-lg">
+                Download CV
+              </button>
             </p>
+          </div>
+          <div class="container-fluid text-light">
             
           </div>
-          
-          <Footer/>
+
+          <Footer />
         </div>
+        
       </div>
-      </div>
-      
-  
+    </div>
   );
 }
