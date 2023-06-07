@@ -9,9 +9,9 @@ export default function Blog() {
       <div id="main_div">
         
        
-        <div class="container  mw-100" id="second_main_div" >
-          <div class="row ">
-            <div class="col col-lg-12">
+        <div className="container  mw-100" id="second_main_div" >
+          <div className="row ">
+            <div className="col col-lg-12">
               <p id="main_caption" >
                 <strong>
                   <span id="caption_span1"> Book </span>
@@ -29,8 +29,8 @@ export default function Blog() {
         </div>
   
   <div>
-        <div class="container-fluid text-light">
-        <div class="col col-lg-12 p-3" >
+        <div className="container-fluid text-light">
+        <div className="col col-lg-12 p-3" >
               <img
                 src={profile_img}
                 class="img-fluid "
@@ -39,10 +39,10 @@ export default function Blog() {
               />
             </div>
             
-          <div class="row ">
+          <div className="row ">
           
-            <div class="col-lg-12 d-flex  p-3" >
-              <p id="contents" >
+            <div className="col-lg-12 d-flex  p-3" >
+              <span id="contents" >
                 <span id="content_caption" >An E-Commerce Website Using React + Springboot + MySQL</span>
                 <br />
                 <br />
@@ -62,7 +62,7 @@ export default function Blog() {
                 </ul>
   
                
-              </p>
+              </span>
             </div>
        
           </div>
