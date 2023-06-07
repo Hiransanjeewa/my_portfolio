@@ -4,7 +4,11 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import profile_img from "./my_profile_image.jpg";
 
+
 export default function Experience() {
+
+
+ // var frontend=["react","redux","javascript"]
   return (
     <div id="main_div">
       <div class="container-fluid text-light">
@@ -44,9 +48,41 @@ export default function Experience() {
             </p>
           </div>
           <div class="container-fluid text-light">
-            
-          </div>
+          <p>
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
+</p>
 
+
+
+<div class="row" id="cards">
+  <div class="col" id="cards">
+    <div class="collapse multi-collapse" id="multiCollapseExample1" >
+      <div class="card card-body" id="cards">
+        
+      <img src={require('../components/skills/react.jpg')} alt="xc " id="skills"/>
+      <img src={require('../components/skills/redux.jpg')} alt=" xc" id="skills"/>
+      <img src={require('../components/skills/javascript.jpg')} alt="xc " id="skills"/>
+      </div>
+    </div>
+  </div>
+  <div class="col" >
+    <div class="collapse multi-collapse" id="multiCollapseExample2">
+      <div class="card card-body" id="cards">
+     asdsad
+      </div>
+    </div>
+  </div>
+  <div class="col" >
+    <div class="collapse multi-collapse" id="multiCollapseExample3">
+      <div class="card card-body" id="cards">
+        Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+      </div>
+    </div>
+  </div>
+</div> 
+          </div>
           <Footer />
         </div>
         
