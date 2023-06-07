@@ -1,6 +1,6 @@
 import React from 'react'
 import Blog from "../components/blog"
-import "./blogs.css"
+import "./blogs.scss"
 
 export default function Blogs() {
 
@@ -8,20 +8,20 @@ export default function Blogs() {
 
       <div >
       
-          <div class="container-fluid text-light" id="main_div">
-            <div class="row ">
-            <div class="col col-lg-4" id='project_viewers'>
+          <div className="container-fluid text-light" id="main_div">
+            <div className="row ">
+            <div className="col col-lg-4" id='project_viewers'>
       
             <Blog/>
               </div>
-              <div class="col-lg-4 d-flex "  id='project_viewers'>
+              <div className="col-lg-4 d-flex "  id='project_viewers'>
                 
             <Blog/>
               </div>
-              <div class="col-lg-4 d-flex "  id='project_viewers'>
+              <div className="col-lg-4 d-flex "  id='project_viewers'>
                 <Blog/>
                   </div>
-                  <div class="col-lg-4 d-flex "  id='project_viewers'>
+                  <div className="col-lg-4 d-flex "  id='project_viewers'>
                 <Blog/>
                   </div>
             </div>

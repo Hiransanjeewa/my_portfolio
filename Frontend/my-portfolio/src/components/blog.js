@@ -1,5 +1,5 @@
 import React from 'react'
-import './blog.css'
+import './blog.scss'
 import profile_img from "../pages/my_profile_image.jpg"
 
 export default function Blog() {
@@ -7,6 +7,7 @@ export default function Blog() {
     return (
       
       <div id="main_div">
+        
        
         <div class="container  mw-100" id="second_main_div" >
           <div class="row ">
