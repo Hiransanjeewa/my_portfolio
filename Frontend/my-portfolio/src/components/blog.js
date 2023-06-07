@@ -1,5 +1,5 @@
 import React from 'react'
-import "./blog.css"
+import './blog.css'
 import profile_img from "../pages/my_profile_image.jpg"
 
 export default function Blog() {
