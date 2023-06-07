@@ -1,0 +1,44 @@
+#main_div{
+    background-color:white;
+    text-align: center;
+    padding-left: 0%;
+    margin-left: 0%;
+    color: black;
+    border: 2%;
+    border-color: black;
+ 
+}
+
+#img_div{
+    text-align: center;
+    
+}
+#main_caption{
+
+text-align: center;
+
+
+}
+#second_main_div{
+    padding-left: 0%;
+    text-align: center;
+    margin-left:0%;
+    
+}
+
+
+#main_caption{
+    
+    padding-left: 0%;
+    text-align: center;
+
+}
+#contents{
+    text-align: left;
+    color: black;
+    
+   
+}
+#li{
+    margin-bottom: 1%;
+}
