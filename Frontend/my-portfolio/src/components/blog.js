@@ -10,13 +10,7 @@ export default function Blog() {
       
       
       <div id="main_div">
-        <html>
-          <head>
-           
-            <style rel='/blog.scss' />
-
-          </head>
-          <body>
+       
 
         <div className="container  mw-100" id="second_main_div" >
           <div className="row ">
@@ -78,8 +72,7 @@ export default function Blog() {
         </div>
         </div>
         
-        </body>
-        </html>
+     
       </div>
     );
   }
