@@ -116,8 +116,6 @@ const HtmlRenderer: React.FC<Props> = ({ htmlContent }) => {
                 <span id="content_caption" >An E-Commerce Website Using React + Springboot + MySQL</span>
 
                 </strong>
-
-               
                 
               </p>
             </div>
