@@ -36,6 +36,12 @@ import React from 'react';
 import Header from './components/header';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
+import Footer from './components/footer';
+import Home from './pages/home';
+import Experience from './pages/experience';
+import AboutMe from './pages/about_me';
+import Blogs from './pages/blogs';
+
 
 
 const App: React.FC = () => {
@@ -48,15 +54,18 @@ const App: React.FC = () => {
       <BrowserRouter>
       <Routes>
         
-        <Route path="/" element={<Header htmlContent={ htmlContent }/>}/>
-        {/* <Route path="/about" element={<AboutMe />}/>
-        <Route path="/blogs" element={<Blogs />}/>
-        <Route path="/experience" element={<Experience />}/>
-        <Route path="/projects" element={<Projects />}/> */}
+        <Route path="/" element={<Home htmlContent={ htmlContent }/>}/>
+        <Route path="/" element={<Footer htmlContent={ htmlContent }/>}/>
+        <Route path="/about" element={<AboutMe htmlContent=''/>}/>
+        <Route path="/experience" element={<Experience htmlContent=''/>}/>
+
+
+        <Route path="/blogs" element={<Blogs htmlContent='' />}/>
+        {/* <Route path="/projects" element={<Projects />}/> */}
 
       </Routes>
     </BrowserRouter>
-      <h1>Render HTML with React</h1>
+      
       {/* <Header htmlContent={htmlContent} /> */}
     </div>
   );
