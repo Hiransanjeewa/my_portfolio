@@ -7,10 +7,15 @@ import profile_img from "./my_profile_image.jpg";
 
 export default function Experience() {
 
+
   const style = {
     content_caption:{
       color:"white",
+    },
+    cards:{
+      backgroundColor:"black",
     }
+
   }
 
 
@@ -58,9 +63,9 @@ export default function Experience() {
           </div>
           <div class="container-fluid text-light">
           <p>
-  <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
-  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
-  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
+  <a class="btn btn-dark" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Frontend</a>
+  <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Backend</button>
+  <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Other</button>
 </p>
 
 
@@ -68,8 +73,7 @@ export default function Experience() {
 <div class="row" id="cards">
   <div class="col" id="cards">
     <div class="collapse multi-collapse" id="multiCollapseExample1" >
-      <div class="card card-body" id="cards">
-        
+      <div class="card card-body" id="cards"  style={style.cards}>
       <img src={require('../components/skills/react.jpg')} alt="xc " id="skills"/>
       <img src={require('../components/skills/redux.jpg')} alt=" xc" id="skills"/>
       <img src={require('../components/skills/javascript.jpg')} alt="xc " id="skills"/>
@@ -77,19 +81,22 @@ export default function Experience() {
     </div>
   </div>
   <div class="col" >
-    <div class="collapse multi-collapse" id="multiCollapseExample2">
-      <div class="card card-body" id="cards">
-     asdsad
+    <div class="collapse multi-collapse" id="multiCollapseExample2" >
+      <div class="card card-body" id="cards" style={style.cards}>
+      <img src={require('../components/skills/spring.jpg')} alt="xc " id="skills"/>
+      <img src={require('../components/skills/express.jpg')} alt=" xc" id="skills"/>
       </div>
     </div>
   </div>
   <div class="col" >
     <div class="collapse multi-collapse" id="multiCollapseExample3">
-      <div class="card card-body" id="cards">
-        Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
-      </div>
+      <div class="card card-body" id="cards" style={style.cards}>
+      <img src={require('../components/skills/sql.jpg')} alt="xc " id="skills"/>
+      <img src={require('../components/skills/mongodb.jpg')} alt=" xc" id="skills"/>
+     </div>
     </div>
   </div>
+  
 </div> 
           </div>
           <Footer />
