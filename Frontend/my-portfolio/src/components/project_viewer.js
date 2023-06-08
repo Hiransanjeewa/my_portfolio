@@ -18,19 +18,14 @@ export default function ProjectViewer(props) {
        fontSize:"20px",
        paddingLeft:"20px",
       },
-
-      
   
   }
 }
   return (
     
     <div id="main_div">
-      <html>
-          <head>
-            <link rel='./project_viewer.css'/>
-          </head>
-          <body>
+      
+    
      
       <div class="container  mw-100" id="second_main_div" style={styles.secondMain}>
         <div class="row ">
@@ -91,8 +86,7 @@ export default function ProjectViewer(props) {
         </div>
       </div>
       </div>
-      </body>
-      </html>
+     
     </div>
   );
 }

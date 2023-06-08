@@ -2,13 +2,17 @@ import React from 'react'
 import ProjectViewer from '../components/project_viewer'
 //import MessageSender from '../components/message_sender'
 import "./projects.css"
+import Footer from '../components/footer';
+import Header from '../components/header';
 
 export default function Projects() {
   return (
 
   
 <div>
+  <Header/>
 <ProjectViewer name="desktop"/>
+
     <div class="container-fluid text-light" id=" ">
       <div class="row ">
       <div class="col col-lg-4" id='project_viewers'>
@@ -27,6 +31,7 @@ export default function Projects() {
             </div>
       </div>
     </div>
+    <Footer/>
     </div>
     
 
