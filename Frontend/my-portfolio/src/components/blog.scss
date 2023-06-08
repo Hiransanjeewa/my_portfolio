@@ -1,21 +1,22 @@
 #main_div{
-    background-color:black;
+    background-color:aliceblue;
     text-align: center;
     padding-left: 0%;
     margin-left: 0%;
  
-    
+    color: black;
     border-color: black;
  
 }
 
 #img_div{
     text-align: center;
-    
+    color: black;
 }
 #main_caption{
 
 text-align: center;
+color: black;
 
 
 }
@@ -23,6 +24,7 @@ text-align: center;
     padding-left: 0%;
     text-align: center;
     margin-left:0%;
+    color: black;
     
 }
 
@@ -31,14 +33,22 @@ text-align: center;
     
     padding-left: 0%;
     text-align: center;
+    color: black;
+    font-size: 70%;
 
 }
 #contents{
     text-align: left;
-    color:aliceblue;
-    
+  
+    color: black;
+   
    
 }
 #li{
     margin-bottom: 1%;
+    
+}
+#content_caption{
+    color: black;
+    
 }

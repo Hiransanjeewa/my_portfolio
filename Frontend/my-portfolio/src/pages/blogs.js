@@ -12,18 +12,18 @@ export default function Blogs() {
       <Header />
           <div className="container-fluid text-light" id="main_div">
             <div className="row ">
-            <div className="col col-lg-4" id='project_viewers'>
+            <div className="col col-lg-4" id='projectViewers'>
       
             <Blog/>
               </div>
-              <div className="col-lg-4 d-flex "  id='project_viewers'>
+              <div className="col-lg-4 d-flex "  id='projectViewers'>
                 
             <Blog/>
               </div>
-              <div className="col-lg-4 d-flex "  id='project_viewers'>
+              <div className="col-lg-4 d-flex "  id='projectViewers'>
                 <Blog/>
                   </div>
-                  <div className="col-lg-4 d-flex "  id='project_viewers'>
+                  <div className="col-lg-4 d-flex "  id='projectViewers'>
                 <Blog/>
                   </div>
             </div>

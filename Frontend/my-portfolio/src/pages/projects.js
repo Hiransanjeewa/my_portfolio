@@ -6,6 +6,12 @@ import Footer from '../components/footer';
 import Header from '../components/header';
 
 export default function Projects() {
+const style={
+  project_viewers:{
+    color:"white",
+  }
+}
+
   return (
 
   
@@ -15,7 +21,7 @@ export default function Projects() {
 
     <div class="container-fluid text-light" id=" ">
       <div class="row ">
-      <div class="col col-lg-4" id='project_viewers'>
+      <div class="col col-lg-4" id='project_viewers' style={style.project_viewers}>
 
       <ProjectViewer/>
         </div>

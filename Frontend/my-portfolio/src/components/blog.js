@@ -2,14 +2,19 @@ import React from 'react'
 import './blog.scss'
 import profile_img from "../pages/my_profile_image.jpg"
 
+const style = {
+  main_div : {
+    backgroundColor : "white",
+  }
+}
 
 
 export default function Blog() {
   
     return (
       
-      
-      <div id="main_div">
+    
+      <div id="main_div" style={style.main_div}>
        
 
         <div className="container  mw-100" id="second_main_div" >
@@ -17,9 +22,12 @@ export default function Blog() {
             <div className="col col-lg-12">
               <p id="main_caption" >
                 <strong>
-                  <span id="caption_span1"> Book </span>
-                  <span id="caption_span2"> Mart</span>
+                <span id="content_caption" >An E-Commerce Website Using React + Springboot + MySQL</span>
+
                 </strong>
+
+               
+                
               </p>
             </div>
           </div>
@@ -30,7 +38,6 @@ export default function Blog() {
             </div>
           </div> */}
         </div>
-  
   <div>
         <div className="container-fluid text-light">
         <div className="col col-lg-12 p-3" >
@@ -46,9 +53,9 @@ export default function Blog() {
           
             <div className="col-lg-12 d-flex  p-3" >
               <span id="contents" >
-                <span id="content_caption" >An E-Commerce Website Using React + Springboot + MySQL</span>
-                <br />
-                <br />
+                {/* <span id="content_caption" >An E-Commerce Website Using React + Springboot + MySQL</span> */}
+               
+               
                 Debbie had taken George for granted for more than fifteen years
                 now. He wasn't sure what exactly had made him choose this time and
                 place to address the issue, but he decided that now was the time.

@@ -10,31 +10,45 @@ export default function ProjectViewer(props) {
     styles = {
       secondMain:{
         padding:"10px",
+        color:"white",
       },
       contentCaption:{
         fontSize:"40px",
+        color:"white",
       },
       contents:{
        fontSize:"20px",
        paddingLeft:"20px",
+       color:"white",
       },
   
   }
+}else{
+  styles = {
+    secondMain:{
+     
+      color:"white",
+    },
+    contentCaption:{
+  
+      color:"white",
+    },
+    contents:{
+  
+     color:"white",
+    }
+}
 }
   return (
     
     <div id="main_div">
       
-    
      
       <div class="container  mw-100" id="second_main_div" style={styles.secondMain}>
         <div class="row ">
           <div class="col col-lg-12">
             <p id="main_caption" >
-              <strong>
-                <span id="caption_span1"> Book </span>{" "}
-                <span id="caption_span2"> Mart</span>
-              </strong>
+             
             </p>
           </div>
         </div>

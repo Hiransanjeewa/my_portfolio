@@ -7,6 +7,12 @@ import profile_img from "./my_profile_image.jpg";
 
 export default function Experience() {
 
+  const style = {
+    content_caption:{
+      color:"white",
+    }
+  }
+
 
  // var frontend=["react","redux","javascript"]
   return (
@@ -19,14 +25,14 @@ export default function Experience() {
           <div class="col col-lg-6">
             <img
               src={profile_img}
-              class="img-fluid "
+              class="img-fluid"
               alt="profile"
               id="image"
             />
           </div>
           <div class="col-lg-6 d-flex " id=" ">
             <p id="contents">
-              <span id="content_caption">Experience</span>
+              <span id="content_caption" style={style.content_caption}>Experience</span>
               <br />
               <br />
               <span id="temp">

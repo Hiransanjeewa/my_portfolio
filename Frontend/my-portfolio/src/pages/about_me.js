@@ -5,6 +5,17 @@ import Footer from "../components/footer";
 import profile_img from "./my_profile_image.jpg";
 
 export default function AboutMe() {
+
+  const style ={
+    main_caption:{
+      fontSize: "350%",
+    },
+    content_caption:{
+      color:"white",
+    }
+    
+
+  }
   return (
     <div id="main_div">
       <Header />
@@ -12,9 +23,9 @@ export default function AboutMe() {
       <div class="container text-center mw-100" id="second_main_div">
         <div class="row justify-content-md-center">
           <div class="col col-lg-6">
-            <p id="main_caption">
+            <p id="main_caption" style={style.main_caption}>
               <strong>
-                <span id="caption_span1"> ABOUT </span>{" "}
+                <span id="caption_span1">ABOUT </span>{" "}
                 <span id="caption_span2">ME</span>
               </strong>
             </p>
@@ -41,7 +52,7 @@ export default function AboutMe() {
           </div>
           <div class="col-lg-6 d-flex " id=" ">
             <p id="contents">
-              <span id="content_caption">A Little About Myself</span>
+              <span id="content_caption" style={style.content_caption}>A Little About Myself</span>
               <br />
               <br />
               <span id="temp">
