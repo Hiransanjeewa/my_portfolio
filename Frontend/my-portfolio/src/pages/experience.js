@@ -1,5 +1,5 @@
 import React from "react";
-import "./experience.css";
+import "./experience.scss";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import profile_img from "./my_profile_image.jpg";
@@ -11,6 +11,7 @@ export default function Experience() {
  // var frontend=["react","redux","javascript"]
   return (
     <div id="main_div">
+     
       <div class="container-fluid text-light">
         <Header />
         <br />
@@ -28,6 +29,7 @@ export default function Experience() {
               <span id="content_caption">Experience</span>
               <br />
               <br />
+              <span id="temp">
               Debbie had taken George for granted for more than fifteen years
               now. He wasn't sure what exactly had made him choose this time and
               place to address the issue, but he decided that now was the time.
@@ -42,6 +44,7 @@ export default function Experience() {
               little bit that this could also be used as a metaphor for her
               life. <br />
               <br />
+              </span>
               <button type="button" class="btn btn-secondary btn-lg">
                 Download CV
               </button>
@@ -87,6 +90,7 @@ export default function Experience() {
         </div>
         
       </div>
+    
     </div>
   );
 }

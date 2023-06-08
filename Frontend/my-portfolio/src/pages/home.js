@@ -8,17 +8,7 @@ export default function Home() {
   return (
     <div>
   <Header/>
-    <html>
-        <head>
-            <title>
-             Hiran Sanjeewa
-            </title>
-            <script>
-              
-            </script>
-
-        </head>
- 
+  
 <div class="container-fluid text-light" id='homepage_body' >
   <div class="row " >
     <div class="col col-lg-6 md-6" id='contents' >
@@ -47,7 +37,7 @@ export default function Home() {
 </div>
 <Footer / >
 
-    </html>
+   
  
     </div>
   )

@@ -1,5 +1,5 @@
 import React from "react";
-import "./about_me.css";
+import "./about_me.scss";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import profile_img from "./my_profile_image.jpg";
@@ -44,6 +44,7 @@ export default function AboutMe() {
               <span id="content_caption">A Little About Myself</span>
               <br />
               <br />
+              <span id="temp">
               Debbie had taken George for granted for more than fifteen years
               now. He wasn't sure what exactly had made him choose this time and
               place to address the issue, but he decided that now was the time.
@@ -56,7 +57,7 @@ export default function AboutMe() {
               around. She stuck in small twigs and leaves to watch the whirlpool
               catch them and then suck them down. It bothered her more than a
               little bit that this could also be used as a metaphor for her
-              life.
+              life.</span>
             </p>
           </div>
           <Footer/>

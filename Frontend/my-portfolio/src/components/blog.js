@@ -2,13 +2,22 @@ import React from 'react'
 import './blog.scss'
 import profile_img from "../pages/my_profile_image.jpg"
 
+
+
 export default function Blog() {
   
     return (
       
+      
       <div id="main_div">
-        
-       
+        <html>
+          <head>
+           
+            <style rel='/blog.scss' />
+
+          </head>
+          <body>
+
         <div className="container  mw-100" id="second_main_div" >
           <div className="row ">
             <div className="col col-lg-12">
@@ -69,6 +78,8 @@ export default function Blog() {
         </div>
         </div>
         
+        </body>
+        </html>
       </div>
     );
   }

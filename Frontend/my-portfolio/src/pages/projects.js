@@ -1,6 +1,6 @@
 import React from 'react'
 import ProjectViewer from '../components/project_viewer'
-import MessageSender from '../components/message_sender'
+//import MessageSender from '../components/message_sender'
 import "./projects.css"
 
 export default function Projects() {
