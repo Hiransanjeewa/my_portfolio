@@ -153,7 +153,6 @@ const Projectviewer: React.FC<Props> = ({ htmlContent }) => {
   
   }
 }
-
   return (
     <div>
     

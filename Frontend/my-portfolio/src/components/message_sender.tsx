@@ -7,7 +7,12 @@ interface Props {
 }
 
 const MessageSender: React.FC<Props> = ({ htmlContent }) => {
+  const messagesender=htmlContent;
+  if (messagesender==='no_message_sender') {
+   // document.getElementById('contact-form').innerHTML='<div/>';
+  }
   return(
+   
   <div>
     <div>
        
@@ -25,9 +30,7 @@ const MessageSender: React.FC<Props> = ({ htmlContent }) => {
             <p>For more information, <a href="https://www.linkedin.com/in/hiran-sanjeewa-a672b4227/" target="blank">visit my Linkdin Account.</a></p>
           
           
-        
-        
-
+      
           <form id="contact-form" className="col-sm-12 col-md-offset-1 scrollimation fade-left d3" action="contact.php" method="post" >
             
             <div className="form-group">

@@ -130,12 +130,12 @@ const Experience: React.FC<Props> = ({ htmlContent }) => {
     }
 
   }
+
+  
+
+
   return (
 
-
-
-
-    
     
      // var frontend=["react","redux","javascript"]
     
@@ -180,7 +180,7 @@ const Experience: React.FC<Props> = ({ htmlContent }) => {
               <p>
       <a className="btn btn-dark" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Frontend</a>
       <button className="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Backend</button>
-      <button className="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Other</button>
+      <button className="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">Other</button>
     </p>
     
     
@@ -214,7 +214,7 @@ const Experience: React.FC<Props> = ({ htmlContent }) => {
     
     </div> 
               </div>
-              <Footer htmlContent=" "/>
+              <Footer htmlContent="no_message_sender"/>
             </div>
             
           </div>
