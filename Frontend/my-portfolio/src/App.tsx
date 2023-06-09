@@ -41,7 +41,7 @@ import Home from './pages/home';
 import Experience from './pages/experience';
 import AboutMe from './pages/about_me';
 import Blogs from './pages/blogs';
-
+import Projects from './pages/projects';
 
 
 const App: React.FC = () => {
@@ -61,8 +61,7 @@ const App: React.FC = () => {
 
 
         <Route path="/blogs" element={<Blogs htmlContent='' />}/>
-        {/* <Route path="/projects" element={<Projects />}/> */}
-
+        <Route path="/projects" element={<Projects />}/>
       </Routes>
     </BrowserRouter>
       

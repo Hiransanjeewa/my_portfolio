@@ -111,51 +111,48 @@ import React from 'react';
 import "./project_viewer.css"
 
 
+
 interface Props {
   htmlContent: string;
 }
+ 
+const Projectviewer: React.FC<Props> = ({ htmlContent }) => {
 
-class Style  {
+  var name=htmlContent;
   
-  constructor(view: string) {
-    if (view==='desktop') {
-      styles = {
-        secondMain:{
-          padding:"10px",
-          color:"white",
-        },
-        contentCaption:{
-          fontSize:"40px",
-          color:"white",
-        },
-        contents:{
-         fontSize:"20px",
-         paddingLeft:"20px",
-         color:"white",
-        },
-    
-    }
-  }else{
+  var styles = {
+    secondMain:{
+      padding:"10px",
+      color:"white",
+    },
+    contentCaption:{
+      fontSize:"40px",
+      color:"white",
+    },
+    contents:{
+     fontSize:"20px",
+     paddingLeft:"20px",
+     color:"white",
+    },
+}
+  if (name==='desktop') {
     styles = {
       secondMain:{
-       
+        padding:"10px",
         color:"white",
       },
       contentCaption:{
-    
+        fontSize:"40px",
         color:"white",
       },
       contents:{
-    
+       fontSize:"20px",
+       paddingLeft:"20px",
        color:"white",
-      }
-  }
-  }
+      },
+  
   }
 }
-
-const Projectviewer: React.FC<Props> = ({ htmlContent }) => {
-
 
   return (
     <div>
