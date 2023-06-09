@@ -9,6 +9,8 @@ const PORT = 3000;
 //     res.status(200).send("<h1>Hello GFG Learner!</h1>");
 // });
 
+app.use(express.json)
+
 const routes = require('./routes/routes')
 app.use('/', routes)
 app.listen(3000, (error) =>{
