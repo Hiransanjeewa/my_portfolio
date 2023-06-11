@@ -6,7 +6,7 @@ const services = require('../services/blogServicesImpl')
 const Db=require('../database/db')
 
 // Email services
-const Email = require('../models/Emails')
+const Email = require('../services/emailService')
 
 
 
@@ -23,21 +23,19 @@ router.use((req, res, next) => {
 router.post('/',async (req, res) => {
   console.log(req.body.id)
     res.send('Your Index number i '+req.body.id)
-    //services("adssa","sfsdf","anbkj")
+
 })
 
 router.get('/checkEmail/:email',async (req,res)=>{
 
     try {
+        var emailResponce ;
+        (async () => {
+            emailResponce = await Email.emailSender(req.params.email)
+        })().then(r => {
 
-
-
-        console.log(typeof (emails));
-
-        res.json(emails)
-
-
-
+        })
+        res.send(emailResponce)
     }catch (e) {
         res.send('Error ' + e);
     }
