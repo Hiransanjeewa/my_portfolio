@@ -1,7 +1,7 @@
 const express = require('express')
 const Email = require("../models/Emails");
 
-async function emailSender(email){
+async function validateEmail(email){
     const emails = await Email.find()
     //   console.log(emails)
     const emailCount = Object.keys(emails).length
@@ -19,21 +19,20 @@ async function emailSender(email){
     return 1;
 }
 
-function validateEmail(email){
-    try {
-        var emailResponce ;
-        (async () => {
-            emailResponce = await EmailService.emailSender(email)
-        })().then(r => {
-
-        })
-        return emailResponce;
-    }catch (e) {
-        return 'Error ' + e
-    }
-
-}
-
+// function validateEmail(email){
+//     try {
+//         var emailResponce ;
+//         (async () => {
+//             emailResponce = await emailSender(email)
+//         })().then(r => {
+//
+//         })
+//         return emailResponce;
+//     }catch (e) {
+//         return 'Error ' + e
+//     }
+//
+// }
 
 async function sendEmail(requestBody) {
     const time = Date.now()
@@ -48,10 +47,16 @@ async function sendEmail(requestBody) {
     });
     // trying to store data in Database
     try {
-        if (validateEmail(email)===1){
+        let emailValidation;
+        (async () => {
+            emailValidation= await validateEmail(email)
+        })().then(r => {
+
+        })
+        if (emailValidation===1){
             const Emails = await email.save()
             return "Message Sent Successfully";
-        }else if(validateEmail(email)===0) {
+        }else if(emailValidation===0) {
             return "Only one message per day ! "
         }else {
             return "Error"
