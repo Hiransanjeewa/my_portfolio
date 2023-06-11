@@ -2,7 +2,7 @@
 const express = require('express');
 const db = require("./database/db.js")
 const index = express();
-const PORT = 3000;
+const PORT = 3001;
 
 
 index.use(express.json());
