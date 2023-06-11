@@ -13,6 +13,10 @@ const emailScheama =new mongoose.Schema({
     message : {
         type : String,
         required : true
+    },
+    date : {
+        type:Number,
+        required:true
     }
 
 })

@@ -4,16 +4,16 @@ const router = express.Router()
 
 const services = require('../services/blogServicesImpl')
 const Db=require('../database/db')
-
+const Email = require("../models/Emails");
 // Email services
-const Email = require('../services/emailService')
+const EmailService = require('../services/emailService')
 
 
 
 
 // middleware that is specific to this router
 router.use((req, res, next) => {
-    console.log('Time: ', Date.now())
+ //   console.log('Time: ', Date.now())
     next()
 })
 
@@ -26,29 +26,9 @@ router.post('/',async (req, res) => {
 
 })
 
-router.get('/checkEmail/:email',async (req,res)=>{
-
-    try {
-        var emailResponce ;
-        (async () => {
-            emailResponce = await Email.emailSender(req.params.email)
-        })().then(r => {
-
-        })
-        res.send(emailResponce)
-    }catch (e) {
-        res.send('Error ' + e);
-    }
 
 
-    // try{
-    //     const email = await Email.findById(req.params.id)
-    //     const emaill="hiransanjeewaa@gmail.com"
-    //     res.json(email);
-    // }catch (e) {
-    //     res.send('Error '+e)
-    // }
-})
+
 
 // define the about route
 router.get('/checkAllEmails',async (req, res) => {
@@ -64,21 +44,9 @@ router.get('/checkAllEmails',async (req, res) => {
 })
 
 router.post('/sendEmail',async (req, res) => {
-    const email = new Email({
-        email : req.body.email,
-        name  : req.body.name,
-        message : req.body.message
 
-    });
-    // trying to store data in Database
-    try{
-       const Emails= await email.save()
-        res.json(Emails)
-    }catch (e) {
-        res.send("Error " + e)
-    }
 
-    //services("adssa","sfsdf","anbkj")
+
 })
 
 
