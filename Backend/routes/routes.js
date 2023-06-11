@@ -17,16 +17,16 @@ router.use((req, res, next) => {
 
 
 // define the home page route
-router.post('/', (req, res) => {
+router.post('/',async (req, res) => {
   console.log(req.body.id)
-    res.send('Your Index number is '+req.body.id)
+    res.send('Your Index number i '+req.body.id)
     //services("adssa","sfsdf","anbkj")
 })
 
 
 
 // define the about route
-router.post('/about', (req, res) => {
+router.post('/about',async (req, res) => {
     res.send('About birds')
    // services("adssa","sfsdf","anbkj")
 })
