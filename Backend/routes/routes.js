@@ -1,12 +1,12 @@
 const express = require('express')
 const router = express.Router()
 
-
-const services = require('../services/blogServicesImpl')
 const Db=require('../database/db')
-const Email = require("../models/Emails");
+
 // Email services
 const EmailService = require('../services/emailService')
+const send = require("send");
+
 
 
 
@@ -20,11 +20,11 @@ router.use((req, res, next) => {
 
 
 // define the home page route
-router.post('/',async (req, res) => {
-  console.log(req.body.id)
-    res.send('Your Index number i '+req.body.id)
-
-})
+// router.post('/',async (req, res) => {
+//   console.log(req.body.id)
+//     res.send('Your Index number i '+req.body.id)
+//
+// })
 
 
 
@@ -44,7 +44,31 @@ router.get('/checkAllEmails',async (req, res) => {
 })
 
 router.post('/sendEmail',async (req, res) => {
+    let response;
 
+
+        // response= await EmailService.sendEmail(req.body)
+        //
+        // res.send(await EmailService.sendEmail(req.body))
+        // console.log(response)
+
+
+
+
+    (async () => {
+        response=await EmailService.sendEmail(req.body)
+
+    })().then(async r => {
+        console.log(response)
+        res.send(response)
+    })
+
+
+    // console.log(response)
+
+
+
+  //  console.log(response)
 
 
 })
