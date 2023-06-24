@@ -27,6 +27,9 @@ const MessageSender: React.FC<Props> = ({ htmlContent }) => {
   function sendEmail(e: React.MouseEvent) {
     console.log(email)
    e.preventDefault();
+   const expression: RegExp = /^(?=.{1,254}$)(?=.{1,64}@)[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~]+(\.[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~]+)*@[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?(\.[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?)*$/;
+   const result: boolean = expression.test(email);
+
    if (userName===' ') {
     (document.getElementById('button') as HTMLImageElement).innerHTML = "<p id='error_message'>Please Enter your name</P>"
   // e.preventDefault();
@@ -34,7 +37,11 @@ const MessageSender: React.FC<Props> = ({ htmlContent }) => {
     else if (email===' ') {
       (document.getElementById('button') as HTMLImageElement).innerHTML = "<p id='error_message'>Please Enter your email address</P>"
     // e.preventDefault();
-    }else if (message===' ') {
+    }else if (!result) {
+      (document.getElementById('button') as HTMLImageElement).innerHTML = "<p id='error_message'>Please Enter a valid email address</P>"
+    // e.preventDefault();
+    }
+    else if (message===' ') {
       (document.getElementById('button') as HTMLImageElement).innerHTML = "<p id='error_message'>Please Enter a message to send</P>"
     // e.preventDefault();
     }
