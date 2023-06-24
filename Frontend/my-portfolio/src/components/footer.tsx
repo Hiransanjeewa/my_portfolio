@@ -9,7 +9,6 @@ interface Props {
 }
 
 
-
 const Footer: React.FC<Props> = ({ htmlContent }) => {
   return(
   <div>
