@@ -2,8 +2,24 @@
 const express = require('express');
 const db = require("./database/db.js")
 
+
+const cors = require('cors');
+
+
+
+// Enable CORS for all routes
+
+
+
+
+
+
+
 const index = express();
+
+index.use(cors());
 const PORT = 8080;
+
 
 
 index.use(express.json());
@@ -17,7 +33,7 @@ index.listen(PORT, (error) =>{
 
 
         if(!error)
-            console.log("Server is Successfully Running, and App is listening on port "+ PORT)
+            console.log("Server is Successfully Running, and App is listening on port "+ 3001)
     else
         console.log("Error occurred, server can't start", error);
     }
