@@ -44,31 +44,27 @@ router.get('/checkAllEmails',async (req, res) => {
 })
 
 router.post('/sendEmail',async (req, res) => {
-    let response;
+    let response=0;
 
 
         // response= await EmailService.sendEmail(req.body)
         //
-        // res.send(await EmailService.sendEmail(req.body))
+    response =await EmailService.sendEmail(req.body)
+    res.send(response)
         // console.log(response)
 
 
 
-
-    (async () => {
-        response=await EmailService.sendEmail(req.body)
-
-    })().then(async r => {
-        console.log(response)
-        res.send(response)
-    })
-
-
-    // console.log(response)
+    // (async () => {
+    //     response=await EmailService.sendEmail(req.body)
+    // })().then(async r => {
+    //     console.log(response)
+    //     res.send(response)
+    // })
 
 
 
-  //  console.log(response)
+
 
 
 })

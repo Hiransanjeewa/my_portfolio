@@ -15,11 +15,11 @@ async function validateEmail(email){
             let date_ob = new Date(time);
             let date = date_ob.getDate();
             if (emails[i].date===date){
-                return 0;
+                return 'email_declined';
             }
        }
     }
-    return 1;
+    return 'email_accepted';
 }
 
 // function validateEmail(email){
@@ -48,35 +48,32 @@ async function sendEmail(requestBody) {
         message: requestBody.message,
         date: date
     });
+
     // trying to store data in Database
     try {
         let emailValidation;
-        let response;
-        (async () => {
-            emailValidation= await validateEmail(email.email)
-        })().then(async r => {
 
-            if (emailValidation === 1) {
+            emailValidation= await validateEmail(email.email)
+
+            if (emailValidation === 'email_accepted') {
                 const Emails = await email.save()
 
-                response= emailValidation;
-            } else if (emailValidation === 0) {
+                return  emailValidation;
+            } else if (emailValidation === 'email_declined') {
 
-                response= emailValidation
+                return  emailValidation;
             } else {
 
-                response= "Error"
+                return  emailValidation;
             }
-        })
-    } catch (e) {
-      var  response= "Error " + e;
-    }
-    return=response
 
+
+    } catch (e) {
+      return "Error " + e;
+    }
 
 
 }
-
 
 
 module.exports = {sendEmail};
