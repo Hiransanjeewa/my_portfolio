@@ -7,6 +7,8 @@ const Db=require('../database/db')
 const EmailService = require('../services/emailService')
 const send = require("send");
 const axios = require("axios");
+const Email = require("../models/Emails");
+const ArticleIds = require("../models/ArticleIds");
 
 const my_medium_id = '5bb14012dbd3';
 
@@ -93,25 +95,6 @@ router.get('/checkAllEmails',async (req, res) => {
     // }
 
 
-    // getting all publications
-    const axios = require('axios');
-
-    const options = {
-        method: 'GET',
-        url: 'https://medium2.p.rapidapi.com/user/5bb14012dbd3/articles',
-        headers: {
-            'X-RapidAPI-Key': '78f26e88dcmshf87d454d9d409f3p101091jsned77dfdafda3',
-            'X-RapidAPI-Host': 'medium2.p.rapidapi.com'
-        }
-    };
-
-    try {
-        const response = await axios.request(options);
-        console.log(response.data);
-    } catch (error) {
-        console.error(error);
-    }
-
 
 
 
@@ -121,21 +104,8 @@ router.post('/sendEmail',async (req, res) => {
     let response=0;
 
 
-        // response= await EmailService.sendEmail(req.body)
-        //
     response =await EmailService.sendEmail(req.body)
     res.send(response)
-        // console.log(response)
-
-
-
-    // (async () => {
-    //     response=await EmailService.sendEmail(req.body)
-    // })().then(async r => {
-    //     console.log(response)
-    //     res.send(response)
-    // })
-
 
 
 

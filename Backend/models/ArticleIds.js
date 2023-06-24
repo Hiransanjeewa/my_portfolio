@@ -8,4 +8,4 @@ const articleIdScheama =new mongoose.Schema({
     },
 })
 
-module.exports=  mongoose.model('Email',emailScheama)
+module.exports=  mongoose.model('ArticleId',articleIdScheama)

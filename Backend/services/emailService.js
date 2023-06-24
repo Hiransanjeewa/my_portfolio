@@ -1,6 +1,8 @@
 const express = require('express')
 const Email = require("../models/Emails");
 
+
+
 async function validateEmail(email){
 
     const emails = await Email.find()

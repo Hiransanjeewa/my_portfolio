@@ -1,6 +1,7 @@
 
 const express = require('express');
 const db = require("./database/db.js")
+
 const index = express();
 const PORT = 3001;
 
@@ -18,3 +19,6 @@ index.listen(PORT, (error) =>{
         console.log("Error occurred, server can't start", error);
     }
 );
+
+
+
