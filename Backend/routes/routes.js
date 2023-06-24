@@ -9,6 +9,7 @@ const send = require("send");
 const axios = require("axios");
 const Email = require("../models/Emails");
 const ArticleIds = require("../models/ArticleIds");
+const schedule = require("node-schedule");
 
 const my_medium_id = '5bb14012dbd3';
 
@@ -108,11 +109,43 @@ router.post('/sendEmail',async (req, res) => {
     res.send(response)
 
 
-
-
+    // const  responsee= {
+    //     associated_articles:[
+    //         '5756b59e1138',
+    //         '8e4f107100a',
+    //         'd9b805e19f37',
+    //         '80be9084c3a8',
+    //         'c31dae2284f3',
+    //         '3060786317a0',
+    //         '5cc4c488250a'
+    //     ]
+    // }
+    // const  articleCount=responsee.associated_articles.length
+    //
+    // // Getting existing ids
+    // const oldArticleIds = await ArticleIds.find()
+    // const oldArticleCount = Object.keys(oldArticleIds).length
+    //
+    //
+    //  for (let i = 0; i < articleCount; i++) {
+    //
+    //      if (oldArticleCount<=i){
+    //
+    //              const article_id = new ArticleIds({
+    //                  article_id: responsee.associated_articles[i],
+    //              });
+    //              const ArticleId = await article_id.save()
+    //
+    //      }
+    //
+    //      }
 
 })
 
-
+const ArticleReceiver = require('../services/ArticleReceiver')
+const j = schedule.scheduleJob({hour: 17, minute: 1}, () => {
+    ArticleReceiver.getArticles();
+    console.log('Job runs every day at 16.46AM');
+});
 
 module.exports = router
