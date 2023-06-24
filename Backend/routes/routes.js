@@ -57,24 +57,7 @@ router.get('/checkAllEmails',async (req, res) => {
 
 
 
-    // const axios = require('axios');
-    //
-    // const options = {
-    //     method: 'GET',
-    //     url: 'https://medium2.p.rapidapi.com/article/5756b59e1138',
-    //     headers: {
-    //         'X-RapidAPI-Key': '78f26e88dcmshf87d454d9d409f3p101091jsned77dfdafda3',
-    //         'X-RapidAPI-Host': 'medium2.p.rapidapi.com'
-    //     }
-    // };
-    //
-    // try {
-    //     const response = await axios.request(options);
-    //     console.log(response.data);
-    // } catch (error) {
-    //
-    //     console.error(error);
-    // }
+
 
 // Content
     // const axios = require('axios');
@@ -109,41 +92,11 @@ router.post('/sendEmail',async (req, res) => {
     res.send(response)
 
 
-    // const  responsee= {
-    //     associated_articles:[
-    //         '5756b59e1138',
-    //         '8e4f107100a',
-    //         'd9b805e19f37',
-    //         '80be9084c3a8',
-    //         'c31dae2284f3',
-    //         '3060786317a0',
-    //         '5cc4c488250a'
-    //     ]
-    // }
-    // const  articleCount=responsee.associated_articles.length
-    //
-    // // Getting existing ids
-    // const oldArticleIds = await ArticleIds.find()
-    // const oldArticleCount = Object.keys(oldArticleIds).length
-    //
-    //
-    //  for (let i = 0; i < articleCount; i++) {
-    //
-    //      if (oldArticleCount<=i){
-    //
-    //              const article_id = new ArticleIds({
-    //                  article_id: responsee.associated_articles[i],
-    //              });
-    //              const ArticleId = await article_id.save()
-    //
-    //      }
-    //
-    //      }
 
 })
 
 const ArticleReceiver = require('../services/ArticleReceiver')
-const j = schedule.scheduleJob({hour: 17, minute: 1}, () => {
+const j = schedule.scheduleJob({hour: 17, minute: 40}, () => {
     ArticleReceiver.getArticles();
     console.log('Job runs every day at 16.46AM');
 });
