@@ -29,6 +29,7 @@ router.post('/sendEmail',async (req, res) => {
 })
 router.get('/getArticles',async (req, res) => {
     const response=await  ArticleService.getArticles(req.query.category) ;
+    console.log('*********')
     res.send(response)
 })
 
