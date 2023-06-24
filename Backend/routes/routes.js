@@ -25,12 +25,12 @@ router.use((req, res, next) => {
 router.post('/sendEmail',async (req, res) => {
     let response=0;
     response =await EmailService.sendEmail(req.body)
-    res.send(response)
+    res.json(response)
 })
 router.get('/getArticles',async (req, res) => {
-    const response=await  ArticleService.getArticles(req.query.category) ;
+        const response=await  ArticleService.getArticles(req.query.category) ;
     console.log('*********')
-    res.send(response)
+    res.json(response)
 })
 
 
