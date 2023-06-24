@@ -10,12 +10,9 @@ const axios = require("axios");
 const Email = require("../models/Emails");
 const ArticleIds = require("../models/ArticleIds");
 const schedule = require("node-schedule");
+const ArticleReceiver = require('../services/ArticleReceiver')
 
 const my_medium_id = '5bb14012dbd3';
-
-
-
-
 
 // middleware that is specific to this router
 router.use((req, res, next) => {
@@ -24,79 +21,29 @@ router.use((req, res, next) => {
 })
 
 
-
-// define the home page route
-// router.post('/',async (req, res) => {
-//   console.log(req.body.id)
-//     res.send('Your Index number i '+req.body.id)
-//
-// })
-
-
-
-
-
-// define the about route
-router.get('/checkAllEmails',async (req, res) => {
-    // Requesting data from database
-    // try {
-    //     const email=await Email.find()
-    //     res.json(email)
-    // }catch (e) {
-    //     res.send('Error ' + e);
-    // }
-   // res.send('About birds')
-   // services("adssa","sfsdf","anbkj")
-
-
-
-
-
-
-
-
-
-
-
-
-// Content
-    // const axios = require('axios');
-    //
-    // const options = {
-    //     method: 'GET',
-    //     url: 'https://medium2.p.rapidapi.com/article/5756b59e1138/content',
-    //     headers: {
-    //         'X-RapidAPI-Key': '78f26e88dcmshf87d454d9d409f3p101091jsned77dfdafda3',
-    //         'X-RapidAPI-Host': 'medium2.p.rapidapi.com'
-    //     }
-    // };
-    //
-    // try {
-    //     const response = await axios.request(options);
-    //     console.log(response.data);
-    // } catch (error) {
-    //     console.error(error);
-    // }
-
-
-
-
-
-})
-
 router.post('/sendEmail',async (req, res) => {
     let response=0;
-
-
     response =await EmailService.sendEmail(req.body)
     res.send(response)
-
-
-
+})
+router.get('/getArticles',async (req, res) => {
+    const response= req.query.category;
+    res.send(response)
 })
 
-const ArticleReceiver = require('../services/ArticleReceiver')
-const j = schedule.scheduleJob({hour: 17, minute: 40}, () => {
+
+
+
+
+
+
+
+
+
+
+
+// Automated Medium articles updater
+const j = schedule.scheduleJob({hour: 18, minute: 11}, () => {
     ArticleReceiver.getArticles();
     console.log('Job runs every day at 16.46AM');
 });

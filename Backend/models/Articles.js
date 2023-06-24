@@ -22,7 +22,7 @@ const articleScheama =new mongoose.Schema({
         type:String,
         required:true
     },
-    subtitle : {
+    content : {
         type:String,
         required:true
     },
