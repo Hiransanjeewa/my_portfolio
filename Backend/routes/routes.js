@@ -11,6 +11,7 @@ const Email = require("../models/Emails");
 const ArticleIds = require("../models/ArticleIds");
 const schedule = require("node-schedule");
 const ArticleReceiver = require('../services/ArticleReceiver')
+const ArticleService = require('../services/ArticleServiceImpl')
 
 const my_medium_id = '5bb14012dbd3';
 
@@ -27,11 +28,9 @@ router.post('/sendEmail',async (req, res) => {
     res.send(response)
 })
 router.get('/getArticles',async (req, res) => {
-    const response= req.query.category;
+    const response=await  ArticleService.getArticles(req.query.category) ;
     res.send(response)
 })
-
-
 
 
 

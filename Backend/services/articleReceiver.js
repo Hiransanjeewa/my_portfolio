@@ -4,9 +4,6 @@ const ArticleIds = require("../models/ArticleIds");
 const schedule = require("node-schedule");
 
 
-
-
-
 // getting all publications
 const axios = require('axios');
 
@@ -23,7 +20,7 @@ async function getArticles() {
 
     try {
         const response = await axios.request(options1);
-      //  console.log(response);
+        //  console.log(response);
         const articleCount = response.data.associated_articles.length
 
         // Getting existing ids
@@ -43,13 +40,13 @@ async function getArticles() {
             const articlesList = await Articles.find()
             const ArticlesCount = Object.keys(articlesList).length
 
-            if (ArticlesCount<=i){
+            if (ArticlesCount <= i) {
 
 
                 console.log(article_id)
                 const options = {
                     method: 'GET',
-                    url: 'https://medium2.p.rapidapi.com/article/'+article_id.article_id,
+                    url: 'https://medium2.p.rapidapi.com/article/' + article_id.article_id,
                     headers: {
                         'X-RapidAPI-Key': '78f26e88dcmshf87d454d9d409f3p101091jsned77dfdafda3',
                         'X-RapidAPI-Host': 'medium2.p.rapidapi.com'
@@ -60,16 +57,16 @@ async function getArticles() {
 
 
                     const response = await axios.request(options);
-                 //   console.log(response.data);
+                    //   console.log(response.data);
 
                     const article = new Articles({
-                        article_id : response.data.id,
-                        last_modified_at : response.data.last_modified_at,
-                        url :response.data.url,
-                        image_url : response.data.image_url,
-                        title : response.data.title,
-                        content : " " ,
-                        category : " ",
+                        article_id: response.data.id,
+                        last_modified_at: response.data.last_modified_at,
+                        url: response.data.url,
+                        image_url: response.data.image_url,
+                        title: response.data.title,
+                        content: " ",
+                        category: " ",
                     });
 
 
@@ -78,7 +75,7 @@ async function getArticles() {
 
                     const options2 = {
                         method: 'GET',
-                        url: 'https://medium2.p.rapidapi.com/article/'+article_id.article_id+'/content',
+                        url: 'https://medium2.p.rapidapi.com/article/' + article_id.article_id + '/content',
                         headers: {
                             'X-RapidAPI-Key': '78f26e88dcmshf87d454d9d409f3p101091jsned77dfdafda3',
                             'X-RapidAPI-Host': 'medium2.p.rapidapi.com'
@@ -88,26 +85,26 @@ async function getArticles() {
                     try {
                         const response2 = await axios.request(options2);
                         console.log(response2.data.content);
-                        article.content =response2.data.content;
+                        article.content = response2.data.content;
                     } catch (error) {
                         console.error(error);
                     }
 
                     const newArticle = await article.save()
 
-                  //  console.log(response.data);
+                    //  console.log(response.data);
                 } catch (error) {
 
                     console.error(error);
                 }
-           }
+            }
 
 
-       }
+        }
 
-   } catch (error) {
-       console.error(error);
-   }
+    } catch (error) {
+        console.error(error);
+    }
 }
 
 module.exports = {getArticles};
