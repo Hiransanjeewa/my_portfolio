@@ -12,21 +12,18 @@ interface Props {
 
 interface ProjectData {
   _id: string;
-  article_id: string;
-  last_modified_at: string;
-  url: URL;
-  image_url: string;
   title:String;
   content:String;
+  points:String[]
   // Add other properties here
 }
 
 interface Props {
-  blogData: BlogData;
+  ProjectData: ProjectData;
 }
 
  
-const Projectviewer: React.FC<Props> = ({ htmlContent }) => {
+const Projectviewer: React.FC<Props> = ({ ProjectData,htmlContent }) => {
 
   var name=htmlContent;
   
