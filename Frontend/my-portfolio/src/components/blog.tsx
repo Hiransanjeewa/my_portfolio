@@ -36,10 +36,10 @@ const HtmlRenderer: React.FC<Props> = ({ blogData }) => {
   //const image_url=blogData.url
   return (
     <div>
-      {/* <a id='article_link' href={`${blogData.url}`}> */}
+      <a id='article_link' href={`${blogData.url}`}>
 
      
-      <div id="main_div"  style={style.main_div}>
+      <div id="main_div" className='main_div'  style={style.main_div}>
         <div className="container  mw-100" id="second_main_div" >
           <div className="row ">
             <div className="col col-lg-12">
@@ -72,7 +72,7 @@ const HtmlRenderer: React.FC<Props> = ({ blogData }) => {
                 {/* <span id="content_caption" >An E-Commerce Website Using React + Springboot + MySQL</span> */}
                
                 {str}
-                 
+                 <span id='read_article'> |  Read complete article on medium</span>
   
                
               </span>
@@ -85,10 +85,7 @@ const HtmlRenderer: React.FC<Props> = ({ blogData }) => {
      
       </div>
  
-  
-
-
-      {/* </a> */}
+      </a>
     </div>
   );
 };

@@ -11,7 +11,7 @@ interface Props {
 
 const style = {
   main_div : {
-    backgroundColor : "white",
+    backgroundColor : 'aliceblue',
   },
   
 }
