@@ -31,41 +31,42 @@
 // export default App;
 
 
-
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import Header from './components/header';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
 import Footer from './components/footer';
 import Home from './pages/home';
 import Experience from './pages/experience';
 import AboutMe from './pages/about_me';
-import Blogs from './pages/blogs';
 import Projects from './pages/projects';
 
+// Use React.lazy to asynchronously load the Blogs component
+const Blogs = lazy(() => import('./pages/blogs'));
 
 const App: React.FC = () => {
-  const htmlContent = ' ';
-
+  const htmlContent = '';
 
   return (
-    
     <div>
       <BrowserRouter>
-      <Routes>
-        
-        <Route path="/" element={<Home htmlContent={ htmlContent }/>}/>
-        <Route path="/" element={<Footer htmlContent={ htmlContent }/>}/>
-        <Route path="/about" element={<AboutMe htmlContent=''/>}/>
-        <Route path="/experience" element={<Experience htmlContent=''/>}/>
+        <Routes>
+          <Route path="/" element={<Home htmlContent={htmlContent} />} />
+          <Route path="/" element={<Footer htmlContent={htmlContent} />} />
+          <Route path="/about" element={<AboutMe htmlContent="" />} />
+          <Route path="/experience" element={<Experience htmlContent="" />} />
 
+          <Route
+            path="/blogs"
+            element={
+              <Suspense fallback={<div>Loading...</div>}>
+                <Blogs />
+              </Suspense>
+            }
+          />
 
-        <Route path="/blogs" element={<Blogs htmlContent='' />}/>
-        <Route path="/projects" element={<Projects />}/>
-      </Routes>
-    </BrowserRouter>
-      
-      {/* <Header htmlContent={htmlContent} /> */}
+          <Route path="/projects" element={<Projects />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };

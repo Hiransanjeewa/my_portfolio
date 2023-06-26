@@ -11,10 +11,6 @@ const cors = require('cors');
 
 
 
-
-
-
-
 const index = express();
 
 index.use(cors());

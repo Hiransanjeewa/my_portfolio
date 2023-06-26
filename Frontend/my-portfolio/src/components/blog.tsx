@@ -90,7 +90,7 @@ import React from 'react';
 import './blog.scss'
 
 interface Props {
-  htmlContent: string;
+  blogData: String[];
 }
 
 const style = {
@@ -99,7 +99,7 @@ const style = {
   }
 }
 
-const HtmlRenderer: React.FC<Props> = ({ htmlContent }) => {
+const HtmlRenderer: React.FC<Props> = ({ blogData }) => {
  
   return (
     <div>
