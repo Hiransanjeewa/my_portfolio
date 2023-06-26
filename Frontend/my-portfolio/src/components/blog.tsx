@@ -2,12 +2,15 @@
 import React from 'react';
 import './blog.scss'
 
+
 interface BlogData {
   _id: string;
   article_id: string;
   last_modified_at: string;
-  url: string;
+  url: URL;
   image_url: string;
+  title:String;
+  content:String;
   // Add other properties here
 }
 
@@ -24,9 +27,9 @@ const style = {
 const HtmlRenderer: React.FC<Props> = ({ blogData }) => {
 
   
-  console.log(blogData._id); // Accessing and printing the _id property of each object in the blogData array
+  console.log(blogData.image_url); // Accessing and printing the _id property of each object in the blogData array
     
-  
+  //const image_url=blogData.url
   return (
     <div>
       <div id="main_div" style={style.main_div}>
@@ -35,7 +38,7 @@ const HtmlRenderer: React.FC<Props> = ({ blogData }) => {
             <div className="col col-lg-12">
               <p id="main_caption" >
                 <strong>
-                <span id="content_caption" >An E-Commerce Website Using React + Springboot + MySQL</span>
+                <span id="content_caption" >{blogData.title}</span>
                 </strong>
               </p>
             </div>
@@ -51,7 +54,7 @@ const HtmlRenderer: React.FC<Props> = ({ blogData }) => {
         <div className="container-fluid text-light">
         <div className="col col-lg-12 p-3" >
               
-              <img src={require('../pages/my_profile_image.jpg')}  className="img-fluid "   alt="profile"  id="image"/>
+              <img src={`${blogData.image_url}`}  className="img-fluid "   alt="profile"  id="image"/>
 
             </div>
             
