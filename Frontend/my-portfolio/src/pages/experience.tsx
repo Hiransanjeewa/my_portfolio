@@ -11,10 +11,7 @@ interface Props {
 }
 
 
-
 function closeCollapse(collapsename:string):void{
-
-
 
   
 }
@@ -46,10 +43,6 @@ const Experience: React.FC<Props> = ({ htmlContent }) => {
   // sum.getSummation();
 
   
-
-
-
-
 
   return (
 
@@ -130,8 +123,6 @@ const Experience: React.FC<Props> = ({ htmlContent }) => {
         </div>
       </div>
     
-
-
 
 
 
