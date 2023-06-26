@@ -34,7 +34,7 @@ const Blogs: React.FC<Props> = () => {
       });
   }, [blogs]);
 
-console.log(blogs)
+//console.log(blogs)
   return (
     <div>
       <Header htmlContent=' ' />
