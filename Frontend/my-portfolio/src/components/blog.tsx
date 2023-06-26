@@ -100,6 +100,8 @@ const style = {
 }
 
 const HtmlRenderer: React.FC<Props> = ({ blogData }) => {
+
+ // console.log(blogData)
  
   return (
     <div>

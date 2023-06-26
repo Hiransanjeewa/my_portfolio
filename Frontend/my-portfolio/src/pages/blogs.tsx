@@ -16,29 +16,41 @@ const Blogs: React.FC<Props> = () => {
     axios
       .get('http://localhost:8080/getArticles?category=cloud computing')
       .then(response => {
-        console.log(response.data);
+        //console.log(response.data);
         let blogSet:React.ReactComponentElement<typeof Blog, any>[] = [];
         for (let index = 0; index < response.data.length; index++) {
-          console.log(response.data[index]);
+         // console.log(response.data[index]);
           const blogData = response.data[index];
-          const blogElement = <Blog blogData={blogData} />;
-          blogSet.push(blogElement);
+          const blogElement = <><div className="col col-lg-4" id='projectViewers'><Blog blogData={blogData} /></div></>;
+         // console.log(blogElement );
+          blogSet.push(blogElement);       
         }
         
         setBlogs(blogSet);
+      //  console.log(blogs)
       })
       .catch(error => {
         console.error('Error fetching blogs:', error);
       });
-  }, []);
+  }, [blogs]);
 
-
+console.log(blogs)
   return (
     <div>
-      {/* <Blog blogData={arr} /> */}
-      {blogs.map(blog => (
-        <p>{blog}</p>
-      ))}
+      <Header htmlContent=' ' />
+
+
+      <div className="container-fluid text-light" id="main_div">
+        <div className="row ">
+        {blogs}
+        </div>
+      </div>
+   
+
+      {/* {blogs.map(blog => (
+        <p>{blogs}</p>
+      ))} */}
+       <Footer htmlContent=' '/>
     </div>
   );
 };
