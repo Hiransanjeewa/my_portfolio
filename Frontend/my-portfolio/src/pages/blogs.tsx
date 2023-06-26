@@ -1,73 +1,146 @@
-import React, { useState } from 'react'
-import {useEffect} from 'react'
-import Blog from "../components/blog"
-import "./blogs.scss"
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import Blog from '../components/blog';
+import './blogs.scss';
 import Footer from '../components/footer';
 import Header from '../components/header';
-import axios from 'axios';
-import { response } from 'express';
 
 interface Props {
-  htmlContent: string;
-}
-let blogList:React.JSX.Element[]=[ 
-  
-];
-
-
-
- function getArticles(category:String) {
-
-
-
-  axios.get('http://localhost:8080/getArticles?category=cloud computing').then(response => {
-    console.log(response.data) ;
-    blogList.push( <Blog blogData={response.data[0]}/>)
-
-    for (let index = 0; index < response.data.length; index++) {
-      blogList.push( <Blog blogData={response.data[index]}/>)
-      
-    }
-    // response.data.forEach((blog : String[],index)=>{
-    //   blogList.push( <Blog blogData={blog}/>)
-    //   })
-  })
-  return blogList
-   
+  // Define your props types here, if applicable
 }
 
-function Blogs(){
-
-  const [isLoading, setLoading] = useState(true)
-  const [blogList, setBlogList] = useState();
-
-  let blogs:React.JSX.Element[]=[ ];
-
+const Blogs: React.FC<Props> = () => {
+  const [blogs, setBlogs] = useState<any[]>([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8080/getArticles?category=cloud computing').then(response => {
+    axios
+      .get('http://localhost:8080/getArticles?category=cloud computing')
+      .then(response => {
+        console.log(response.data);
+        let blogSet:React.ReactComponentElement<typeof Blog, any>[] = [];
+        for (let index = 0; index < response.data.length; index++) {
+          console.log(response.data[index]);
+          const blogData = response.data[index];
+          const blogElement = <Blog blogData={blogData} />;
+          blogSet.push(blogElement);
+        }
+        
+        setBlogs(blogSet);
+      })
+      .catch(error => {
+        console.error('Error fetching blogs:', error);
+      });
+  }, []);
 
-    for (let index = 0; index < response.data.length; index++) {
-      blogs.push( <Blog blogData={response.data[index]}/>)
 
-    }
-      setLoading(false);
-     
-    });
-  });
+  return (
+    <div>
+      {/* <Blog blogData={arr} /> */}
+      {blogs.map(blog => (
+        <p>{blog}</p>
+      ))}
+    </div>
+  );
+};
 
-  if (isLoading) {
-    return <div className="App">Loading...</div>;
-  }else{
+export default Blogs;
 
-    console.log('bjh')
-    return (
-      <div className="App">
-       
-        {blogs}
-      </div>
-    );
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// interface Props {
+//   htmlContent: string;
+// }
+// let blogList:React.JSX.Element[]=[ 
+  
+// ];
+
+
+//  function getArticles(category:String) {
+
+
+//   axios.get('http://localhost:8080/getArticles?category=cloud computing').then(response => {
+//     console.log(response.data) ;
+//     blogList.push( <Blog blogData={response.data[0]}/>)
+
+//     for (let index = 0; index < response.data.length; index++) {
+//       blogList.push( <Blog blogData={response.data[index]}/>)
+      
+//     }
+//     // response.data.forEach((blog : String[],index)=>{
+//     //   blogList.push( <Blog blogData={blog}/>)
+//     //   })
+//   })
+//   return blogList
+   
+// }
+
+// //const Blogs: React.FC<Props> = (props: Props) => {
+
+
+
+// // class Blogs extends React.Component {
+// //    url = 'http://localhost:8080/getArticles?category=cloud computing'
+// //   render() {
+// //     return <h2>Hi, I am a Car!</h2>;
+// //   }
+// // }
+  
+// export default function Blogs(){
+  
+  
+//   axios.get('http://localhost:8080/getArticles?category=cloud computing').then(response => {
+//       const Data = response.data
+//       console.log(Data)
+//   })
+  
+
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -103,5 +176,5 @@ function Blogs(){
 //   );
 // };
 //console.log(typeof(Blogs))
-    }
-export default Blogs
+     
+// export default Blogs
