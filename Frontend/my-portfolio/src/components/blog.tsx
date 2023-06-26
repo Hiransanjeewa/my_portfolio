@@ -21,24 +21,31 @@ interface Props {
 const style = {
   main_div : {
     backgroundColor : "white",
+  },
+  title : {
+    fontSize:24,
   }
+
 }
 
 const HtmlRenderer: React.FC<Props> = ({ blogData }) => {
 
   
-  console.log(blogData.image_url); // Accessing and printing the _id property of each object in the blogData array
-    
+  console.log(blogData.content); // Accessing and printing the _id property of each object in the blogData array
+    const str:String = blogData.content.substring(0,500);
   //const image_url=blogData.url
   return (
     <div>
-      <div id="main_div" style={style.main_div}>
+      {/* <a id='article_link' href={`${blogData.url}`}> */}
+
+     
+      <div id="main_div"  style={style.main_div}>
         <div className="container  mw-100" id="second_main_div" >
           <div className="row ">
             <div className="col col-lg-12">
               <p id="main_caption" >
                 <strong>
-                <span id="content_caption" >{blogData.title}</span>
+                <span id="content_caption" style={style.title}>{blogData.title}</span>
                 </strong>
               </p>
             </div>
@@ -64,21 +71,8 @@ const HtmlRenderer: React.FC<Props> = ({ blogData }) => {
               <span id="contents" >
                 {/* <span id="content_caption" >An E-Commerce Website Using React + Springboot + MySQL</span> */}
                
-                {typeof(blogData)}
-                Debbie had taken George for granted for more than fifteen years
-                now. He wasn't sure what exactly had made him choose this time and
-                place to address the issue, but he decided that now was the time.
-                <br />
-                <br /> 
-                <ul>
-                  <li id='li'>Debbie had taken George for granted for more than fifteen years
-                now.dddddddddd44 Debbie had taken George for granted for more than fifteen years
-                now.dddddddddd44 </li>
-                <li id='li'>Debbie had taken George for granted for more than fifteen years
-                now. </li>
-                <li id='li'>Debbie had taken George for granted for more than fifteen years
-                now. </li>
-                </ul>
+                {str}
+                 
   
                
               </span>
@@ -94,7 +88,7 @@ const HtmlRenderer: React.FC<Props> = ({ blogData }) => {
   
 
 
-      
+      {/* </a> */}
     </div>
   );
 };

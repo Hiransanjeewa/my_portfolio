@@ -9,6 +9,13 @@ interface Props {
   // Define your props types here, if applicable
 }
 
+const style = {
+  main_div : {
+    backgroundColor : "white",
+  },
+  
+}
+
 const Blogs: React.FC<Props> = () => {
   const [blogs, setBlogs] = useState<any[]>([]);
 
@@ -39,8 +46,7 @@ const Blogs: React.FC<Props> = () => {
     <div>
       <Header htmlContent=' ' />
 
-
-      <div className="container-fluid text-light" id="main_div">
+      <div className="container-fluid text-light" id="main_div" style={style.main_div}>
         <div className="row ">
         {blogs}
         </div>
