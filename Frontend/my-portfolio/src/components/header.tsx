@@ -40,8 +40,8 @@ const Header: React.FC<Props> = ({ htmlContent }) => {
             Blogs
           </a>
           <ul className="dropdown-menu">
-            <li><a className="dropdown-item" href="/blogs">Cloud Computing</a></li>
-            <li><a className="dropdown-item" href="/blogs">Web development</a></li>
+            <li><a className="dropdown-item" href="/blogs?category=cloud computing">Cloud Computing</a></li>
+            <li><a className="dropdown-item" href="/blogs?category=web development">Web development</a></li>
             <li><hr className="dropdown-divider" ></hr></li>
             <li><a className="dropdown-item" href="/blogs">All blogs</a></li>
           </ul>

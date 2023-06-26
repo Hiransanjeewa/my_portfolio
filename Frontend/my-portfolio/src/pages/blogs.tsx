@@ -17,13 +17,21 @@ const style = {
 }
 
 const Blogs: React.FC<Props> = () => {
+
+  const queryParameters = new URLSearchParams(window.location.search)
+  let category = queryParameters.get("category")
+  console.log(category)
+  if (category===null) {
+    category='any'
+  }
+
   const [blogs, setBlogs] = useState<any[]>([]);
 
   useEffect(() => {
     axios
-      .get('http://localhost:8080/getArticles?category=cloud computing')
+      .get('http://localhost:8080/getArticles?category='+category)
       .then(response => {
-        //console.log(response.data);
+        console.log(response.data);
         let blogSet:React.ReactComponentElement<typeof Blog, any>[] = [];
         for (let index = 0; index < response.data.length; index++) {
          // console.log(response.data[index]);
@@ -39,7 +47,7 @@ const Blogs: React.FC<Props> = () => {
       .catch(error => {
         console.error('Error fetching blogs:', error);
       });
-  }, [blogs]);
+  }, [blogs, category]);
 
 //console.log(blogs)
   return (
@@ -53,9 +61,6 @@ const Blogs: React.FC<Props> = () => {
       </div>
    
 
-      {/* {blogs.map(blog => (
-        <p>{blogs}</p>
-      ))} */}
        <Footer htmlContent=' '/>
     </div>
   );
