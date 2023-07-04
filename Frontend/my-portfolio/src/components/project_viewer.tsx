@@ -3,29 +3,32 @@
 import React from 'react';
 import "./project_viewer.css"
 
-
-
-interface Props {
-  htmlContent: string;
-}
-
-
-interface ProjectData {
+interface Project {
   _id: string;
+  project_no:Number;
   title:String;
   content:String;
-  points:String[]
+  points:String[];
+  device:String;
   // Add other properties here
 }
 
 interface Props {
-  ProjectData: ProjectData;
+  projectData: Project;
 }
 
  
-const Projectviewer: React.FC<Props> = ({ ProjectData,htmlContent }) => {
+const Projectviewer: React.FC<Props> = ({ projectData}) => {
+  // ...
 
+  // ...
+  console.log('*****')
+
+  var htmlContent=projectData.device
   var name=htmlContent;
+  console.log(projectData)
+  console.log(htmlContent)
+
   
   var styles = {
     secondMain:{

@@ -36,6 +36,7 @@ const Blogs: React.FC<Props> = () => {
         for (let index = 0; index < response.data.length; index++) {
          // console.log(response.data[index]);
           const blogData = response.data[index];
+          console.log(blogData);
           const blogElement = <><div className="col col-lg-4" id='projectViewers'><Blog blogData={blogData} /></div></>;
          // console.log(blogElement );
           blogSet.push(blogElement);       

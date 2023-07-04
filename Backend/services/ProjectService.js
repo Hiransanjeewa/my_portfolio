@@ -7,7 +7,7 @@ async function getProjects(project) {
     const ProjectsCount = Object.keys(projectsList).length
     var response=[];
     console.log(project)
-    if (project !== "any") {
+    if ((project !== null)||(project !== 'any')) {
         for (let i = 0; i < ProjectsCount; i++) {
             if (projectsList[i].title===project){
                 // console.log(articlesList[i].category);

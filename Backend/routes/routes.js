@@ -35,7 +35,7 @@ router.get('/getArticles',async (req, res) => {
 })
 router.get('/getProjects',async (req, res) => {
     const response=await  ProjectService.getProjects(req.query.project) ;
-  //  console.log('*********')
+    //console.log(response)
     res.json(response)
 })
 
