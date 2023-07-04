@@ -49,7 +49,7 @@ const Header: React.FC<Props> = ({ htmlContent }) => {
         </li>
         <li className="nav-item" >
           <button className="btn btn-tertiary fs-5" >
-          <a className="nav-link" href="/projects">Projects</a>
+          <a className="nav-link" href="/projects?project=any">Projects</a>
           </button>
         </li>
         <li className="nav-item">
