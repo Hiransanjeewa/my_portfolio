@@ -22,12 +22,12 @@ const Projectviewer: React.FC<Props> = ({ projectData}) => {
   // ...
 
   // ...
-  console.log('*****')
+ // console.log('*****')
 
   var htmlContent=projectData.device
   var name=htmlContent;
   console.log(projectData)
-  console.log(htmlContent)
+ // console.log(htmlContent)
 
   
   var styles = {
@@ -63,6 +63,8 @@ const Projectviewer: React.FC<Props> = ({ projectData}) => {
   
   }
 }
+
+   const project_content:String=projectData.content.substring(0,250);
   return (
     <div>
     
@@ -97,12 +99,14 @@ const Projectviewer: React.FC<Props> = ({ projectData}) => {
         
           <div className="col-lg-12 d-flex  p-3" >
             <p id="contents" style={styles.contents}>
-              <span id="content_caption" style={styles.contentCaption}>An E-Commerce Website Using React + Springboot + MySQL</span>
+              <span id="content_caption" style={styles.contentCaption}>{projectData.title}</span>
               <br />
               <br />
-              Debbie had taken George for granted for more than fifteen years
+              {/* Debbie had taken George for granted for more than fifteen years
               now. He wasn't sure what exactly had made him choose this time and
-              place to address the issue, but he decided that now was the time.
+              place to address the issue, but he decided that now was the time. */}
+
+              {project_content}
               <br />
               <br /> 
               <ul>

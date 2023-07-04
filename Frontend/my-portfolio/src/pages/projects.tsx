@@ -18,10 +18,10 @@ const Projects: React.FC<Props> = () => {
   let project = queryParameters.get("project")
   //console.log(project)
 
-  // if (project===null) {
-  //   project='any'
-  //   console.log(project)
-  // }
+  if (project===null) {
+    project='any'
+    console.log(project)
+  }
 
 // const style={
 //   project_viewers:{
@@ -42,7 +42,7 @@ const Projects: React.FC<Props> = () => {
         //console.log(response.data.length);
         let projectSet:React.ReactComponentElement<typeof Projectviewer, any>[] = [];
         for (let index = 0; index < response.data.length; index++) {
-          console.log(response.data);
+          //console.log(response.data);
           var projectData = response.data[index];
           projectData.device='desktop';
           //console.log(projectData);
@@ -52,7 +52,7 @@ const Projects: React.FC<Props> = () => {
         }
         
         setProjects(projectSet);
-       // console.log(project_Contents)
+        //console.log(project_Contents)
       })  
       .catch(error => {
         console.error('Error fetching Projects:', error);
@@ -66,6 +66,7 @@ const Projects: React.FC<Props> = () => {
   
 <div>
   <Header htmlContent=''/>
+  {project_Contents}
 {/* <Projectviewer htmlContent='desktop'/> */}
 
     {/* <div className="container-fluid text-light" id=" ">

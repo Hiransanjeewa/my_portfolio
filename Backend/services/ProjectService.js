@@ -9,14 +9,14 @@ async function getProjects(project) {
     console.log(project)
     if ((project !== null)&&(project !=="any")) {
         for (let i = 0; i < ProjectsCount; i++) {
-            if (projectsList[i].title===project){
-                // console.log(articlesList[i].category);
+            console.log(projectsList[i].title);
+            if (projectsList[i].title.toUpperCase()===project.toUpperCase()){
                 const count=response.length
                 response[count]=projectsList[i];
             }
         }
         //console.log(response)
-       // console.log(" ********** ")
+        //console.log(" ********** ")
 
         return response;
     }else {
