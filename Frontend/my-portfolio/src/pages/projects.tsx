@@ -16,18 +16,18 @@ interface Props {
 const Projects: React.FC<Props> = () => {
   const queryParameters = new URLSearchParams(window.location.search)
   let project = queryParameters.get("project")
-  console.log(project)
+  //console.log(project)
 
   // if (project===null) {
   //   project='any'
   //   console.log(project)
   // }
 
-const style={
-  project_viewers:{
-    color:"white",
-  }
-}
+// const style={
+//   project_viewers:{
+//     color:"white",
+//   }
+// }
 
 //const [blogs, setBlogs] = useState<any[]>([]);
 //if (project!==null) {
@@ -38,27 +38,26 @@ const style={
     axios
     
       .get('http://localhost:8080/getProjects?project='+project)
-     //.get('localhost:8080/getProjects?project=1')
       .then(response => {
-       // console.log(response.data);
+        //console.log(response.data.length);
         let projectSet:React.ReactComponentElement<typeof Projectviewer, any>[] = [];
         for (let index = 0; index < response.data.length; index++) {
-         // console.log(response.data[index]);
+          console.log(response.data);
           var projectData = response.data[index];
           projectData.device='desktop';
-          console.log(projectData);
+          //console.log(projectData);
           const projectElement = <><div className="col col-lg-4" id='projectViewers'><Projectviewer projectData={projectData} /></div></>;
-        //  console.log(projectElement );
+         // console.log(projectElement );
          projectSet.push(projectElement);       
         }
         
         setProjects(projectSet);
-      //  console.log(blogs)
+       // console.log(project_Contents)
       })  
       .catch(error => {
         console.error('Error fetching Projects:', error);
       });
-  }, [ project]);
+  }, [project, project_Contents]);
 //   }
 
   return (
