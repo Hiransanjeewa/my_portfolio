@@ -66,13 +66,12 @@ const Experience: React.FC<Props> = ({ htmlContent }) => {
                   <br />
                   <br />
                   <span id="temp">
-                  Debbie had taken George for granted for more than fifteen years
-                  now. He wasn't sure what exactly had made him choose this time and
-                  place to address the issue, but he decided that now was the time.
+                  I still didn't have industrial experience in software engineering. But I 
+                  have experience using React as a frontend library, Express and Springboot frameworks as
+                  backend technologies. I have really good experience using MERN stack. 
                   <br />
-                  <br /> He looked straight into her eyes and just as she was about
-                  to speak, turned away and walked out the door. Sarah watched the
-                  whirlpool mesmerized.
+                  <br /> Although i still didd't done any software engineering related job , I have
+                  worked as a trainee in Bank of ceylon. It gives me opportunity to learn how to 
                   <br /> <br />
                   She couldn't take her eyes off the water swirling around and
                   around. She stuck in small twigs and leaves to watch the whirlpool

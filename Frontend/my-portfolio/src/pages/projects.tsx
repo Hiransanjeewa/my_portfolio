@@ -51,7 +51,7 @@ const Projects: React.FC<Props> = () => {
           for (let index = 0; index < response.data.length; index++) {
             //console.log(response.data);
             projectData = response.data[index];
-            projectData.device='desktop';
+            //projectData.device='desktop';
             //console.log(projectData);
             const projectElement = <><div className="col col-lg-4" id='projectViewers'><Projectviewer projectData={projectData} /></div></>;
            // console.log(projectElement );

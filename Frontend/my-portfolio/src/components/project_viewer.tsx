@@ -2,6 +2,7 @@
 
 import React from 'react';
 import "./project_viewer.css"
+import { hover } from '@testing-library/user-event/dist/hover';
 
 interface Project {
   _id: string;
@@ -45,8 +46,10 @@ const Projectviewer: React.FC<Props> = ({ projectData}) => {
      paddingLeft:"20px",
      color:"white",
     },
+   
 }
   if (name==='desktop') {
+    
     styles = {
       secondMain:{
         padding:"10px",
@@ -69,6 +72,8 @@ const Projectviewer: React.FC<Props> = ({ projectData}) => {
 
    const project_content:String=projectData.content.substring(0,250);
    const project_link="/projects?project="+projectData.title
+
+   //document.getElementById('projectlink').innerHTML=' '
   return (
     <div>
     <div id="main_div">
@@ -91,7 +96,8 @@ const Projectviewer: React.FC<Props> = ({ projectData}) => {
       </div>
 
 <div>
-      <div className="container-fluid text-light" id='second_main'>
+      <div className="container-fluid text-light" id='second_main' >
+     
       <a id='projectlink' href={project_link}>
 
       
