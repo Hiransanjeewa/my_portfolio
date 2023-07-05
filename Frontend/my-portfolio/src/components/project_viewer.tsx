@@ -38,6 +38,7 @@ const Projectviewer: React.FC<Props> = ({ projectData}) => {
     contentCaption:{
       fontSize:"40px",
       color:"white",
+      textAllign:"center",
     },
     contents:{
      fontSize:"20px",
@@ -54,6 +55,8 @@ const Projectviewer: React.FC<Props> = ({ projectData}) => {
       contentCaption:{
         fontSize:"40px",
         color:"white",
+        textAllign:"center",
+        
       },
       contents:{
        fontSize:"20px",
@@ -65,9 +68,9 @@ const Projectviewer: React.FC<Props> = ({ projectData}) => {
 }
 
    const project_content:String=projectData.content.substring(0,250);
+   const project_link="/projects?project="+projectData.title
   return (
     <div>
-    
     <div id="main_div">
       
      
@@ -88,7 +91,10 @@ const Projectviewer: React.FC<Props> = ({ projectData}) => {
       </div>
 
 <div>
-      <div className="container-fluid text-light">
+      <div className="container-fluid text-light" id='second_main'>
+      <a id='projectlink' href={project_link}>
+
+      
       <div className="col col-lg-12 p-3" >
            
            <img src={require('../pages/my_profile_image.jpg')}    className="img-fluid "  alt="profile"  id="image"/>
@@ -124,6 +130,7 @@ const Projectviewer: React.FC<Props> = ({ projectData}) => {
           </div>
      
         </div>
+        </a>
       </div>
       </div>
      

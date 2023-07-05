@@ -41,16 +41,23 @@ const Projects: React.FC<Props> = () => {
       .then(response => {
         //console.log(response.data.length);
         let projectSet:React.ReactComponentElement<typeof Projectviewer, any>[] = [];
-        for (let index = 0; index < response.data.length; index++) {
-          //console.log(response.data);
-          var projectData = response.data[index];
-          projectData.device='desktop';
-          //console.log(projectData);
-          const projectElement = <><div className="col col-lg-4" id='projectViewers'><Projectviewer projectData={projectData} /></div></>;
-         // console.log(projectElement );
-         projectSet.push(projectElement);       
-        }
         
+        if (response.data.length===1) {
+          var projectData = response.data[0];
+          projectData.device='desktop';
+          const projectElement = <><div  id='projectViewers'><Projectviewer projectData={projectData} /></div></>;
+          projectSet.push(projectElement);  
+        }else{
+          for (let index = 0; index < response.data.length; index++) {
+            //console.log(response.data);
+            projectData = response.data[index];
+            projectData.device='desktop';
+            //console.log(projectData);
+            const projectElement = <><div className="col col-lg-4" id='projectViewers'><Projectviewer projectData={projectData} /></div></>;
+           // console.log(projectElement );
+           projectSet.push(projectElement);       
+          }
+        }
         setProjects(projectSet);
         //console.log(project_Contents)
       })  
@@ -61,12 +68,15 @@ const Projects: React.FC<Props> = () => {
 //   }
 
   return (
-    <div>
+    <div id='main_div'>
 
   
 <div>
   <Header htmlContent=''/>
+  <div className="row ">
   {project_Contents}
+        </div>
+  
 {/* <Projectviewer htmlContent='desktop'/> */}
 
     {/* <div className="container-fluid text-light" id=" ">
