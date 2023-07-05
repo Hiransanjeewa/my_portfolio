@@ -70,14 +70,15 @@ const Experience: React.FC<Props> = ({ htmlContent }) => {
                   have experience using React as a frontend library, Express and Springboot frameworks as
                   backend technologies. I have really good experience using MERN stack. 
                   <br />
-                  <br /> Although i still didd't done any software engineering related job , I have
-                  worked as a trainee in Bank of ceylon. It gives me opportunity to learn how to 
+                  <br /> Although i still didn't done any software engineering related job , I have
+                  worked as a trainee in Bank of ceylon. It gives me opportunity to learn teamwork, 
+                  collaboration and problem-solving skills. 
                   <br /> <br />
-                  She couldn't take her eyes off the water swirling around and
+                  {/* She couldn't take her eyes off the water swirling around and
                   around. She stuck in small twigs and leaves to watch the whirlpool
                   catch them and then suck them down. It bothered her more than a
                   little bit that this could also be used as a metaphor for her
-                  life. <br />
+                  life. <br /> */}
                   <br />
                   </span>
                   <button type="button" className="btn btn-secondary btn-lg">
