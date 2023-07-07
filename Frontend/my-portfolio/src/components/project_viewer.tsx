@@ -2,7 +2,7 @@
 
 import React from 'react';
 import "./project_viewer.css"
-import { hover } from '@testing-library/user-event/dist/hover';
+
 
 interface Project {
   _id: string;
@@ -27,7 +27,7 @@ const Projectviewer: React.FC<Props> = ({ projectData}) => {
 
   var htmlContent=projectData.device
   var name=htmlContent;
-  console.log(projectData)
+ // console.log(projectData)
  // console.log(htmlContent)
 
   
@@ -73,6 +73,10 @@ const Projectviewer: React.FC<Props> = ({ projectData}) => {
    const project_content:String=projectData.content.substring(0,250);
    const project_link="/projects?project="+projectData.title
 
+  //  const link = <a id='projectlink' href={project_link}>;
+  //  const link_end = </a>
+
+
    //document.getElementById('projectlink').innerHTML=' '
   return (
     <div>
@@ -98,7 +102,8 @@ const Projectviewer: React.FC<Props> = ({ projectData}) => {
 <div>
       <div className="container-fluid text-light" id='second_main' >
      
-      <a id='projectlink' href={project_link}>
+      {/* <a id='projectlink' href={project_link}> */}
+     
 
       
       <div className="col col-lg-12 p-3" >
@@ -136,7 +141,8 @@ const Projectviewer: React.FC<Props> = ({ projectData}) => {
           </div>
      
         </div>
-        </a>
+        {/* </a> */}
+      
       </div>
       </div>
      

@@ -53,7 +53,12 @@ const Projects: React.FC<Props> = () => {
             projectData = response.data[index];
             //projectData.device='desktop';
             //console.log(projectData);
-            const projectElement = <><div className="col col-lg-4" id='projectViewers'><Projectviewer projectData={projectData} /></div></>;
+            const project_link="/projects?project="+projectData.title
+
+            
+           
+
+            const projectElement = <><div className="col col-lg-4" id='projectViewers'><a id='projectlink' href={project_link}><Projectviewer projectData={projectData} /></a></div> </>;
            // console.log(projectElement );
            projectSet.push(projectElement);       
           }
