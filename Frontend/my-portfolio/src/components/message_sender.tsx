@@ -1,10 +1,14 @@
 
 import React, { useState } from "react";
 import "./message_sender.css"
-// import Cookies from 'universal-cookie';
-// const cookies = new Cookies();
-// cookies.set('message_time', 'time', { path: '/' });
-// console.log(cookies.get('myCat')); 
+
+import { useCookies } from 'react-cookie'
+
+ 
+  
+
+     
+
 
 
 interface Props {
@@ -12,6 +16,13 @@ interface Props {
 }
 
 const MessageSender: React.FC<Props> = ({ htmlContent }) => {
+
+  const [cookies, setCookie] = useCookies(['message_day'])
+
+ 
+
+   
+   
 
   //const [cookies, setCookie] = useCookies(['user']);
   const [email,setEmail]=useState(' ');
@@ -37,13 +48,17 @@ const MessageSender: React.FC<Props> = ({ htmlContent }) => {
      }
   
   }
-  
+  //console.log(cookies.message_day)
   function sendEmail() {
    console.log(email)
+   console.log(userName);
+ 
    
    const expression: RegExp = /^(?=.{1,254}$)(?=.{1,64}@)[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~]+(\.[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~]+)*@[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?(\.[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?)*$/;
    const result: boolean = expression.test(email);
-   console.log(userName);
+
+    setEmail((document.getElementById('contact-mail') as HTMLDataElement).value)
+   
    if (userName===' ') {
     
     (document.getElementById('button') as HTMLImageElement).innerHTML = "<p id='error_message'>Please Enter your name</P>"
@@ -54,15 +69,28 @@ const MessageSender: React.FC<Props> = ({ htmlContent }) => {
     
     }else if (!result) {
       (document.getElementById('button') as HTMLImageElement).innerHTML = "<p id='error_message'>Please Enter a valid email address</P>"
-    
     }
     else if (message===' ') {
       (document.getElementById('button') as HTMLImageElement).innerHTML = "<p id='error_message'>Please Enter a message to send</P>"
     
     }
     else{
-      (document.getElementById('button') as HTMLImageElement).innerHTML = "<p id='error_message'>Message Sent</P>"
+      var today = new Date()
+      console.log(typeof( cookies.message_day))
+      console.log(typeof( today.getDate().toString()))
+      if (cookies.message_day===today.getDate().toString()) {
+        (document.getElementById('button') as HTMLImageElement).innerHTML = "<p id='error_message'>Sorry only one message per day</P>"
+       }else{
+        (document.getElementById('button') as HTMLImageElement).innerHTML = "<p id='error_message'>Message Sent</P>"
+        setCookie('message_day', today.getDate(), { path: '/'})
+       }
+       //console.log(cookies.message_day)
+       (document.getElementById('contact-name') as HTMLDataElement).value = "";
+       (document.getElementById('contact-mail') as HTMLDataElement).value ="";
+       (document.getElementById('contact-message') as HTMLDataElement).value = ""
 
+
+       
     }
   }
 
@@ -102,14 +130,14 @@ const MessageSender: React.FC<Props> = ({ htmlContent }) => {
             
             <div className="form-group">
               <label className="control-label" >Email</label>
-              <div className=" controls" onClick={(event)=>RemoveError()}>
-              <input id="contact-mail" name="email" placeholder="Your email" className="form-control requiredField" data-new-placeholder="Your email" type="email" data-error-empty="Please enter your email" data-error-invalid="Invalid email address"  onChange={(e)=>setEmail(e.target.value)} onKeyDown={(event)=>RemoveError()}/>
+              <div className=" controls" >
+              <input id="contact-mail" name="email" placeholder="Your email" className="form-control requiredField" data-new-placeholder="Your email" type="email" data-error-empty="Please enter your email"  onChange={(e)=>setEmail(e.target.value)} onSelect={(event)=>RemoveError()}/>
               </div>
             </div>
             
             <div className="form-group">
               <label className="control-label" >Message</label>
-              <div className="controls" onClick={(event)=>RemoveError()}>
+              <div className="controls" >
                 <textarea id="contact-message" name="comments"  placeholder="Your message" className="form-control requiredField" data-new-placeholder="Your message" data-error-empty="Please enter your message"  onChange={(e)=>setMessage(e.target.value)} onSelect={(event)=>RemoveError()}></textarea>
               </div>
             </div>
