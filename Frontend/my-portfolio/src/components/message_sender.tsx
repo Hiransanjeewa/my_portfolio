@@ -1,7 +1,10 @@
 
 import React, { useState } from "react";
 import "./message_sender.css"
-
+// import Cookies from 'universal-cookie';
+// const cookies = new Cookies();
+// cookies.set('message_time', 'time', { path: '/' });
+// console.log(cookies.get('myCat')); 
 
 
 interface Props {
