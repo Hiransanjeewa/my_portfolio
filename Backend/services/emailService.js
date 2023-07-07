@@ -66,7 +66,7 @@ async function sendEmail(requestBody) {
                     html: 'Hey there! you have new email from ' +email.name +'</br> email : '+email.email
                     +' <br> message : '+email.message,
                 };
-                console.log(mailData)
+                //console.log(mailData)
 
 
                 transporter.sendMail(mailData).then((info) => {

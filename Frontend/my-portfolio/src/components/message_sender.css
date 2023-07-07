@@ -325,3 +325,7 @@ background-image:url('../images/bg-contact.png');
 #message-send-button{
     background-color:indianred
 }
+#error_message{
+    color:green;
+    font-size: larger;
+}
