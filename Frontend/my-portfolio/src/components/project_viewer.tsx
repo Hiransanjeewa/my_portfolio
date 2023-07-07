@@ -90,7 +90,7 @@ const Projectviewer: React.FC<Props> = ({ projectData}) => {
   }
 }
 
-   const project_content:String=projectData.content.substring(0,250);
+   const project_content:String=projectData.content.substring(0,275);
    const project_link="/projects?project="+projectData.title
 
   //  const link = <a id='projectlink' href={project_link}>;
