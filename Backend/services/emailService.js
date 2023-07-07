@@ -24,20 +24,6 @@ async function validateEmail(email){
     return 'email_accepted';
 }
 
-// function validateEmail(email){
-//     try {
-//         var emailResponce ;
-//         (async () => {
-//             emailResponce = await emailSender(email)
-//         })().then(r => {
-//
-//         })
-//         return emailResponce;
-//     }catch (e) {
-//         return 'Error ' + e
-//     }
-//
-// }
 
 async function sendEmail(requestBody) {
     const time = Date.now()

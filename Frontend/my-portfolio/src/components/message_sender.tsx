@@ -1,8 +1,9 @@
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./message_sender.css"
 
 import { useCookies } from 'react-cookie'
+import axios from "axios";
 
  
   
@@ -23,13 +24,13 @@ const MessageSender: React.FC<Props> = ({ htmlContent }) => {
   class Email {
     email:string;
     message:string;
-    user:string;
+    name:string;
     date:number;
 
     constructor(email: string,message:string,username:string,date:number) {
       this.email = email;
       this.message=message;
-      this.user=username;
+      this.name=username;
       this.date=date;
     }
   }
@@ -96,6 +97,17 @@ const MessageSender: React.FC<Props> = ({ htmlContent }) => {
 
         let emailObject=new Email(email,message,userName,today.getDate());
         console.log(emailObject);
+
+          axios
+            .post('http://localhost:8080/sendEmail',{
+              "email" : email,
+              "name" : userName,
+              "message" : message
+            })
+            .then(response => {
+              console.log(response.data)
+            });
+         
 
         
 
