@@ -1,6 +1,8 @@
 const express = require('express')
 const Email = require("../models/Emails");
 
+const nodemailer = require('nodemailer');
+
 
 
 async function validateEmail(email){
@@ -45,6 +47,43 @@ async function sendEmail(requestBody) {
 
             if (emailValidation === 'email_accepted') {
                 const Emails = await email.save()
+
+                const transporter = nodemailer.createTransport({
+                    port: 465,               // true for 465, false for other ports
+                    host: "smtp.gmail.com",
+                    auth: {
+                        user: 'portfoliohiransanjeewa@gmail.com',
+                        pass: 'qclipffqmfktmqwm',
+                    },
+                    secure: true,
+                });
+
+                const mailData = {
+                    from: 'portfoliohiransanjeewa@gmail.com',  // sender address
+                    to: 'hiransanjeewaa@gmail.com',   // list of receivers
+                    subject: "Email from "+email.name+" email: "+ email.email,
+                    text: email.message,
+                    html: 'Hey there! you have new email from ' +email.name +'</br> email : '+email.email
+                    +' <br> message : '+email.message,
+                };
+                console.log(mailData)
+
+
+                transporter.sendMail(mailData).then((info) => {
+                    // return res.status(201).json(
+                    //     {
+                    //         msg: "Email sent",
+                    //         info: info.messageId,
+                    //         preview: nodemailer.getTestMessageUrl(info)
+                    //     }
+                    // )
+                    console.log("mail sent")
+                }).catch((err) => {
+                         console.log(err)
+                   // console.log("mail not sent")
+                    }
+                );
+
 
                 return  emailValidation;
             } else if (emailValidation === 'email_declined') {
