@@ -20,7 +20,19 @@ const MessageSender: React.FC<Props> = ({ htmlContent }) => {
   const [cookies, setCookie] = useCookies(['message_day'])
 
  
+  class Email {
+    email:string;
+    message:string;
+    user:string;
+    date:number;
 
+    constructor(email: string,message:string,username:string,date:number) {
+      this.email = email;
+      this.message=message;
+      this.user=username;
+      this.date=date;
+    }
+  }
    
    
 
@@ -81,6 +93,12 @@ const MessageSender: React.FC<Props> = ({ htmlContent }) => {
       if (cookies.message_day===today.getDate().toString()) {
         (document.getElementById('button') as HTMLImageElement).innerHTML = "<p id='error_message'>Sorry only one message per day</P>"
        }else{
+
+        let emailObject=new Email(email,message,userName,today.getDate());
+        console.log(emailObject);
+
+        
+
         (document.getElementById('button') as HTMLImageElement).innerHTML = "<p id='error_message'>Message Sent</P>"
         setCookie('message_day', today.getDate(), { path: '/'})
        }
@@ -90,7 +108,6 @@ const MessageSender: React.FC<Props> = ({ htmlContent }) => {
        (document.getElementById('contact-message') as HTMLDataElement).value = ""
 
 
-       
     }
   }
 
