@@ -1,6 +1,6 @@
 
+import React, { useState } from 'react';
 
-import React from 'react';
 import "./project_viewer.css"
 
 
@@ -30,8 +30,23 @@ const Projectviewer: React.FC<Props> = ({ projectData}) => {
  // console.log(projectData)
  // console.log(htmlContent)
 
-  
+ const [isHover, setIsHover] = useState(false);
+
+   const handleMouseEnter = () => {
+      setIsHover(true);
+   };
+   const handleMouseLeave = () => {
+      setIsHover(false);
+   };
+ 
+
+
+
+
   var styles = {
+    second_main:{
+      backgroundColor: isHover ? 'rgb(42, 37, 37)' : 'black'
+    },
     secondMain:{
       padding:"10px",
       color:"white",
@@ -49,8 +64,13 @@ const Projectviewer: React.FC<Props> = ({ projectData}) => {
    
 }
   if (name==='desktop') {
+
     
     styles = {
+      second_main:{
+        backgroundColor: isHover ? 'black' : 'black'
+      },
+
       secondMain:{
         padding:"10px",
         color:"white",
@@ -100,7 +120,7 @@ const Projectviewer: React.FC<Props> = ({ projectData}) => {
       </div>
 
 <div>
-      <div className="container-fluid text-light" id='second_main' >
+      <div className="container-fluid text-light" id='second_main' style={styles.second_main} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
      
       {/* <a id='projectlink' href={project_link}> */}
      
