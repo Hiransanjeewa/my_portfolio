@@ -91,7 +91,7 @@ const Projectviewer: React.FC<Props> = ({ projectData}) => {
 }
 
    const project_content:String=projectData.content.substring(0,275);
-   const project_link="/projects?project="+projectData.title
+   //const project_link="/projects?project="+projectData.title
 
   //  const link = <a id='projectlink' href={project_link}>;
   //  const link_end = </a>
@@ -128,7 +128,7 @@ const Projectviewer: React.FC<Props> = ({ projectData}) => {
       
       <div className="col col-lg-12 p-3" >
            
-           <img src={require('../pages/my_profile_image.jpg')}    className="img-fluid "  alt="profile"  id="image"/>
+           <img src={require('../project_images/'+projectData.title+'.jpg')}    className="img-fluid "  alt="profile"  id="image"/>
 
           </div>
           
