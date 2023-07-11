@@ -44,6 +44,7 @@ const Projectviewer: React.FC<Props> = ({ projectData}) => {
 
 
   var styles = {
+
     second_main:{
       backgroundColor: isHover ? 'rgb(42, 37, 37)' : 'black'
     },
@@ -63,9 +64,25 @@ const Projectviewer: React.FC<Props> = ({ projectData}) => {
     },
    
 }
+let project_content:String=GetContent(name);
+
+
+
+function GetContent(name:String) {
+  let project_contentt:String;
+
+  if (name==='desktop') {
+    project_contentt=projectData.content;
+  }else{
+    const project_content:String=projectData.content.substring(0,275);
+    project_contentt=project_content
+  }
+  return project_contentt;
+}
+
+
   if (name==='desktop') {
 
-    
     styles = {
       second_main:{
         backgroundColor: isHover ? 'black' : 'black'
@@ -90,7 +107,7 @@ const Projectviewer: React.FC<Props> = ({ projectData}) => {
   }
 }
 
-   const project_content:String=projectData.content.substring(0,275);
+
    //const project_link="/projects?project="+projectData.title
 
   //  const link = <a id='projectlink' href={project_link}>;
