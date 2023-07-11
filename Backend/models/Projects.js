@@ -14,9 +14,10 @@ const projectScheama =new mongoose.Schema({
         type:String,
         required:true
     },
-    points:[{
-        type: String
-    }]
+    points:{
+        type:[String],
+        required: true
+    }
 
 
 })

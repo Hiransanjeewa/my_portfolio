@@ -67,7 +67,6 @@ const Projectviewer: React.FC<Props> = ({ projectData}) => {
 let project_content:String=GetContent(name);
 
 
-
 function GetContent(name:String) {
   let project_contentt:String;
 
