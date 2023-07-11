@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 
 import "./project_viewer.css"
 
@@ -24,6 +24,7 @@ const Projectviewer: React.FC<Props> = ({ projectData}) => {
 
   // ...
  // console.log('*****')
+ console.log(projectData.points)
 
   var htmlContent=projectData.device
   var name=htmlContent;
@@ -39,6 +40,69 @@ const Projectviewer: React.FC<Props> = ({ projectData}) => {
       setIsHover(false);
    };
  
+
+
+
+
+
+   const [project_points, setProjectPoints] = useState<any[]>([]);
+  
+         //console.log(response.data.length);
+         let projectPointSet:React.ReactComponentElement<typeof Projectviewer, any>[] = [];
+         
+
+         function getPoints() {
+          
+         if (projectData.points.length>1) {
+           for (let index = 0; index < projectData.points.length; index++) {
+             
+             var projectPoints =  setPointLengths(name, projectData.points[index])  ;
+             const projectElement = <><li id='li'> {projectPoints}</li> </>
+            projectPointSet.push(projectElement);       
+           }
+          }
+          return projectPointSet
+        }
+
+        useEffect(() => {
+          setProjectPoints(getPoints());
+        
+        }, []);
+
+
+function setPointLengths(name:String,point:String) {
+  let projectPoints:String;
+
+  if (name==='desktop') {
+    projectPoints=point;
+  }else{
+    const project_content:String=point.substring(0,100);
+    projectPoints=project_content+"..."
+  }
+  return projectPoints;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -73,7 +137,7 @@ function GetContent(name:String) {
   if (name==='desktop') {
     project_contentt=projectData.content;
   }else{
-    const project_content:String=projectData.content.substring(0,275);
+    const project_content:String=projectData.content.substring(0,250);
     project_contentt=project_content+"..."
   }
   return project_contentt;
@@ -163,13 +227,15 @@ function GetContent(name:String) {
               <br />
               <br /> 
               <ul>
-                <li id='li'>Debbie had taken George for granted for more than fifteen years
+
+              {project_points}
+                {/* <li id='li'>Debbie had taken George for granted for more than fifteen years
               now.dddddddddd44 Debbie had taken George for granted for more than fifteen years
               now.dddddddddd44 </li>
               <li id='li'>Debbie had taken George for granted for more than fifteen years
               now. </li>
               <li id='li'>Debbie had taken George for granted for more than fifteen years
-              now. </li>
+              now. </li> */}
               </ul>
 
              
