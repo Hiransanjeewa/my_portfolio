@@ -81,9 +81,9 @@ const Experience: React.FC<Props> = ({ htmlContent }) => {
                   life. <br /> */}
                   <br />
                   </span>
-                  <button type="button" className="btn btn-secondary btn-lg">
+                  {/* <button type="button" className="btn btn-secondary btn-lg">
                     Download CV
-                  </button>
+                  </button> */}
                 </p>
               </div>
               <div className="container-fluid text-light">

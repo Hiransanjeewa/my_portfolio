@@ -107,6 +107,7 @@ function setPointLengths(name:String,point:String) {
 
 
 
+
   var styles = {
 
     second_main:{
