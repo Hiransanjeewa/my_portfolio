@@ -39,6 +39,8 @@ const Footer: React.FC<Props> = ({ htmlContent }) => {
                         <ul>
                             <li><a href="projects?project=Book-Mart">Book Mart (Web-Application)</a></li>
                             <li><a href="projects?project=Kids-Paradise">Kids Paradise </a></li>
+                            <li><a href="projects?project=portfolio">My portfolio </a></li>
+
                         </ul>
                     </div>
                     <div className="col-md-3 item text">

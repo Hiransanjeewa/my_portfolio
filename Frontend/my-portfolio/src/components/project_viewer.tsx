@@ -46,7 +46,7 @@ const Projectviewer: React.FC<Props> = ({ projectData}) => {
   var styles = {
 
     second_main:{
-      backgroundColor: isHover ? 'rgb(42, 37, 37)' : 'black'
+      backgroundColor: isHover ? ' rgb(42, 60, 37)' : 'rgb(42, 37, 37) '
     },
     secondMain:{
       padding:"10px",
@@ -75,7 +75,7 @@ function GetContent(name:String) {
     project_contentt=projectData.content;
   }else{
     const project_content:String=projectData.content.substring(0,275);
-    project_contentt=project_content
+    project_contentt=project_content+"..."
   }
   return project_contentt;
 }
