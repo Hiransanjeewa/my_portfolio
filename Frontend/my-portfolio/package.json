@@ -46,14 +46,9 @@
     ]
   },
   "devDependencies": {
-    "fork-ts-checker-webpack-plugin": "^6.5.3",
-   
-    "typescript": "^3.0.2"
-    
-  },
-  "overrides": {
-    "react-scripts": {
-      "typescript": "$typescript"
-    }
+    "@babel/runtime": "7.13.8",
+    "typescript": "3.2.1"
   }
+  
+  
 }
