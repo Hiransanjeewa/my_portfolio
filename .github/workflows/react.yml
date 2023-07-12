@@ -20,9 +20,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-              - name: Change directory to my_portfolio
-        # run: cd Frontend/Frontend/my_portfolio
-      - run:|
+      - run: |
          cd Frontend/my-portfolio
          npm ci
       - run: npm run build
+
+      # - name: Change directory to my_portfolio
+        # run: cd Frontend/Frontend/my_portfolio
