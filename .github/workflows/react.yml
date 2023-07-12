@@ -27,7 +27,7 @@ jobs:
           cache-dependency-path: './Frontend/my-portfolio/package-lock.json'
      
       - name: Install dependencies
-        run: npm ci
+        run: npm install --legacy-peer-deps
         # working-directory: ./subdirectory
 
       - name: Install dependencies
