@@ -20,9 +20,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-      - run: |
-         cd Frontend/my-portfolio
-         npm ci
+          cache-dependency-path: './Frontend/my-portfolio/package-lock.json'
+      - run: npm ci
+         
+         
       - run: npm run build
 
       # - name: Change directory to my_portfolio
