@@ -21,7 +21,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
        - name: Build and test backend
-        
+        working-directory: ./frontend/my-porttfolio
         run: |
           cd Frontend
           npm ci
