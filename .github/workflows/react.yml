@@ -20,5 +20,5 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-      - run: cd frontend/my-portfolio && npm ci
-      - run: cd frontend/my-portfolio && npm run build
+      - run: cd Frontend/my-portfolio && npm ci
+      - run: cd Frontend/my-portfolio && npm run build
