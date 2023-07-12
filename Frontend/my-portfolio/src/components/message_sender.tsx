@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import "./message_sender.css"
 
 import { useCookies } from 'react-cookie'

@@ -67,6 +67,7 @@ const Projectviewer: React.FC<Props> = ({ projectData}) => {
         useEffect(() => {
           setProjectPoints(getPoints());
         
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         }, []);
 
 
