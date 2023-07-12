@@ -11,6 +11,7 @@ interface Props {
   htmlContent: string;
 }
 
+
 const AboutMe: React.FC<Props> = ({ htmlContent }) => {
 
 const style ={
