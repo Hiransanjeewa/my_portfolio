@@ -20,11 +20,14 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-          cache-dependency-path: './Frontend/my-portfolio/package.json'
-      - run: npm ci
+       - name: Build and test backend
+        working-directory: Frontend/my-portfolio
+        run: |
+          npm ci
+          npm run build
          
          
-      - run: npm run build
+       
 
       # - name: Change directory to my_portfolio
         # run: cd Frontend/Frontend/my_portfolio
