@@ -5,6 +5,7 @@ import './blogs.scss';
 import Footer from '../components/footer';
 import Header from '../components/header';
 
+
 interface Props {
   // Define your props types here, if applicable
 }
