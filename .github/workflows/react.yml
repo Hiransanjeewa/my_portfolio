@@ -19,6 +19,11 @@ jobs:
         DOCKER_PASSWORD: ${{secrets.DOCKERHUB_PASSWORD}}
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD 
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag hiransanjeewa/portfolio_frontend:latest
+        
+    - name: Docker Push
+      run: docker push hiransanjeewa/portfolio_frontend
           
          
          
