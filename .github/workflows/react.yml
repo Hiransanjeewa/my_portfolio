@@ -19,20 +19,20 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t my-app .
-        
+
 
       - name: Push Docker image to EC2 server
         run: |
-          docker save my-app:latest | ssh -i ${{ secrets.SSH_PRIVATE_KEY }} ubuntu@ec2-52-87-244-20.compute-1.amazonaws.com 'docker load'
+          docker save my-app:latest | ssh -T -i ${{ secrets.SSH_PRIVATE_KEY }} ubuntu@ec2-52-87-244-20.compute-1.amazonaws.com 'docker load'
 
       - name: Stop previous container on EC2 server
-        run: ssh -i ${{ secrets.SSH_PRIVATE_KEY }} ubuntu@ec2-52-87-244-20.compute-1.amazonaws.com 'docker stop my-app-container || true'
+        run: ssh -T -i ${{ secrets.SSH_PRIVATE_KEY }} ubuntu@ec2-52-87-244-20.compute-1.amazonaws.com 'docker stop my-app-container || true'
 
       - name: Remove previous container on EC2 server
-        run: ssh -i ${{ secrets.SSH_PRIVATE_KEY }} ubuntu@ec2-52-87-244-20.compute-1.amazonaws.com 'docker rm my-app-container || true'
+        run: ssh -T -i ${{ secrets.SSH_PRIVATE_KEY }} ubuntu@ec2-52-87-244-20.compute-1.amazonaws.com 'docker rm my-app-container || true'
 
       - name: Run Docker container on EC2 server
-        run: ssh -i ${{ secrets.SSH_PRIVATE_KEY }} ubuntu@ec2-52-87-244-20.compute-1.amazonaws.com 'docker run -d -p 80:80 --name my-app-container my-app:latest'
+        run: ssh -T -i ${{ secrets.SSH_PRIVATE_KEY }} ubuntu@ec2-52-87-244-20.compute-1.amazonaws.com 'docker run -d -p 80:80 --name my-app-container my-app:latest'
 
       
  
