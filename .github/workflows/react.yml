@@ -1,38 +1,38 @@
-name: React CI/CD
+name: Build and Deploy
 
 on:
   push:
     branches:
       - main
+ 
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: ./Frontend/my-portfolio
 
-    strategy:
-      matrix:
-        node-version: [18.x]
-    
-
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-          cache-dependency-path: './Frontend/my-portfolio/package-lock.json'
-     
-      - name: Install dependencies
-        run: npm install --legacy-peer-deps
-        # working-directory: ./subdirectory
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-      - name: building the app
-        run: npm run build
-        # working-directory: ./subdirectory
+      - name: Build Docker image
+        run: docker build -t my-app .
+
+      - name: Push Docker image to EC2 server
+        run: |
+          docker save my-app:latest | ssh -i "id_rsa" ubuntu@ec2-52-90-220-217.compute-1.amazonaws.com 'docker load'
+
+      - name: Stop previous container on EC2 server
+        run: ssh -i "id_rsa" ubuntu@ec2-52-90-220-217.compute-1.amazonaws.com 'docker stop my-app-container || true'
+
+      - name: Remove previous container on EC2 server
+        run: ssh -i "id_rsa" ubuntu@ec2-52-90-220-217.compute-1.amazonaws.com 'docker rm my-app-container || true'
+
+      - name: Run Docker container on EC2 server
+        run: ssh -i "id_rsa" ubuntu@ec2-52-90-220-217.compute-1.amazonaws.com 'docker run -d -p 80:80 --name my-app-container my-app:latest'
+
       
  
          
