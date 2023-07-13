@@ -50,9 +50,6 @@
     ]
   },
   "devDependencies": {
-    "babel": "^7.14.6",
-    "webpack": "^5.40.0",
-    "@babel/plugin-proposal-private-property-in-object": "^7.14.6"
-   
+
   }
 }
