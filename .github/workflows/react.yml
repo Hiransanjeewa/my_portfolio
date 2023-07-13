@@ -19,6 +19,7 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t my-app .
+        
 
       - name: Push Docker image to EC2 server
         run: |
