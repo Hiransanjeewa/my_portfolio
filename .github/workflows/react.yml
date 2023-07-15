@@ -23,13 +23,13 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker-compose -f docker-compose.yml build --no-cache --force-rm 
+      run: docker-compose -f docker-compose.yml -f Backend/docker-compose.yml build build --no-cache --force-rm 
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Test the Docker image
-        run: docker-compose -f docker-compose.yml up -d 
+        run: docker-compose -f docker-compose.yml -f Backend/docker-compose.yml build up -d 
   push_to_registry:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
