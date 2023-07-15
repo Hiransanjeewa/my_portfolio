@@ -23,7 +23,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker-compose -f docker-compose.yml -f Backend/docker-compose.yml build build --no-cache --force-rm 
+      run: docker-compose -f docker-compose.yml -f Backend/docker-compose.yml  build --no-cache --force-rm 
   test:
     runs-on: ubuntu-latest
     steps:
