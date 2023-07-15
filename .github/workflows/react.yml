@@ -70,16 +70,19 @@ jobs:
          
         
          # Start the containers
-         sudo docker pull mongo:latest
-         sudo docker run -d -p 27017:27017 –name = mongo-example mongo:latest
-         sudo fuser -k 3000/tcp
+        
+         
+         sudo docker rm my-client-container
+         sudo docker rm my-server-container
+
+         
 
 
 
 
-         sudo docker run -d  -p 3000:3000 hiransanjeewa/portfolio_client:latest
+         sudo docker run -d -p 3000:3000 --name=my-client-container hiransanjeewa/portfolio_client:latest
 
-         sudo docker run -d  -p 8080:8080 hiransanjeewa/portfolio_server:latest
+         sudo docker run -d -p 8080:8080 --name=my-server-container hiransanjeewa/portfolio_server:latest
 
         
         
