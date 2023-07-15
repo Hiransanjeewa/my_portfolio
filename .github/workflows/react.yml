@@ -11,6 +11,10 @@ env:
   REGISTRY: docker.io
   # github.repository as <account>/<repo>
   IMAGE_NAME: hiransanjeewa/portfolio
+  EC2_INSTANCE_IP: 3.83.134.214
+  SSH_USERNAME: ubuntu
+  SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+
 
 jobs:
 
@@ -47,9 +51,18 @@ jobs:
       run : |
        docker-compose build --no-cache --force-rm --build-arg IMAGE_TAG=hiransanjeewa/portfolio:latest
        docker-compose push
+       ls
 
-    # - name: Build the Docker image
-    #   run: docker build . --file Dockerfile 
+    - name: Deploy to EC2 instance
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ env.EC2_INSTANCE_IP }}
+        username: ${{ env.SSH_USERNAME }}
+        key: ${{ env.SSH_PRIVATE_KEY }}
+        script: |
+           cd /path/to/your/docker-compose/files
+           docker-compose pull
+           docker-compose up -d
           
     
 
