@@ -40,7 +40,7 @@ jobs:
 
     - name: Deploy to EC2 instance
       run: |
-          ssh -o StrictHostKeyChecking=no -i ${{ secrets.EC2_SSH_PRIVATE_KEY }} ec2-user@$AWS_EC2_INSTANCE_IP "docker pull $DOCKERHUB_USERNAME/$DOCKER_IMAGE_NAME:latest && docker stop portfolio || true && docker rm portfolio || true && docker run -d --name portfolio -p 80:80 $DOCKERHUB_USERNAME/$DOCKER_IMAGE_NAME:latest"
+          ssh -o StrictHostKeyChecking=no -i ${{ secrets.EC2_SSH_PRIVATE_KEY }} ubuntu@ec$AWS_EC2_INSTANCE_IP "docker pull $DOCKERHUB_USERNAME/$DOCKER_IMAGE_NAME:latest && docker stop portfolio || true && docker rm portfolio || true && docker run -d --name portfolio -p 80:80 $DOCKERHUB_USERNAME/$DOCKER_IMAGE_NAME:latest"
           
          
          
