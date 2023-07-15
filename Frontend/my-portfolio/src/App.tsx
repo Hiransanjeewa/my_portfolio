@@ -53,7 +53,7 @@ const App: React.FC = () => {
   return (
     
     <div>
-      <BrowserRouter basename="http://ec2-54-164-51-13.compute-1.amazonaws.com">
+      <BrowserRouter >
       <Routes>
         
         <Route path="/" element={<Home htmlContent={ htmlContent }/>}/>
