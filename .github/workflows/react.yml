@@ -60,7 +60,7 @@ jobs:
         username: ${{ env.SSH_USERNAME }}
         key: ${{ env.SSH_PRIVATE_KEY }}
         script: |
-           cd /path/to/your/docker-compose/files
+           ls
            docker-compose pull
            docker-compose up -d
           
