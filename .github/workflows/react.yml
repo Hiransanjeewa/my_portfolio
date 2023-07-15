@@ -81,8 +81,8 @@ jobs:
          sudo docker run -d -p 80:3000 --name=my-client-container hiransanjeewa/portfolio_client:latest
 
          sudo docker run -d -p 8080:8080 --name=my-server-container hiransanjeewa/portfolio_server:latest
-         sudo  docker image prune
-         docker container prune
+          docker image prune
+          docker container prune
         
         
           
