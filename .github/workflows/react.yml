@@ -64,14 +64,14 @@ jobs:
          sudo apt install -y docker.io
         
          # Pull the Docker Hub images
-         docker pull hiransanjeewa/portfolio_client:latest
-         docker pull hiransanjeewa/portfolio_server:latest
+         sudo docker pull hiransanjeewa/portfolio_client:latest
+         sudo docker pull hiransanjeewa/portfolio_server:latest
          # Add more pull commands as needed
         
          # Start the containers
-         docker run -d docker run -p 3000:80 hiransanjeewa/portfolio_client
+         sudo docker run -d docker run -p 3000:80 hiransanjeewa/portfolio_client
 
-         docker run -d docker run -p 8080:8080 hiransanjeewa/portfolio_server
+         sudo docker run -d docker run -p 8080:8080 hiransanjeewa/portfolio_server
 
         
         
