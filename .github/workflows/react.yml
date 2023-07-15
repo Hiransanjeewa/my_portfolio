@@ -44,14 +44,14 @@ jobs:
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
     - name: Build the Docker image
-      run : docker-compose build --no-cache --force-rm --build-arg IMAGE_TAG=hiransanjeewa/portfolio
-
+      run : |
+       docker-compose build --no-cache --force-rm --build-arg IMAGE_TAG=hiransanjeewa/portfolio
+       docker-compose push
 
     # - name: Build the Docker image
     #   run: docker build . --file Dockerfile 
           
-    - name: Docker Push
-      run: docker push hiransanjeewa/portfolio
+    
 
    
          
