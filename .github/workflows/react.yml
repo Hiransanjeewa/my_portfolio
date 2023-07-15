@@ -67,11 +67,12 @@ jobs:
          sudo docker pull hiransanjeewa/portfolio_client:latest
          sudo docker pull hiransanjeewa/portfolio_server:latest
          # Add more pull commands as needed
+         sudo docker kill $(docker ps -q)
         
          # Start the containers
-         sudo docker run -d docker run -p 3000:3000 hiransanjeewa/portfolio_client
+         sudo docker run -d  -p 3000:3000 hiransanjeewa/portfolio_client
 
-         sudo docker run -d docker run -p 8080:8080 hiransanjeewa/portfolio_server
+         sudo docker run -d  -p 8080:8080 hiransanjeewa/portfolio_server
 
         
         
