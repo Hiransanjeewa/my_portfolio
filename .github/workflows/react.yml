@@ -44,7 +44,8 @@ jobs:
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
     - name: Build the Docker image
-      run: docker-compose build --tag hiransanjeewa/portfolio:latest
+      run : docker-compose build --no-cache --force-rm --build-arg IMAGE_TAG=hiransanjeewa/portfolio
+
 
     # - name: Build the Docker image
     #   run: docker build . --file Dockerfile 
