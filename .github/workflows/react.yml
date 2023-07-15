@@ -71,7 +71,8 @@ jobs:
         
          # Start the containers
         
-         
+         sudo docker stop my-client-container
+         sudo docker stop my-server-container
          sudo docker rm my-client-container
          sudo docker rm my-server-container
 
