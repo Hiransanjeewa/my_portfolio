@@ -60,9 +60,21 @@ jobs:
         username: ${{ env.SSH_USERNAME }}
         key: ${{ env.SSH_PRIVATE_KEY }}
         script: |
-           ls
-           docker-compose pull
-           docker-compose up -d
+         sudo apt update
+         sudo apt install -y docker.io
+        
+         # Pull the Docker Hub images
+         docker pull hiransanjeewa/portfolio_client:latest
+         docker pull hiransanjeewa/portfolio_server:latest
+         # Add more pull commands as needed
+        
+         # Start the containers
+         docker run -d docker run -p 3000:80 hiransanjeewa/portfolio_client
+
+         docker run -d docker run -p 8080:8080 hiransanjeewa/portfolio_server
+
+        
+        
           
     
 
