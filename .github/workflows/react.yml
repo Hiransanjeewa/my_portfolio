@@ -45,7 +45,7 @@ jobs:
 
     - name: Build the Docker image
       run : |
-       docker-compose build --no-cache --force-rm --build-arg IMAGE_TAG=hiransanjeewa/portfolio
+       docker-compose build --no-cache --force-rm --build-arg IMAGE_TAG=hiransanjeewa/portfolio:latest
        docker-compose push
 
     # - name: Build the Docker image

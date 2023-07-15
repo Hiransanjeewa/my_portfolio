@@ -5,7 +5,7 @@ services:
     build:
       context: ./Backend
       dockerfile: Dockerfile
-    image: portfolio-server
+    image: hiransanjeewa/portfolio_server:latest
     container_name: portfolio-Backend
     command: /Backend/node_modules/.bin/nodemon server.js
     volumes:
@@ -35,7 +35,7 @@ services:
     build:
       context: ./Frontend/my-portfolio
       dockerfile: Dockerfile
-    image: portfolio-client
+    image: hiransanjeewa/portfolio_client:latest
     container_name: portfolio-Frontend
     command: npm start
     volumes:
