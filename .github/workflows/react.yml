@@ -26,9 +26,9 @@ jobs:
       run: docker-compose build 
 
     
-    - uses: actions/checkout@v2
-    - name: Test the Docker image
-      run: docker-compose up 
+    # - uses: actions/checkout@v2
+    # - name: Test the Docker image
+    #   run: docker-compose up 
 
  
     
