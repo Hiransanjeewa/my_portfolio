@@ -16,6 +16,6 @@ RUN npm install
 # Copying all the files in our project
 COPY . .
 
-EXPOSE 3000
+EXPOSE 80
 # Starting our application
 CMD npm start
