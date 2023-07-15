@@ -2,7 +2,8 @@ name: Build and Push Docker Image to Docker Hub
 
 on:
   push:
-    branches: [ "dev", "main" ]
+    branches: [  "main" ]
+
   
 
 env:
@@ -16,6 +17,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./
 
     steps:
     - uses: actions/checkout@v3
