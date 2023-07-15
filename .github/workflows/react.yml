@@ -31,7 +31,8 @@ jobs:
       run: docker-compose up 
 
  
-    - name: Push Docker image to Docker Hub
+    
+    - name: Check out the repo
       uses: actions/checkout@v3
 
     - name: Set up Docker Buildx
@@ -52,10 +53,10 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v2
       with:
-        context: "{{defaultContext}}"
-        push: true
-        tags: ${{ steps.meta.outputs.tags }}
-        labels: ${{ steps.meta.outputs.labels }}
+       context: "{{defaultContext}}"
+       push: true
+       tags: ${{ steps.meta.outputs.tags }}
+       labels: ${{ steps.meta.outputs.labels }}
 
    
          
