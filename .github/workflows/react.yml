@@ -12,7 +12,7 @@ env:
   REGISTRY: docker.io
   # github.repository as <account>/<repo>
   IMAGE_NAME: hiransanjeewa/portfolio
-  EC2_INSTANCE_IP: 54.164.51.13
+  EC2_INSTANCE_IP: 44.211.217.17
   SSH_USERNAME: ubuntu
   SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 
