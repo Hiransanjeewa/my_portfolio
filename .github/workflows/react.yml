@@ -71,7 +71,7 @@ jobs:
         
          # Start the containers
          sudo docker pull mongo:latest
-         sudo docker run -d -p 27017:27017 –name=mongo-example mongo:latest
+         sudo docker run -d -p 27017:27017 –name = mongo-example mongo:latest
 
 
 
