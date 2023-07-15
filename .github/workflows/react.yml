@@ -3,6 +3,11 @@ name: Docker Image CI
 on:
   push:
     branches: [ main ]
+env:
+  AWS_EC2_INSTANCE_IP: 3.83.134.214
+  DOCKER_IMAGE_NAME: portfolio
+  DOCKERHUB_USERNAME: hiransanjeewa
+  DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
   
 
 jobs:
@@ -23,10 +28,19 @@ jobs:
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD 
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag hiransanjeewa/portfolio_frontend:latest
+      run: docker build . --file Dockerfile --tag hiransanjeewa/portfolio:latest
         
     - name: Docker Push
-      run: docker push hiransanjeewa/portfolio_frontend
+      run: docker push hiransanjeewa/portfolio
+
+    - name: Set up SSH
+      uses: webfactory/ssh-agent@v0.5.1
+      with:
+          ssh-private-key: ${{ secrets.EC2_SSH_PRIVATE_KEY }}
+
+    - name: Deploy to EC2 instance
+      run: |
+          ssh -o StrictHostKeyChecking=no -i ${{ secrets.EC2_SSH_PRIVATE_KEY }} ec2-user@$AWS_EC2_INSTANCE_IP "docker pull $DOCKERHUB_USERNAME/$DOCKER_IMAGE_NAME:latest && docker stop portfolio || true && docker rm portfolio || true && docker run -d --name portfolio -p 80:80 $DOCKERHUB_USERNAME/$DOCKER_IMAGE_NAME:latest"
           
          
          
