@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
 env:
-  AWS_EC2_INSTANCE_IP: 3.83.134.214
+  AWS_EC2_INSTANCE_IP: "3.83.134.214"
   DOCKER_IMAGE_NAME: portfolio
   DOCKERHUB_USERNAME: hiransanjeewa
   DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
