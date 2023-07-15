@@ -69,7 +69,7 @@ jobs:
          # Add more pull commands as needed
         
          # Start the containers
-         sudo docker run -d docker run -p 3000:80 hiransanjeewa/portfolio_client
+         sudo docker run -d docker run -p 3000:3000 hiransanjeewa/portfolio_client
 
          sudo docker run -d docker run -p 8080:8080 hiransanjeewa/portfolio_server
 
