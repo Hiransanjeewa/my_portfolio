@@ -35,6 +35,18 @@ jobs:
 
       - name: Install SSH client
         run: sudo apt-get install -y openssh-client
+
+      - name: Create SSH directory
+        run: mkdir -p ~/.ssh
+      
+      - name: Set permissions for SSH directory
+        run: chmod 700 ~/.ssh
+      
+      - name: Create known_hosts file
+        run: touch ~/.ssh/known_hosts
+      
+      - name: Set permissions for known_hosts file
+        run: chmod 644 ~/.ssh/known_hosts
         
       - name: Retrieve host key and add to known_hosts
         run: |
