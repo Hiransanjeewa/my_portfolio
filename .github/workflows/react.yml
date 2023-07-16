@@ -33,14 +33,20 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
 
+      - name: Install SSH client
+        run: sudo apt-get install -y openssh-client
+        
+      - name: Retrieve host key and add to known_hosts
+        run: |
+          ssh-keyscan -H ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
+        
       - name: Pull Docker Compose images on EC2 instance
         run: |
-          ssh ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} "docker-compose pull"
-
+            ssh -i ${{ secrets.SSH_PRIVATE_KEY }} ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} "docker-compose pull"
+        
       - name: Deploy Docker Compose on EC2 instance
         run: |
-          ssh ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} "docker-compose up -d"
-
+            ssh -i ${{ secrets.SSH_PRIVATE_KEY }} ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} "docker-compose up -d"
 
         #  # Pull the Docker Hub images
         #  sudo docker pull hiransanjeewa/portfolio_client:latest
