@@ -77,14 +77,13 @@ jobs:
          
 
          sudo docker pull mongo:latest
-         mkdir mongodb
-         sudo docker run -d -p 27017:27017 -v ~/mongodb:/data/db --name mongodb
+         mkdir mongodbsrc
+         sudo docker run -d -p 27017:27017 -v ~/mongodbsrc:/data/db --name mongodb mongo
          mkdir backup
          cd backup
          curl -LO https://raw.githubusercontent.com/Hiransanjeewa/my_portfolio/main/my_portfolio_db
-         sudo mongorestore -d my_portfolio ./backup/
-
-
+         sudo docker run --rm -v $(pwd):/backup mongo mongorestore --host mongodb --port 27017 --db my_portfolio /backup
+         
 
          
 
