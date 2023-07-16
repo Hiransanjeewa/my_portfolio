@@ -8,8 +8,9 @@ const socketIO = require('socket.io');
 
 
 const index = express();
-const server = http.createServer(app);
+const server = http.createServer(index);
 const io = socketIO(server);
+
 
 io.on('connection', (socket) => {
     console.log('A client connected');
