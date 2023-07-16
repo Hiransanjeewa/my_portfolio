@@ -9,12 +9,11 @@ on:
 
 env:
   # Use docker.io for Docker Hub if empty
-  REGISTRY: docker.io
+  # REGISTRY: docker.io
   # github.repository as <account>/<repo>
-  IMAGE_NAME: hiransanjeewa/portfolio
-  EC2_INSTANCE_IP:  54.91.187.60
-  SSH_USERNAME: ubuntu
-  SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+  # IMAGE_NAME: hiransanjeewa/portfolio
+  # EC2_INSTANCE_IP:  54.91.187.60
+  # SSH_USERNAME: ubuntu
 
 jobs:
   deploy:
@@ -44,7 +43,7 @@ jobs:
       - name: SSH into EC2 instance
         uses: appleboy/ssh-action@master
         with:
-          host: 3.89.131.139
+          host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
 
