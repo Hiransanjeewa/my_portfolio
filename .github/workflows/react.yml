@@ -61,6 +61,7 @@ jobs:
         key: ${{ env.SSH_PRIVATE_KEY }}
         script: |
          sudo apt update
+         sudo apt install nodejs
          sudo apt install -y docker.io
         
          # Pull the Docker Hub images
