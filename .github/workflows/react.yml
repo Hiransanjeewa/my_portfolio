@@ -4,16 +4,7 @@ on:
   push:
     branches: [  "main" ]
 
-  
 
-
-env:
-  # Use docker.io for Docker Hub if empty
-  # REGISTRY: docker.io
-  # github.repository as <account>/<repo>
-  # IMAGE_NAME: hiransanjeewa/portfolio
-  # EC2_INSTANCE_IP:  54.91.187.60
-  # SSH_USERNAME: ubuntu
 
 jobs:
   deploy:
@@ -26,12 +17,7 @@ jobs:
       - name: Install Docker and Docker Compose
         run: |
           sudo apt-get update
-
-                 
           sudo apt-get install -y docker-compose
-
-
-        #sudo apt-get install -y docker.io
 
 
       - name: Build and push Docker images
