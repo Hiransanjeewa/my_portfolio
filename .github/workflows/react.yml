@@ -62,30 +62,27 @@ jobs:
          sudo apt install nodejs
          sudo apt install -y docker.io
         
+        
+
+         # Removing previous verions
+         sudo docker stop my-client-container
+         sudo docker stop my-server-container
+         sudo docker rm my-client-container
+         sudo docker rm my-server-container
+         
+         sudo docker rmi hiransanjeewa/portfolio_client:latest
+         sudo docker rmi hiransanjeewa/portfolio_server:latest
+
+
          # Pull the Docker Hub images
          sudo docker pull hiransanjeewa/portfolio_client:latest
          sudo docker pull hiransanjeewa/portfolio_server:latest
          # Add more pull commands as needed
          
         
-         # Start the containers
+         
         
-         sudo docker stop my-client-container
-         sudo docker stop my-server-container
-         sudo docker rm my-client-container
-         sudo docker rm my-server-container
-         
-
-         sudo docker pull mongo:latest
-         mkdir mongodbsrc
-         sudo docker run -d -p 27017:27017 -v ~/mongodbsrc:/data/db --name mongodb mongo
-         mkdir backup
-         cd backup
-         curl -LO https://raw.githubusercontent.com/Hiransanjeewa/my_portfolio/main/my_portfolio_db
-         sudo docker run --rm -v $(pwd):/backup mongo mongorestore --host mongodb --port 27017 --db my_portfolio /backup
-         
-
-         
+         # Starting Applications
 
          sudo docker run -d   -p 80:3000 --name=my-client-container hiransanjeewa/portfolio_client:latest
 
@@ -95,7 +92,14 @@ jobs:
         
         
     
-
+ #  sudo docker pull mongo:latest
+        #  mkdir mongodbsrc
+        #  sudo docker run -d -p 27017:27017 -v ~/mongodbsrc:/data/db --name mongodb mongo
+        #  mkdir backup
+        #  cd backup
+        #  curl -LO https://raw.githubusercontent.com/Hiransanjeewa/my_portfolio/main/my_portfolio_db
+        #  sudo docker run --rm -v $(pwd):/backup mongo mongorestore --host mongodb --port 27017 --db my_portfolio /backup
+         
    
          
          
