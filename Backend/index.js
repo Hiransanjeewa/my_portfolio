@@ -39,7 +39,12 @@ index.use(express.urlencoded({ extended: true }));
 
 const routes = require('./routes/routes')
 const schedule = require("node-schedule");
-index.use('/', routes)
+
+
+// index.use('/', routes)
+
+
+server.use('/',routes)
 
 const port = 8080;
 server.listen(port, () => {
@@ -49,13 +54,13 @@ server.listen(port, () => {
 
 
 
-index.listen(PORT, (error) =>{
+// index.listen(PORT, (error) =>{
 
-        if(!error)
-            console.log("Server is Successfully Running, and App is listening on port "+ 8080)
-    else
-        console.log("Error occurred, server can't start", error);
-    }
-);
+//         if(!error)
+//             console.log("Server is Successfully Running, and App is listening on port "+ 8080)
+//     else
+//         console.log("Error occurred, server can't start", error);
+//     }
+// );
 
 
