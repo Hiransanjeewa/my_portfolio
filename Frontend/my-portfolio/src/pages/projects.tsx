@@ -37,7 +37,7 @@ const Projects: React.FC<Props> = () => {
   useEffect(() => {
     axios
     
-      .get('http://127.0.0.1:8080/getProjects?project='+project)
+      .get('http://3.89.131.139:8080/getProjects?project='+project)
       .then(response => {
         //console.log(response.data.length);
         let projectSet:React.ReactComponentElement<typeof Projectviewer, any>[] = [];

@@ -31,7 +31,7 @@ const Blogs: React.FC<Props> = () => {
   
   useEffect(() => {
     axios
-      .get('http://localhost:8080/getArticles?category='+category)
+      .get('http://172.31.86.8:8080/getArticles?category='+category)
       .then(response => {
         console.log(response.data);
         let blogSet:React.ReactComponentElement<typeof Blog, any>[] = [];
