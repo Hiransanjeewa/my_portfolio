@@ -61,30 +61,38 @@ jobs:
         key: ${{ env.SSH_PRIVATE_KEY }}
         script: |
          sudo apt update
-         sudo apt install nodejs
+         
          sudo apt install -y docker.io
+         sudo apt-get install -y docker-compose
+         git clone https://github.com/Hiransanjeewa/my_portfolio.git
+         cd your-repo
+
+         sudo docker-compose build
+         sudo docker-compose up -d
+
         
-         # Pull the Docker Hub images
-         sudo docker pull hiransanjeewa/portfolio_client:latest
-         sudo docker pull hiransanjeewa/portfolio_server:latest
-         # Add more pull commands as needed
+
+
+        #  # Pull the Docker Hub images
+        #  sudo docker pull hiransanjeewa/portfolio_client:latest
+        #  sudo docker pull hiransanjeewa/portfolio_server:latest
+        #  # Add more pull commands as needed
          
         
-         # Start the containers
+        #  # Start the containers
         
-         sudo docker stop my-client-container
-         sudo docker stop my-server-container
-         sudo docker rm my-client-container
-         sudo docker rm my-server-container
+        #  sudo docker stop my-client-container
+        #  sudo docker stop my-server-container
+        #  sudo docker rm my-client-container
+        #  sudo docker rm my-server-container
          
 
-         
 
-         sudo docker run -d --network=my-network -p 80:3000 --name=my-client-container hiransanjeewa/portfolio_client:latest
+        #  sudo docker run -d -p 80:3000 --name=my-client-container hiransanjeewa/portfolio_client:latest
 
-         sudo docker run -d --network=my-network -p 8080:8080 --name=my-server-container hiransanjeewa/portfolio_server:latest
-         sudo docker image prune
-         sudo docker container prune
+        #  sudo docker run -d -p 8080:8080 --name=my-server-container hiransanjeewa/portfolio_server:latest
+        #  sudo docker image prune
+        #  sudo docker container prune
         
         
           
@@ -95,5 +103,3 @@ jobs:
          
        
 
-      # - name: Change directory to my_portfolio
-        # run: cd Frontend/Frontend/my_portfolio
