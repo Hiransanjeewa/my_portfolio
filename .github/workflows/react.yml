@@ -49,9 +49,10 @@ jobs:
 
     - name: Build the Docker image
       run : |
-       docker-compose build --no-cache --force-rm --build-arg IMAGE_TAG=hiransanjeewa/portfolio:latest
-       docker-compose push
-       ls
+
+        #  docker-compose build --no-cache --force-rm --build-arg IMAGE_TAG=hiransanjeewa/portfolio:latest
+      #  docker-compose push
+      #  ls
 
     - name: Deploy to EC2 instance
       uses: appleboy/ssh-action@master
@@ -65,7 +66,7 @@ jobs:
          sudo apt install -y docker.io
          sudo apt-get install -y docker-compose
          git clone https://github.com/Hiransanjeewa/my_portfolio.git
-         cd your-repo
+         cd my_portfolio
 
          sudo docker-compose build
          sudo docker-compose up -d
