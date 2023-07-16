@@ -28,6 +28,7 @@ const Blogs: React.FC<Props> = () => {
 
   const [blogs, setBlogs] = useState<any[]>([]);
 
+  
   useEffect(() => {
     axios
       .get('http://172.31.82.251:8080/getArticles?category='+category)
