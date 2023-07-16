@@ -10,7 +10,7 @@ env:
   REGISTRY: docker.io
   # github.repository as <account>/<repo>
   IMAGE_NAME: hiransanjeewa/portfolio
-  EC2_INSTANCE_IP:  3.89.131.139
+  EC2_INSTANCE_IP:  ${{ secrets.EC2_HOST }}     
   SSH_USERNAME: ubuntu
   SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 
@@ -78,31 +78,13 @@ jobs:
 
          
 
-         sudo docker run -d  -p 80:3000 --name=my-client-container hiransanjeewa/portfolio_client:latest
+         sudo docker run -d --network mynetwork  -p 80:3000 --name=my-client-container hiransanjeewa/portfolio_client:latest
 
-         sudo docker run -d  -p 8080:8080 --name=my-server-container hiransanjeewa/portfolio_server:latest
+         sudo docker run -d --network mynetwork  -p 8080:8080 --name=my-server-container hiransanjeewa/portfolio_server:latest
          sudo docker image prune
          sudo docker container prune
         
         
-          
-        #  # Start the containers
-        
-        #  sudo docker stop my-client-container
-        #  sudo docker stop my-server-container
-        #  sudo docker rm my-client-container
-        #  sudo docker rm my-server-container
-         
-
-
-        #  sudo docker run -d -p 80:3000 --name=my-client-container hiransanjeewa/portfolio_client:latest
-
-        #  sudo docker run -d -p 8080:8080 --name=my-server-container hiransanjeewa/portfolio_server:latest
-        #  sudo docker image prune
-        #  sudo docker container prune
-        
-        
-          
     
 
    
