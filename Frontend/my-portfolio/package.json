@@ -1,5 +1,6 @@
 {
   "name": "my-portfolio",
+  "proxy": "http://54.197.13.100:8080",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
