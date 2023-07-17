@@ -61,8 +61,8 @@ jobs:
          sudo apt update
          sudo apt install nodejs
          sudo apt install -y docker.io
-         sudo docker stop mongo 
-         sudo docker start mongo 
+         sudo docker stop 3a9f0353de7b
+         sudo docker start 3a9f0353de7b 
         
         
 
