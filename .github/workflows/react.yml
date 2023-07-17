@@ -47,9 +47,11 @@ jobs:
 
     - name: Build the Docker image
       run : |
-       docker-compose build --no-cache --force-rm --build-arg IMAGE_TAG=hiransanjeewa/portfolio:latest
-       docker-compose push
-       ls
+        docker-compose build frontend    
+        docker-compose push
+        docker-compose build backend   
+        docker-compose push
+     
 
     - name: Deploy to EC2 instance
       uses: appleboy/ssh-action@master
