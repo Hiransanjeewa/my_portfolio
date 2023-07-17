@@ -30,14 +30,14 @@ index.use('/', routes)
 
 
 
-const PORT = 80;
+const PORT = 8080;
 
 
 
 index.listen(PORT, (error) =>{
 
         if(!error)
-            console.log("Server is Successfully Running, and App is listening on port "+ 80)
+            console.log("Server is Successfully Running, and App is listening on port "+ 8080)
     else
         console.log("Error occurred, server can't start", error);
     }

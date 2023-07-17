@@ -15,22 +15,21 @@ services:
        
     ports:
       - "8080:8080"
-    depends_on:
-      - mongo
+   
   
     
     environment:
       - NODE_ENV=development
     networks:
       - app-network
-  mongo:
-    image: mongo
-    volumes:
-      - data-volume:/data/db
-    ports:
-      - "27017:27017"
-    networks:
-      - app-network
+  # mongo:
+  #   image: mongo
+  #   volumes:
+  #     - data-volume:/data/db
+  #   ports:
+  #     - "27017:27017"
+  #   networks:
+  #     - app-network
   client:
     build:
       context: ./Frontend/my-portfolio

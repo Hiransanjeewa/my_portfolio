@@ -47,9 +47,14 @@ jobs:
 
     - name: Build the Docker image
       run : |
-       docker-compose build --no-cache --force-rm --build-arg IMAGE_TAG=hiransanjeewa/portfolio:latest
-       docker-compose push
-       ls
+       docker-compose build --tag hiransanjeewa/portfolio:latest
+       docker push hiransanjeewa/portfolio:latest
+
+
+
+      #  docker-compose build --no-cache --force-rm --build-arg IMAGE_TAG=hiransanjeewa/portfolio:latest
+      #  docker-compose push
+      #  ls
 
     - name: Deploy to EC2 instance
       uses: appleboy/ssh-action@master
@@ -58,39 +63,43 @@ jobs:
         username: ${{ env.SSH_USERNAME }}
         key: ${{ env.SSH_PRIVATE_KEY }}
         script: |
-         sudo apt update
-         sudo apt install nodejs
-         sudo apt install -y docker.io
-         sudo docker stop 3a9f0353de7b
-         sudo docker start 3a9f0353de7b 
+         sudo docker pull hiransanjeewa/portfolio:latest
+         sudo docker-compose up
+
+
+        #  sudo apt update
+        #  sudo apt install nodejs
+        #  sudo apt install -y docker.io
+        #  sudo docker stop 3a9f0353de7b
+        #  sudo docker start 3a9f0353de7b 
         
         
 
-         # Removing previous verions
-         sudo docker stop my-client-container
-         sudo docker stop my-server-container
-         sudo docker rm my-client-container
-         sudo docker rm my-server-container
+        #  # Removing previous verions
+        #  sudo docker stop my-client-container
+        #  sudo docker stop my-server-container
+        #  sudo docker rm my-client-container
+        #  sudo docker rm my-server-container
          
-         sudo docker rmi hiransanjeewa/portfolio_client:latest
-         sudo docker rmi hiransanjeewa/portfolio_server:latest
+        #  sudo docker rmi hiransanjeewa/portfolio_client:latest
+        #  sudo docker rmi hiransanjeewa/portfolio_server:latest
 
 
-         # Pull the Docker Hub images
-         sudo docker pull hiransanjeewa/portfolio_client:latest
-         sudo docker pull hiransanjeewa/portfolio_server:latest
-         # Add more pull commands as needed
+        #  # Pull the Docker Hub images
+        #  sudo docker pull hiransanjeewa/portfolio_client:latest
+        #  sudo docker pull hiransanjeewa/portfolio_server:latest
+        #  # Add more pull commands as needed
          
         
          
         
-         # Starting Applications
+        #  # Starting Applications
 
-         sudo docker run -d   -p 80:3000 --name=my-client-container hiransanjeewa/portfolio_client:latest
+        #  sudo docker run -d   -p 80:3000 --name=my-client-container hiransanjeewa/portfolio_client:latest
 
-         sudo docker run -d   -p 8080:443 --name=my-server-container hiransanjeewa/portfolio_server:latest
-         sudo docker image prune
-         sudo docker container prune
+        #  sudo docker run -d   -p 8080:443 --name=my-server-container hiransanjeewa/portfolio_server:latest
+        #  sudo docker image prune
+        #  sudo docker container prune
         
         
     
