@@ -9,7 +9,7 @@ env:
   IMAGE_NAME: hiransanjeewa/portfolio
   EC2_INSTANCE_IP: ${{ secrets.EC2_HOST }}
   SSH_USERNAME: ubuntu
-  SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+  SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_PRIVATE_KEY }}
 
 jobs:
   build-and-deploy:
@@ -30,7 +30,7 @@ jobs:
 
       - name: Copy Docker Compose file
         run: |
-          scp -i ${{ secrets.SSH_PRIVATE_KEY }} ./docker-compose.yml ${{ env.SSH_USERNAME }}@${{ env.EC2_INSTANCE_IP }}:/path/to/destination/docker-compose.yml
+          scp -i ${{ secrets.EC2_SSH_PRIVATE_KEY }} ./docker-compose.yml ${{ env.SSH_USERNAME }}@${{ env.EC2_INSTANCE_IP }}:/path/to/destination/docker-compose.yml
 
       - name: Deploy to EC2 instance
         uses: appleboy/ssh-action@master
