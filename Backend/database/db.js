@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const url = "mongodb://44.201.172.53:27017/my_portfolio";
+const url = "mongodb://localhost:27017/my_portfolio";
 
 
 mongoose.connect(url).then(() => {
