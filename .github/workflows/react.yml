@@ -30,7 +30,7 @@ jobs:
 
       - name: Copy Docker Compose file
         run: |
-          scp -i ${{ env.SSH_PRIVATE_KEY }} ./docker-compose.yml ${{ env.SSH_USERNAME }}@${{ env.EC2_INSTANCE_IP }}:/path/to/destination/docker-compose.yml
+          scp -i ${{ env.SSH_PRIVATE_KEY }} ../../docker-compose.yml ${{ env.SSH_USERNAME }}@${{ env.EC2_INSTANCE_IP }}:/path/to/destination/docker-compose.yml
 
       - name: Deploy to EC2 instance
         uses: appleboy/ssh-action@master
