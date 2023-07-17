@@ -99,7 +99,7 @@ const MessageSender: React.FC<Props> = ({ htmlContent }) => {
         console.log(emailObject);
 
           axios
-            .post('http://172.17.0.3:8080/sendEmail',{
+            .post('http://52.5.41.86:8080/sendEmail',{
               "email" : email,
               "name" : userName,
               "message" : message
