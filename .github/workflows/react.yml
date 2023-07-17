@@ -28,10 +28,9 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
-      - name: Build and Push Docker image
+      - name: Copy Docker Compose file
         run: |
-          docker-compose build 
-          docker-compose push
+          scp -i ${{ secrets.SSH_PRIVATE_KEY }} ./docker-compose.yml ${{ env.SSH_USERNAME }}@${{ env.EC2_INSTANCE_IP }}:/path/to/destination/docker-compose.yml
 
       - name: Deploy to EC2 instance
         uses: appleboy/ssh-action@master
@@ -47,11 +46,8 @@ jobs:
             sudo chmod +x /usr/local/bin/docker-compose
             docker-compose --version
 
-            - name: List files in working directory
-             ls -la .
-
             sudo docker pull hiransanjeewa/portfolio:latest
-            sudo docker-compose up
+            sudo docker-compose -f /path/to/destination/docker-compose.yml up
 
         #  sudo apt update
         #  sudo apt install nodejs
