@@ -45,13 +45,16 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
-    - name: Build the Docker image
+    - name: Build the React Docker image
       run : |
         docker-compose build frontend    
         docker-compose push
-        docker-compose build backend   
-        docker-compose push
-     
+
+    
+    - name: Build the React Docker image
+      run : |  
+       docker-compose build backend   
+       docker-compose push
 
     - name: Deploy to EC2 instance
       uses: appleboy/ssh-action@master
