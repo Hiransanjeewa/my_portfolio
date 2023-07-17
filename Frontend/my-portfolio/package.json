@@ -1,6 +1,6 @@
 {
   "name": "my-portfolio",
-  "proxy": "http://54.164.231.189:8080" ,
+  "proxy": "http://52.5.41.86:8080" ,
   "version": "0.1.0",
   "private": true,
   "dependencies": {
