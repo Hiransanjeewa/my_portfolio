@@ -47,6 +47,9 @@ jobs:
             sudo chmod +x /usr/local/bin/docker-compose
             docker-compose --version
 
+            - name: List files in working directory
+             ls -la .
+
             sudo docker pull hiransanjeewa/portfolio:latest
             sudo docker-compose up
 
