@@ -47,7 +47,8 @@ jobs:
 
     - name: Build the Docker image
       run : |
-       docker-compose build --tag ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+       docker-compose build
+       docker images
        docker-compose push
 
 
