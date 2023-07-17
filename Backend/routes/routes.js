@@ -32,12 +32,12 @@ router.post('/sendEmail',async (req, res) => {
 })
 router.get('/getArticles',async (req, res) => {
         const response=await  ArticleService.getArticles(req.query.category) ;
-   // console.log('*********')
+    console.log('*********')
     res.json(response)
 })
 router.get('/getProjects',async (req, res) => {
     const response=await  ProjectService.getProjects(req.query.project) ;
-    //console.log(response)
+    console.log(response)
     res.json(response)
 })
 
