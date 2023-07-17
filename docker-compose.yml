@@ -6,39 +6,27 @@ services:
       context: ./Backend
       dockerfile: Dockerfile
     image: hiransanjeewa/portfolio_server:latest
-    container_name: portfolio-Backend
+    # container_name: portfolio-Backend
     command: /Backend/node_modules/.bin/nodemon server.js
     volumes:
-      - ./server/:/usr/src/app
+      - ./Backend:/usr/src/app
       - /usr/src/app/node_modules
-
-       
     ports:
       - "8080:8080"
-   
-  
-    
     environment:
       - NODE_ENV=development
     networks:
       - app-network
-  # mongo:
-  #   image: mongo
-  #   volumes:
-  #     - data-volume:/data/db
-  #   ports:
-  #     - "27017:27017"
-  #   networks:
-  #     - app-network
+
   client:
     build:
       context: ./Frontend/my-portfolio
       dockerfile: Dockerfile
     image: hiransanjeewa/portfolio_client:latest
-    container_name: portfolio-Frontend
+    # container_name: portfolio-Frontend
     command: npm start
     volumes:
-      - ./client/:/usr/app
+      - ./Frontend/my-portfolio:/usr/app
       - /usr/app/node_modules
     depends_on:
       - server
@@ -47,12 +35,21 @@ services:
     networks:
       - app-network
 
+  # mongo:
+  #   image: mongo
+  #   volumes:
+  #     - data-volume:/data/db
+  #   ports:
+  #     - "27017:27017"
+  #   networks:
+  #     - app-network
+
 networks:
-    app-network:
-        driver: bridge
+  app-network:
+    driver: bridge
 
 volumes:
-    data-volume:
-    node_modules:
-    web-root:
-      driver: local
+  data-volume:
+  node_modules:
+  web-root:
+    driver: local
