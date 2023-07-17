@@ -48,13 +48,17 @@ jobs:
     - name: Build the React Docker image
       run : |
         docker-compose build frontend    
-        docker-compose push
+        
 
     
-    - name: Build the React Docker image
+    - name: Build the Express Docker image
       run : |  
        docker-compose build backend   
+      
+    - name: Pushing images to Dockerhub
+      run : |  
        docker-compose push
+
 
     - name: Deploy to EC2 instance
       uses: appleboy/ssh-action@master
