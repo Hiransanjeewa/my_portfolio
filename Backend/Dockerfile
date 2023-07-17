@@ -19,5 +19,5 @@ RUN npm install -g nodemon
 # Bundle app source
 COPY . .
 
-EXPOSE 443
+EXPOSE 8080
 CMD [ "node", "index.js" ]
