@@ -1,7 +1,7 @@
 
 {
   "name": "my-portfolio",
-  "homepage": "https://hiransanjeewa.github.io/my-portfolio",
+  "homepage": "https://hiransanjeewa.github.io/my_portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
