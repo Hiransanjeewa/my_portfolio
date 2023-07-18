@@ -29,13 +29,15 @@ jobs:
 
     
 
-    - name: Build
+    - name: Installing node package manager
       working-directory: ./Frontend/my-portfolio
       run: npm install
-    - name: Install dependencies
+
+    - name: Install dependencies...
       working-directory: ./Frontend/my-portfolio
       run: npm ci
-    - name: Build
+
+    - name: Building React app...
       working-directory: ./Frontend/my-portfolio
       run: |
         npm run build
