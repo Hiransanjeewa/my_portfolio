@@ -144,7 +144,7 @@ jobs:
         
          # Starting Applications
 
-         sudo docker run -d -p 8080:8080 --name=my-server-container hiransanjeewa/portfolio_server:latest
+         sudo docker run -d -p 443:8080 --name=my-server-container hiransanjeewa/portfolio_server:latest
 
          sudo docker run -d -p 80:3000 --name=my-client-container --link my-server-container hiransanjeewa/portfolio_client:latest
          sudo docker image prune
