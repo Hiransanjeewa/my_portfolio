@@ -15,29 +15,26 @@ env:
   SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 
 jobs:
-
-  build-push-gcr:
-    name: Build and Deploy
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    # - name: Change working directory to frontend
-    #   run: cd Frontend/my-portfolio
-
-    - name: Build
-      working-directory: ./Frontend/my-portfolio
-      run: |
-        npm install
-        npm install gh-pages --save-dev
-    - name: Deploy
-      working-directory: ./Frontend/my-portfolio
-      run: |
-        git config --global user.name 'Hiransanjeewa'
-        git config --global user.email 'hiransanjeewaa@gmail.com'
-        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}    
-        npm run deploy
+    build-push-gcr:
+      name: Build and Deploy
+      runs-on: ubuntu-latest
+  
+      steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+  
+      - name: Build
+        run: npm install
+  
+      - name: Test
+        run: npm run test
+  
+      - name: Deploy
+        run: |
+          git config --global user.name 'Hiransanjeewa'
+          git config --global user.email 'hiransanjeewaa@gmail.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}    
+          npm run deploy
 
   build:
 
