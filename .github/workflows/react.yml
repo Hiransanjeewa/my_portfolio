@@ -36,7 +36,7 @@ jobs:
           run: |
             git config --global user.name 'Hiransanjeewa'
             git config --global user.email 'hiransanjeewaa@gmail.com'
-            git remote set-url origin https://github.com/${{ github.repository }}
+            git remote set-url origin https://github.com/Hiransanjeewa/my_portfolio
             npm install gh-pages
             npx gh-pages -d build
 
