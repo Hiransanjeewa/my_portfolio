@@ -27,6 +27,7 @@ jobs:
         - name: Build and Deploy
           working-directory: ./Frontend/my-portfolio
           run: |
+            npm install
             npm ci
             npm run build
   
