@@ -1,4 +1,3 @@
-
 {
   "name": "my-portfolio",
   "homepage": "https://hiransanjeewa.github.io/my_portfolio",
@@ -17,6 +16,7 @@
     "@types/react-dom": "^18.2.4",
     "axios": "^1.4.0",
     "bootstrap": "^5.3.0",
+    "http-proxy-middleware": "^2.0.6",
     "react": "^18.2.0",
     "react-cookie": "^4.1.1",
     "react-dom": "^18.2.0",
@@ -28,14 +28,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    
     "start": "react-scripts start ",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
-    
   },
   "eslintConfig": {
     "extends": [
