@@ -36,6 +36,7 @@ jobs:
       working-directory: ./Frontend/my-portfolio
       run: npm ci
     - name: Build
+      working-directory: ./Frontend/my-portfolio
       run: npm run build
 
 
