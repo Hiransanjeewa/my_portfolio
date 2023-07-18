@@ -1,6 +1,6 @@
 {
   "name": "my-portfolio",
-  "homepage": "https://hiransanjeewa.github.io/my_portfolio",
+  "proxy": "http://52.5.41.86:8080",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
