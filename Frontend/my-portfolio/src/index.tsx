@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
+   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /> 
 
 
 ReactDOM.render(
@@ -10,7 +11,6 @@ ReactDOM.render(
   <React.StrictMode>
    
 
-   {/* <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /> */}
 
 
     <App />
