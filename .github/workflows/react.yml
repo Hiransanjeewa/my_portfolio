@@ -16,6 +16,29 @@ env:
 
 jobs:
 
+  build-push-gcr:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Change working directory to frontend
+      run: cd Frontend/my-portfolio
+
+    - name: Build
+      run: npm install
+
+    - name: Test
+      run: npm run test
+
+    - name: Deploy
+      run: |
+        git config --global user.name 'Hiransanjeewa'
+        git config --global user.email 'hiransanjeewaa@gmail.com'
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}    
+        npm run deploy
+
   build:
 
     runs-on: ubuntu-latest
@@ -45,9 +68,9 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
-    - name: Build the React Docker image
-      run : |
-        docker-compose build frontend    
+    # - name: Build the React Docker image
+    #   run : |
+    #     docker-compose build frontend    
         
 
     
@@ -78,17 +101,17 @@ jobs:
         
 
          # Removing previous verions
-         sudo docker stop my-client-container
+            
          sudo docker stop my-server-container
-         sudo docker rm my-client-container
+         
          sudo docker rm my-server-container
          
-         sudo docker rmi hiransanjeewa/portfolio_client:latest
+        
          sudo docker rmi hiransanjeewa/portfolio_server:latest
 
 
          # Pull the Docker Hub images
-         sudo docker pull hiransanjeewa/portfolio_client:latest
+         
          sudo docker pull hiransanjeewa/portfolio_server:latest
          # Add more pull commands as needed
          
@@ -97,10 +120,13 @@ jobs:
         
          # Starting Applications
 
-         sudo docker run -d   -p 80:3000 --name=my-client-container hiransanjeewa/portfolio_client:latest
 
-         sudo docker run -d   -p 8080:8080 --name=my-server-container hiransanjeewa/portfolio_server:latest
+         sudo docker run -d   -p 80:80 --name=my-server-container hiransanjeewa/portfolio_server:latest
          sudo docker image prune
          sudo docker container prune
         
-        
+        #  sudo docker stop my-client-container
+        # sudo docker rm my-client-container
+        # sudo docker rmi hiransanjeewa/portfolio_client:latest
+        # sudo docker pull hiransanjeewa/portfolio_client:latest
+        #  sudo docker run -d   -p 80:3000 --name=my-client-container hiransanjeewa/portfolio_client:latest

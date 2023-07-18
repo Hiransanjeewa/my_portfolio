@@ -1,11 +1,11 @@
 version: '3'
 
 services:
-  frontend:
-    build:
-      context: ./Frontend/my-portfolio
-      dockerfile: Dockerfile
-    image: hiransanjeewa/portfolio_client:latest
+  # frontend:
+  #   build:
+  #     context: ./Frontend/my-portfolio
+  #     dockerfile: Dockerfile
+  #   image: hiransanjeewa/portfolio_client:latest
 
   backend:
     build:
