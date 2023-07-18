@@ -14,6 +14,7 @@ env:
   SSH_USERNAME: ubuntu
   SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 
+  
 jobs:
  build-push-gcr:
     name: Build and Deploy
@@ -28,6 +29,7 @@ jobs:
           node-version: 14
 
     
+
 
 
 
