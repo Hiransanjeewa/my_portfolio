@@ -27,15 +27,17 @@ jobs:
       with:
           node-version: 14
 
-    - name: Change working directory to Frontend/my-portfolio
-      run: cd Frontend/my-portfolio
+    
     - name: Build
+      working-directory: ./Frontend/my-portfolio
       run: npm install
     - name: Install dependencies
+      working-directory: ./Frontend/my-portfolio
       run: npm ci
 
 
     - name: Deploy
+      working-directory: ./Frontend/my-portfolio
       run: |
         git config --global user.name 'Hiransanjeewa'
         git config --global user.email 'hiransanjeewaa@gmail.com'
