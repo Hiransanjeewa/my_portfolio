@@ -23,16 +23,19 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-    - name: Change working directory to frontend
-      run: cd Frontend/my-portfolio
+    # - name: Change working directory to frontend
+    #   run: cd Frontend/my-portfolio
 
     - name: Build
+      working-directory: ./Frontend/my-portfolio
       run: npm install
 
     - name: Test
+      working-directory: ./Frontend/my-portfolio
       run: npm run test
 
     - name: Deploy
+      working-directory: ./Frontend/my-portfolio
       run: |
         git config --global user.name 'Hiransanjeewa'
         git config --global user.email 'hiransanjeewaa@gmail.com'
