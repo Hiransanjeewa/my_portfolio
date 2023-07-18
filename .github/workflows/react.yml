@@ -28,7 +28,10 @@ jobs:
 
     - name: Build
       working-directory: ./Frontend/my-portfolio
-      run: npm install
+      run: |
+        npm install
+        npm install gh-pages --save-dev
+
 
 
 
