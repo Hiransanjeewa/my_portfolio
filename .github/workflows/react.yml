@@ -28,26 +28,26 @@ jobs:
           node-version: 14
 
     
-          
+
 
 
     - name: Installing node package manager
-      working-directory: ./Frontend/my-portfolio
+      
       run: npm install
 
     - name: Install dependencies...
-      working-directory: ./Frontend/my-portfolio
+      
       run: npm ci
 
     - name: Building React app...
-      working-directory: ./Frontend/my-portfolio
+      
       run: |
         npm run build
         ls
 
 
     - name: Deploy
-      working-directory: ./Frontend/my-portfolio
+      
       run: |
         git config --global user.name 'Hiransanjeewa'
         git config --global user.email 'hiransanjeewaa@gmail.com'
