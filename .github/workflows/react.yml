@@ -35,6 +35,8 @@ jobs:
     - name: Install dependencies
       working-directory: ./Frontend/my-portfolio
       run: npm ci
+    - name: Build
+      run: npm run build
 
 
     - name: Deploy
