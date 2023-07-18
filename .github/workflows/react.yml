@@ -14,7 +14,7 @@ env:
   SSH_USERNAME: ubuntu
   SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 
-  
+
 jobs:
  build-push-gcr:
     name: Build and Deploy
@@ -54,8 +54,7 @@ jobs:
         git config --global user.name 'Hiransanjeewa'
         git config --global user.email 'hiransanjeewaa@gmail.com'
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}    
-        npm install -g gh-pages
-        npx gh-pages -d build
+        npm run deploy
         
 
 
