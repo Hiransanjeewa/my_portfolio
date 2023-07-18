@@ -28,7 +28,7 @@ jobs:
           node-version: 14
 
     
-          
+
     - name: Build
       working-directory: ./Frontend/my-portfolio
       run: npm install
@@ -43,7 +43,8 @@ jobs:
         git config --global user.name 'Hiransanjeewa'
         git config --global user.email 'hiransanjeewaa@gmail.com'
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}    
-        npm run deploy   
+        npm install -g gh-pages
+        npx gh-pages -d build
         
 
 
