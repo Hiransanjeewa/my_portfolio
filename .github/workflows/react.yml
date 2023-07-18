@@ -89,9 +89,9 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
-    # - name: Build the React Docker image
-    #   run : |
-    #     docker-compose build frontend    
+    - name: Build the React Docker image
+      run : |
+        docker-compose build frontend    
         
 
     
