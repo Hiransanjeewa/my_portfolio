@@ -25,7 +25,7 @@ router.use((req, res, next) => {
 })
 
 
-router.post('/sendEmail',async (req, res) => {
+router.post('/api/sendEmail',async (req, res) => {
     let response=0;
     response =await EmailService.sendEmail(req.body)
     res.json(response)
