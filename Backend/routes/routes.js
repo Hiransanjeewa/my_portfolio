@@ -24,7 +24,6 @@ router.use((req, res, next) => {
     next()
 })
 
-
 router.post('/api/sendEmail',async (req, res) => {
     let response=0;
     response =await EmailService.sendEmail(req.body)
