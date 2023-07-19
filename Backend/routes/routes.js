@@ -30,12 +30,12 @@ router.post('/api/sendEmail',async (req, res) => {
     response =await EmailService.sendEmail(req.body)
     res.json(response)
 })
-router.get('/getArticles',async (req, res) => {
+router.get('/api/getArticles',async (req, res) => {
         const response=await  ArticleService.getArticles(req.query.category) ;
     console.log('*********')
     res.json(response)
 })
-router.get('/getProjects',async (req, res) => {
+router.get('/api/getProjects',async (req, res) => {
     const response=await  ProjectService.getProjects(req.query.project) ;
     console.log(response)
     res.json(response)
