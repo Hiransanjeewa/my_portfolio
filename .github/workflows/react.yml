@@ -139,6 +139,7 @@ jobs:
          sudo docker pull hiransanjeewa/portfolio_client:latest
          # Add more pull commands as needed
          
+         
         
          
         
