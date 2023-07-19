@@ -45,14 +45,14 @@ import AboutMe from './pages/about_me';
 import Blogs from './pages/blogs';
 import Projects from './pages/projects';
 
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /> 
 
 
 const App: React.FC = () => {
   const htmlContent = ' ';
-  
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /> 
 
+  // <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /> 
+
+// {/* <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />  */}
 
 
   return (
