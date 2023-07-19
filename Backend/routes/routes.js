@@ -28,15 +28,17 @@ router.use((req, res, next) => {
 router.post('/api/sendEmail',async (req, res) => {
     let response=0;
     response =await EmailService.sendEmail(req.body)
+    console.log('Sending Emails')
     res.json(response)
 })
 router.get('/api/getArticles',async (req, res) => {
         const response=await  ArticleService.getArticles(req.query.category) ;
-    console.log('*********')
+    console.log('Getting Articles')
     res.json(response)
 })
 router.get('/api/getProjects',async (req, res) => {
     const response=await  ProjectService.getProjects(req.query.project) ;
+    console.log('Getting Projects')
     console.log(response)
     res.json(response)
 })
