@@ -7,6 +7,9 @@ module.exports = function(app) {
       target: 'http://52.5.41.86:8080', // The URL of your backend server
       changeOrigin: true,
       secure: false, // Set to 'false' if your backend server does not use HTTPS
+      headers: {
+        Host: '52.5.41.86:8080' // Set the correct host header value here
+      },
     })
   );
 };
