@@ -88,27 +88,6 @@ function setPointLengths(name:String,point:String) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   var styles = {
 
     second_main:{
@@ -187,7 +166,7 @@ function GetContent(name:String) {
      
       <div className="container  mw-100" id="second_main_div" style={styles.secondMain}>
         <div className="row ">
-          <div className="col col-lg-12">
+          <div className="col col-lg-12 ">
             <p id="main_caption" >
              
             </p>

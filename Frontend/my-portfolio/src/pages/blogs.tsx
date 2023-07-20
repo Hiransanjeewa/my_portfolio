@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Blog from '../components/blog';
-import './blogs.scss';
+import './blogs.css';
 import Footer from '../components/footer';
 import Header from '../components/header';
+import {BrowserView, MobileView, isMobile} from 'react-device-detect';
 
 
 interface Props {
@@ -39,7 +40,13 @@ const Blogs: React.FC<Props> = () => {
          // console.log(response.data[index]);
           const blogData = response.data[index];
           console.log(blogData);
-          const blogElement = <><div className="col col-lg-4" id='projectViewers'><Blog blogData={blogData} /></div></>;
+
+          const blogElement = <> <BrowserView>
+         <div className="col col-lg-4" id='projectViewers'><Blog blogData={blogData} /></div>
+      </BrowserView>
+      <MobileView>
+      <div className="col col-lg-5" id='projectViewers'><Blog blogData={blogData} /></div>
+      </MobileView></>;
          // console.log(blogElement );
           blogSet.push(blogElement);       
         }
