@@ -28,7 +28,6 @@ const Blogs: React.FC<Props> = () => {
   }
 
   const [blogs, setBlogs] = useState<any[]>([]);
-  const [BlogsView, setBlogsView] = useState<any[]>([]);
 
  
   useEffect(() => {
@@ -38,7 +37,7 @@ const Blogs: React.FC<Props> = () => {
         console.log(response.data);
         let blogSet:React.ReactComponentElement<typeof Blog, any>[] = [];
 
-     
+       
 
 
         for (let index = 0; index < response.data.length; index++) {
@@ -47,37 +46,41 @@ const Blogs: React.FC<Props> = () => {
           console.log(blogData);
           let blogElement=<> </>
 
-            blogElement = <> 
-            <div className="col col-lg-12" id='projectViewers'><Blog blogData={blogData} /></div>
-            </> 
+          if (isMobile) {
+            blogElement = 
+            <div className="col col-lg-4" id='projectViewers'><Blog blogData={blogData} /></div>
+            
+          }else{
+            blogElement =  
+            <div className="col col-lg-4" id='projectViewers'><Blog blogData={blogData} /></div>
+            
+          }       
             
          // console.log(blogElement );
          
           blogSet.push(blogElement); 
+          
+          if (isMobile) {
+            blogSet.push(<hr/>)
+          }
+
         }
+        let rawBlogSet:React.ReactComponentElement<typeof Blog, any>[] = [];
+
         if (!isMobile) {
-          let rawBlogSet:React.ReactComponentElement<typeof Blog, any>[] = [];
-
           rawBlogSet.push(<><div className="container-fluid text-light" id="main_div" style={style.main_div}>
-        <div className="row ">   {blogSet}</div></div></>
+        <div className="row " > {blogSet}</div></div></>
           )
-
-
         setBlogs(rawBlogSet);
         }else{
-          setBlogs(blogSet);
+          rawBlogSet.push(<><div className="container" id="main_div" style={style.main_div}>
+          <div className="column ">   {blogSet}</div></div></>
+            )
+          setBlogs(rawBlogSet);
         }
         
           
-        
-          if (isMobile) {
-            
-          }
-        
-       
-        
-       
-         
+    
           
       //  console.log(blogs)
       })
@@ -92,8 +95,10 @@ const Blogs: React.FC<Props> = () => {
     <div>
       <Header htmlContent=' ' />
 
-      
-        {blogs}
+      <div id='mainblogsdiv'>
+      {blogs}
+
+      </div>
       
      
    

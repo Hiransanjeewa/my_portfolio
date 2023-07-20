@@ -8,4 +8,12 @@
     padding: 0%;
     text-align: center;
     padding: 2%;
+    width: 100%;
+}
+#mainblogsdiv{
+    padding-top: 5%;
+    background-color:aliceblue;
+}
+#rows{
+    margin-bottom: 3%;
 }
