@@ -39,7 +39,10 @@ jobs:
 
     - name: Install dependencies...
       working-directory: ./Frontend/my-portfolio
-      run: npm ci
+      run: | 
+       npm ci
+       npm install react-device-detect --save
+
 
     - name: Building React app...
       working-directory: ./Frontend/my-portfolio

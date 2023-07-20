@@ -45,7 +45,7 @@ const Blogs: React.FC<Props> = () => {
          <div className="col col-lg-4" id='projectViewers'><Blog blogData={blogData} /></div>
       </BrowserView>
       <MobileView>
-      <div className="col col-lg-5" id='projectViewers'><Blog blogData={blogData} /></div>
+      <div className="col col-lg-7" id='projectViewers'><Blog blogData={blogData} /></div>
       </MobileView></>;
          // console.log(blogElement );
           blogSet.push(blogElement);       
