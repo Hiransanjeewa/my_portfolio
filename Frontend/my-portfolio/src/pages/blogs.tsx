@@ -28,54 +28,73 @@ const Blogs: React.FC<Props> = () => {
   }
 
   const [blogs, setBlogs] = useState<any[]>([]);
+  const [BlogsView, setBlogsView] = useState<any[]>([]);
 
-  
+ 
   useEffect(() => {
     axios
       .get('https://hiransanjeewa.live/api/getArticles?category='+category)
       .then(response => {
         console.log(response.data);
         let blogSet:React.ReactComponentElement<typeof Blog, any>[] = [];
+
+     
+
+
         for (let index = 0; index < response.data.length; index++) {
          // console.log(response.data[index]);
           const blogData = response.data[index];
           console.log(blogData);
           let blogElement=<> </>
 
-          if(isMobile) {
             blogElement = <> 
             <div className="col col-lg-12" id='projectViewers'><Blog blogData={blogData} /></div>
             </> 
             
-        }else{
-          blogElement = <> 
-          <div className="row ">
-          <div className="col col-lg-4" id='projectViewers'><Blog blogData={blogData} /></div>
-          </div></> 
-          
-         
-        }
-        
-          
          // console.log(blogElement );
-          blogSet.push(blogElement);       
+         
+          blogSet.push(blogElement); 
+        }
+        if (!isMobile) {
+          let rawBlogSet:React.ReactComponentElement<typeof Blog, any>[] = [];
+
+          rawBlogSet.push(<><div className="container-fluid text-light" id="main_div" style={style.main_div}>
+        <div className="row ">   {blogSet}</div></div></>
+          )
+
+
+        setBlogs(rawBlogSet);
+        }else{
+          setBlogs(blogSet);
         }
         
-        setBlogs(blogSet);
+          
+        
+          if (isMobile) {
+            
+          }
+        
+       
+        
+       
+         
+          
       //  console.log(blogs)
       })
       .catch(error => {
         console.error('Error fetching blogs:', error);
       });
   }, [blogs, category]);
+  
 
 //console.log(blogs)
   return (
     <div>
       <Header htmlContent=' ' />
 
-        
+      
         {blogs}
+      
      
    
    
