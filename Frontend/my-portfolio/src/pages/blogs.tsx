@@ -44,13 +44,14 @@ const Blogs: React.FC<Props> = () => {
 
           if(isMobile) {
             blogElement = <> 
-            <div className="col col-lg-7" id='projectViewers'><Blog blogData={blogData} /></div>
+            <div className="col col-lg-12" id='projectViewers'><Blog blogData={blogData} /></div>
             </> 
             
         }else{
           blogElement = <> 
+          <div className="row ">
           <div className="col col-lg-4" id='projectViewers'><Blog blogData={blogData} /></div>
-          </> 
+          </div></> 
           
          
         }
@@ -73,10 +74,10 @@ const Blogs: React.FC<Props> = () => {
     <div>
       <Header htmlContent=' ' />
 
-        <div className="row ">
+        
         {blogs}
      
-      </div>
+   
    
 
        <Footer htmlContent=' '/>
