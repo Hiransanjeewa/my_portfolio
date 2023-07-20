@@ -4,7 +4,7 @@ import Blog from '../components/blog';
 import './blogs.css';
 import Footer from '../components/footer';
 import Header from '../components/header';
-import {BrowserView, MobileView, isMobile} from 'react-device-detect';
+import {isMobile} from 'react-device-detect';
 
 
 interface Props {
@@ -40,13 +40,22 @@ const Blogs: React.FC<Props> = () => {
          // console.log(response.data[index]);
           const blogData = response.data[index];
           console.log(blogData);
+          let blogElement=<> </>
 
-          const blogElement = <> <BrowserView>
-         <div className="col col-lg-4" id='projectViewers'><Blog blogData={blogData} /></div>
-      </BrowserView>
-      <MobileView>
-      <div className="col col-lg-4" id='projectViewers'><Blog blogData={blogData} /></div>
-      </MobileView></>;
+          if(isMobile) {
+            
+               blogElement = <> 
+              <div className="col col-lg-4" id='projectViewers'><Blog blogData={blogData} /></div>
+              </> 
+            
+        }else{
+          
+          blogElement = <> 
+          <div className="col col-lg-7" id='projectViewers'><Blog blogData={blogData} /></div>
+          </> 
+        }
+        
+          
          // console.log(blogElement );
           blogSet.push(blogElement);       
         }
