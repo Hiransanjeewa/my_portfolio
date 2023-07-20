@@ -51,7 +51,7 @@ const Blogs: React.FC<Props> = () => {
         }else{
           
           blogElement = <> 
-          <div className="col col-lg-7" id='projectViewers'><Blog blogData={blogData} /></div>
+          <div className="col col-lg-9" id='projectViewers'><Blog blogData={blogData} /></div>
           </> 
         }
         
