@@ -117,8 +117,7 @@ jobs:
          sudo apt update
          sudo apt install nodejs
          sudo apt install -y docker.io
-         sudo docker stop 3a9f0353de7b
-         sudo docker start 3a9f0353de7b 
+     
         
 
          
@@ -155,5 +154,10 @@ jobs:
          sudo docker container prune
         
       
-        # 
-        # 
+        #  sudo docker stop 3a9f0353de7b
+        #  sudo docker start 3a9f0353de7b 
+        
+        # running mongodb 
+        # sudo docker pull mongo:latest
+        # sudo docker volume create my-volume
+        # sudo docker run -d -p 27017:27017 -v my-volume:/data/db -d mongo
