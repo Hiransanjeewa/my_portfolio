@@ -47,7 +47,7 @@ router.get('/api/getProjects',async (req, res) => {
 
 
 // Automated Medium articles updater
-const j = schedule.scheduleJob({hour: 23, minute: 41}, () => {
+const j = schedule.scheduleJob({hour: 23, minute: 55}, () => {
     console.log('Job runs every day at 20.40AM');
 
     ArticleGetter.getArticles();
