@@ -17,7 +17,7 @@ env:
 
 jobs:
  build-push-gcr:
-    name: Build and Deploy
+    name: Building Docker and Pushing images
     runs-on: ubuntu-latest
 
     steps:
@@ -64,6 +64,7 @@ jobs:
 
 
  build:
+    name: Deploying in EC2
 
     runs-on: ubuntu-latest
     
@@ -154,7 +155,7 @@ jobs:
          sudo docker container prune
         
       
-         
+
         #  sudo docker stop 3a9f0353de7b
         #  sudo docker start 3a9f0353de7b 
         
