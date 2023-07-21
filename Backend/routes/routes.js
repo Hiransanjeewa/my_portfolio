@@ -17,6 +17,7 @@ const ArticleService = require('../services/ArticleServiceImpl')
 const ProjectService = require('../services/ProjectService')
 const ArticleReceiver = require('../services/articleReceiver')
 
+
 const my_medium_id = '5bb14012dbd3';
 
 // middleware that is specific to this router
@@ -46,7 +47,7 @@ router.get('/api/getProjects',async (req, res) => {
 
 
 // Automated Medium articles updater
-const j = schedule.scheduleJob({hour: 9, minute: 45}, () => {
+const j = schedule.scheduleJob({hour: 8, minute: 5}, () => {
     ArticleReceiver.getArticles();
     console.log('Job runs every day at 9.35AM');
 });
