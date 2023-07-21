@@ -66,12 +66,10 @@ async function getArticles() {
                         image_url: response.data.image_url,
                         title: response.data.title,
                         content: " ",
-                        category: " ",
+                        category: "any",
                     });
 
-
                     // Taking the article Content
-
 
                     const options2 = {
                         method: 'GET',
@@ -90,6 +88,7 @@ async function getArticles() {
                         console.error(error);
                     }
 
+                    // article.category='any';
                     const newArticle = await article.save()
 
                     //  console.log(response.data);
