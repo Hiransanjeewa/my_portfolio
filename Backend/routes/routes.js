@@ -16,7 +16,7 @@ const schedule = require("node-schedule");
 
 const ArticleService = require('../services/ArticleServiceImpl')
 const ProjectService = require('../services/ProjectService')
- const ArticleReceiver = require('../services/ArticleReceiver')
+ const ArticleGetter = require('../services/ArticleReceiveService')
 
 
 const my_medium_id = '5bb14012dbd3';
@@ -47,9 +47,10 @@ router.get('/api/getProjects',async (req, res) => {
 
 
 // Automated Medium articles updater
-const j = schedule.scheduleJob({hour: 21, minute: 43}, () => {
+const j = schedule.scheduleJob({hour: 22, minute: 25}, () => {
     console.log('Job runs every day at 20.40AM');
-    ArticleReceiver.getArticles();
+
+    ArticleGetter.getArticles();
    
     console.log('Job runs every day at 20.40AM');
 });
