@@ -54,10 +54,11 @@ async function getArticles() {
                 };
 
                 try {
-
+ 
 
                     const response = await axios.request(options);
                     //   console.log(response.data);
+                    console.log('taking article data')
 
                     const article = new Articles({
                         article_id: response.data.id,
@@ -89,6 +90,7 @@ async function getArticles() {
                     }
 
                     // article.category='any';
+                    console.log('saving')
                     const newArticle = await article.save()
 
                     //  console.log(response.data);
