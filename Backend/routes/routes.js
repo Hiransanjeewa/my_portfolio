@@ -5,6 +5,7 @@ const cors = require('cors');
 router.use(cors())
 const Db=require('../database/db')
 
+
 // Email services
 const EmailService = require('../services/emailService')
 const send = require("send");
@@ -51,5 +52,7 @@ const j = schedule.scheduleJob({hour: 8, minute: 20}, () => {
     ArticleReceiver.getArticles();
     console.log('Job runs every day at 8.20AM');
 });
+
+
 
 module.exports = router
