@@ -4,6 +4,7 @@ import React from 'react';
 import Footer from '../components/footer';
 import Header from '../components/header';
 import "./home.css"
+import { isMobile } from 'react-device-detect';
 
 
 interface Props {
@@ -17,6 +18,11 @@ const Home: React.FC<Props> = ({ htmlContent }) => {
         }
       }
       
+      let horizontalspace 
+      if (!isMobile) {
+        horizontalspace =<><br/><br/><br/><br/></>
+      }
+
   return (
     <div>
 
@@ -27,25 +33,34 @@ const Home: React.FC<Props> = ({ htmlContent }) => {
 <div className="container-fluid text-light" id='homepage_body' >
   <div className="row " >
     <div className="col col-lg-6 md-6" id='contents' style={style.contents}>
-      
-    <span>Hi , I'm Hiran,</span>
+      {horizontalspace}
+    <span style={{fontSize:'150%'}}>Hi , I'm Hiran,</span>
               <p id='caption-1'>
-                I am a full stack Developer.
+              Cloud & DevOps Enthusiast | Full-Stack Developer | AWS.
               </p>
               <p >
-                I'm a Third year software Engineering Undergraduate of University of Kelaniya
+                I'm a Third year software Engineering Undergraduate at University of Kelaniya
               </p>
               <span>
-                <a href='about' className="text-decoration-none">
+                <a href='about' className="text-decoration-none" style={{fontSize:'150%'}}>
                 See more about Me
                 </a>
                 <br/>
                 
               </span>
     </div>
-    <div className="col-lg-6 d-flex " id='img_div'>
-    
-    <img src={require('./my_profile_image.jpg')}className="img-fluid " alt="profile "/>
+    <div className="col-lg-6 d-flex " id='img_div' style={{backgroundColor:'black'}}>
+   
+
+    <div style={{width:"13%"}}>
+    </div>
+
+    <div style={{width:"76%",marginTop:"3%",backgroundColor:'black'}}>
+   
+
+    <img src={require('./my_profile_image.jpg')} alt="profile" style={{ width: '100%',height: '100%'}}/>
+   <br/>
+    </div>
     </div>
     
   </div>

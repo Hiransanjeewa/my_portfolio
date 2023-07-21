@@ -57,7 +57,7 @@ const Experience: React.FC<Props> = ({ htmlContent }) => {
             <div className="row" id="main_div">
               <div className="col col-lg-6">
                
-            <img src={require('./my_profile_image.jpg')} className="img-fluid" alt="profile" id="image"/>
+              <img src={require('./my_profile_image.jpg')} alt="profile" style={{ width: '65%',height: '90%px', fontWeight: 'bold' }}/>
 
               </div>
               <div className="col-lg-6 d-flex " id=" ">

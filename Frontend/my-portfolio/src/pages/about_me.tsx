@@ -20,13 +20,11 @@ const style ={
   },
   content_caption:{
     color:"white",
-  },
-  // image{
-  //   width:"20px"
-  // }
-
-  
+  }
 }
+
+
+
   return (
   <div>
 
@@ -56,11 +54,13 @@ const style ={
     </div>
 
 <div>
-    <div className="container-fluid text-light" id=" ">
+    <div className="container-fluid text-light" >
       <div className="row ">
-        <div className="col col-lg-6">
-         
-      <img src={require('./my_profile_image.jpg')} id="image" style={style.image} alt="profile" className="img-fluid "/>
+        <div className="col col-lg-6" >
+
+        <img src={require('./my_profile_image.jpg')} alt="profile" style={{ width: '65%',height: '90%px', fontWeight: 'bold' }}/>
+
+  
 
         </div>
         <div className="col-lg-6 d-flex " id=" ">
