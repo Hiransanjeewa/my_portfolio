@@ -20,7 +20,11 @@ const style ={
   },
   content_caption:{
     color:"white",
-  }
+  },
+  // image{
+  //   width:"20px"
+  // }
+
   
 }
   return (
@@ -56,7 +60,7 @@ const style ={
       <div className="row ">
         <div className="col col-lg-6">
          
-      <img src={require('./my_profile_image.jpg')} id="image" alt="profile" className="img-fluid "/>
+      <img src={require('./my_profile_image.jpg')} id="image" style={style.image} alt="profile" className="img-fluid "/>
 
         </div>
         <div className="col-lg-6 d-flex " id=" ">
