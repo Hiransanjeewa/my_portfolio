@@ -69,17 +69,17 @@ const style ={
             <br />
             <br />
             <span id="temp">
-            Devops and Full Stack Development Enthusiast, Who is looking for 
+            Devops , Cloud and Full Stack Development Enthusiast, Who is looking for 
             an Internship opportunity. I am a quick learner and that's makes me
             easy to adapt new technologies.
-            <br />
-            <br /> I have an experience using MERN stack and AWS tools. Currently following 
-            Net Centric Applications, Mobile Computing Applications and Data Science and Engineering 
-            Applications domains in my degree program.
             <br /> <br />
             I am a good communicator and i have good team work skills and i can work collaboratively
             with others. I have good problem solving skills , time management and leadership
-            skills 
+            skills .
+            <br />
+            <br /> Currently following Net Centric , Mobile Computing  and Data Science domains in my degree program. 
+            My goal is to contribute to DevOps practices that enhance productivity, reliability, and overall efficiency in software development.
+          
             </span>
           </p>
         </div>

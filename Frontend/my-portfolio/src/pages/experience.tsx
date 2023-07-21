@@ -67,13 +67,13 @@ const Experience: React.FC<Props> = ({ htmlContent }) => {
                   <br />
                   <br />
                   <span id="temp">
-                  I still didn't have industrial experience in software engineering. But I 
-                  have experience using React as a frontend library, Express and Springboot frameworks as
-                  backend technologies. I have really good experience using MERN stack. 
+                  I have experience using React as a frontend library, Express and Springboot frameworks as
+                  backend technologies.I have experience with Docker , Kubernetes devops tools. And i have intermediate level 
+                  knowledge and experience with AWS services and devops tools. I have really good experience using MERN stack and Springboot. 
                   <br />
                   <br /> Although i still didn't done any software engineering related job , I have
                   worked as a trainee in Bank of ceylon. It gives me opportunity to learn teamwork, 
-                  collaboration and problem-solving skills. 
+                  collaboration skills. . 
                   <br /> <br />
                   {/* She couldn't take her eyes off the water swirling around and
                   around. She stuck in small twigs and leaves to watch the whirlpool
@@ -88,12 +88,25 @@ const Experience: React.FC<Props> = ({ htmlContent }) => {
 
 <div className="container-fluid text-light">
               <p>
-      <a className="btn btn-dark" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1" onClick={() => closeCollapse('multiCollapseExample1')}>Frontend</a>
-      <button className="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Backend</button>
-      <button className="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">Other</button>
+              <button className="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample0" aria-expanded="false" aria-controls="multiCollapseExample0">DevOps</button>
+      <a className="btn btn-dark" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample0" onClick={() => closeCollapse('multiCollapseExample1')}>Frontend</a>
+      <button className="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="true" aria-controls="multiCollapseExample0">Backend</button>
+      <button className="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample0">Other</button>
     </p>
     
     <div className="row" id="cards">
+    <div className="col" id="cards">
+        <div className="collapse multi-collapse" id="multiCollapseExample0" >
+          <div className="card card-body" id="cards"  style={style.cards}>
+          <img src={require('../components/skills/docker.jpg')} alt="xc " id="skills" style={{marginRight:'1cm'}}/>
+          <img src={require('../components/skills/aws.jpg')} alt=" xc" id="skills" style={{marginRight:'1cm'}}/>
+          <img src={require('../components/skills/kubernetes.jpg')} alt="xc " id="skills" style={{marginRight:'1cm'}}/>
+          <img src={require('../components/skills/github_actions.jpg')} alt="xc " id="skills" style={{marginRight:'1cm'}}/>
+        </div>
+        </div>
+      </div>
+
+
       <div className="col" id="cards">
         <div className="collapse multi-collapse" id="multiCollapseExample1" >
           <div className="card card-body" id="cards"  style={style.cards}>
@@ -105,7 +118,6 @@ const Experience: React.FC<Props> = ({ htmlContent }) => {
       </div>
 
 
-      
       <div className="col" id="cards">
         <div className="collapse multi-collapse" id="multiCollapseExample2" >
           <div className="card card-body" id="cards" style={style.cards}>
