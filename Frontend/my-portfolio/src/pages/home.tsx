@@ -36,7 +36,7 @@ const Home: React.FC<Props> = ({ htmlContent }) => {
       {horizontalspace}
     <span style={{fontSize:'150%'}}>Hi , I'm Hiran,</span>
               <p id='caption-1'>
-              Cloud & DevOps Enthusiast | Full-Stack Developer | AWS.
+              Cloud & DevOps Enthusiast | Full-Stack Developer .
               </p>
               <p >
                 I'm a Third year software Engineering Undergraduate at University of Kelaniya
