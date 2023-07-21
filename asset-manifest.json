@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.abc568ee.css",
-    "main.js": "/static/js/main.a0022604.js",
+    "main.css": "/static/css/main.f0127bb5.css",
+    "main.js": "/static/js/main.ec185165.js",
     "static/media/my_profile_image.jpg": "/static/media/my_profile_image.d063584a824595374a22.jpg",
     "static/media/Toy Land.jpg": "/static/media/Toy Land.72fabfce2f4e6b505a83.jpg",
     "static/media/Book Mart.jpg": "/static/media/Book Mart.5b3d202d44339c436583.jpg",
     "static/media/Portfolio.jpg": "/static/media/Portfolio.5b3d202d44339c436583.jpg",
     "index.html": "/index.html",
-    "main.abc568ee.css.map": "/static/css/main.abc568ee.css.map",
-    "main.a0022604.js.map": "/static/js/main.a0022604.js.map"
+    "main.f0127bb5.css.map": "/static/css/main.f0127bb5.css.map",
+    "main.ec185165.js.map": "/static/js/main.ec185165.js.map"
   },
   "entrypoints": [
-    "static/css/main.abc568ee.css",
-    "static/js/main.a0022604.js"
+    "static/css/main.f0127bb5.css",
+    "static/js/main.ec185165.js"
   ]
 }
