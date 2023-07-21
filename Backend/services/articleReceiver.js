@@ -41,8 +41,6 @@ async function getArticles() {
             const ArticlesCount = Object.keys(articlesList).length
 
             if (ArticlesCount <= i) {
-
-
                 console.log(article_id)
                 const options = {
                     method: 'GET',
@@ -55,7 +53,6 @@ async function getArticles() {
 
                 try {
  
-
                     const response = await axios.request(options);
                     //   console.log(response.data);
                     console.log('taking article data')
