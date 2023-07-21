@@ -6,17 +6,17 @@ body{
   font-family: Raleway, Arial, sans-serif;
     font-size:16px;
     font-weight:300;
-    color:#6d6d6d;
+    color:teal;
   overflow-x:hidden;
 }
 
 a{
-  color:#f9398c;
+  
   text-decoration:none
 }
 
 a:hover,a:focus{
-  color:#f9398c;
+  
   text-decoration:underline
 }
 
@@ -67,12 +67,12 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
 
 .bg-color1{
     color:#fff;
-    background:#509B9E;
+    
 }
 
 .bg-color2{
     color:#fff;
-    background:#f9398c;
+    
 }
 
 .bg-color3{
@@ -164,8 +164,9 @@ background-image:url('../images/bg-contact.png');
  
     background-repeat:no-repeat;
     background-position:0 100%;
-    background-color:cadetblue
+    background-color:rgb(63, 92, 92)
 }
+
 
 #contact-form .form-group label{
     display:none;
@@ -308,7 +309,7 @@ background-image:url('../images/bg-contact.png');
     height:50px;
     line-height:50px;
     text-align:center;
-    background:#509B9E;
+    
     border-radius:50%;
     -webkit-transition:all .3s ease-out;
     transition:all .3s ease-out;
@@ -316,7 +317,7 @@ background-image:url('../images/bg-contact.png');
 
 .social-links li a:hover {
     color:#fff;
-    background:#f9398c;
+   
 }
 #message_sender_details{
     font-size: 12;
