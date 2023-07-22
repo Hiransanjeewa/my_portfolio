@@ -4,12 +4,14 @@ const Articles = require("../models/Articles");
 
 
 async function getArticles(category) {
+    let ArticlesCount=0;
     try{
         const articlesList = await Articles.find()
+        ArticlesCount = Object.keys(articlesList).length
+
     }catch(e){
         console.log(e)
     }
-    const ArticlesCount = Object.keys(articlesList).length
     var response=[];
     //console.log(category)
     if (category !== "any") {
