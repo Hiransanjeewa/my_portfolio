@@ -35,7 +35,7 @@ const HtmlRenderer: React.FC<Props> = ({ blogData }) => {
     const str:String = blogData.content.substring(0,500);
   //const image_url=blogData.url
   return (
-    <div>
+    <div id='super_div'>
       <a id='article_link' href={`${blogData.url}`}>
 
      

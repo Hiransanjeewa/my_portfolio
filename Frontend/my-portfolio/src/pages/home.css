@@ -2,8 +2,7 @@
     background-color:black;
     height:14cm;
     padding-left: 5%;
-    
-    
+    width: 100%;
     
 }
 #caption-1{
@@ -14,6 +13,7 @@
     padding-top: 7%;
     height: 100%;
     padding-bottom: 6%;
+    background-color: black;
    
    
     
@@ -23,4 +23,6 @@
     padding-left: 0%;
     background-color: black;
 }
-
+#super_div{
+    background-color: black;
+}
