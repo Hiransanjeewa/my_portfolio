@@ -5,7 +5,7 @@ on:
     branches: [  "main" ]
 
 
-    
+
 
 env:
   # Use docker.io for Docker Hub if empty
@@ -166,3 +166,32 @@ jobs:
         # sudo docker pull mongo:latest
         # sudo docker volume create my-volume
         # sudo docker run -d -p 27017:27017 -v my-volume:/data/db -d mongo
+
+
+        # Ngnix configurations
+        # sudo apt update
+
+#         sudo apt install nginx
+#         sudo systemctl start nginx
+#         sudo systemctl enable nginx
+#         sudo nano /etc/nginx/nginx.conf
+#         chmod options permissions file
+
+#         http {
+  # server {
+  #   listen 80;
+
+  #   location / {
+  #     proxy_pass http://localhost:3000;
+  #     proxy_set_header Host $host;
+  #     proxy_set_header X-Real-IP $remote_addr;
+  #   }
+
+  #   location /api {
+  #     proxy_pass http://localhost:8080;
+  #     proxy_set_header Host $host;
+  #     proxy_set_header X-Real-IP $remote_addr;
+  #   }
+  # }
+# } in this settings how to run my containers
+# change the localhost with the public ip of the instance
