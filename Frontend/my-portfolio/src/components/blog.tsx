@@ -19,11 +19,12 @@ interface Props {
 }
 
 const style = {
-  main_div : {
-    backgroundColor : "white",
-  },
+ super_div : {
+  backgroundColor: 'white',
+ },
   title : {
     fontSize:24,
+   
   }
 
 }
@@ -36,15 +37,18 @@ const HtmlRenderer: React.FC<Props> = ({ blogData }) => {
     const str:String = blogData.content.substring(0,500);
   //const image_url=blogData.url
   return (
-    <div id='super_div'>
+    <div id='super_div' style= {style.super_div}>
+      
+
+     
       <a id='article_link' href={`${blogData.url}`}>
 
      
-      <div id="main_div" className='main_div'  style={style.main_div}>
+      <div id="main_div" className='main_div' >
         <div className="container  mw-100" id="second_main_div" >
          
             <div className="col col-lg-12">
-              <p id="main_caption" >
+              <p id="main_caption" style= {style.super_div}>
                 <strong>
                 <span id="content_caption" style={style.title}>{blogData.title}</span>
                 </strong>
@@ -59,8 +63,8 @@ const HtmlRenderer: React.FC<Props> = ({ blogData }) => {
           </div> */}
         </div>
   <div>
-        <div className="container-fluid text-light">
-        <div className="col col-lg-12 p-3" >
+        <div className="container-fluid text-light" style= {style.super_div}>
+        <div className="col col-lg-12 p-3" style= {style.super_div}>
               
               <img src={`${blogData.image_url}`}  className="img-fluid "   alt="profile"  id="image"/>
 
@@ -68,8 +72,8 @@ const HtmlRenderer: React.FC<Props> = ({ blogData }) => {
             
           <div className="row ">
           
-            <div className="col-lg-12 d-flex  p-3" >
-              <span id="contents" >
+            <div className="col-lg-12 d-flex  p-3" style= {style.super_div}>
+              <span id="contents" style= {style.super_div}>
                 {/* <span id="content_caption" >An E-Commerce Website Using React + Springboot + MySQL</span> */}
                
                 {str}
@@ -87,6 +91,7 @@ const HtmlRenderer: React.FC<Props> = ({ blogData }) => {
       </div>
  
       </a>
+     
     </div>
   );
 };

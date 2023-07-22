@@ -18,6 +18,12 @@ interface Props {
   projectData: Project;
 }
 
+const style ={
+  backgroudSetter: {
+    backgroundColor: 'white',
+  }
+}
+
  
 const Projectviewer: React.FC<Props> = ({ projectData}) => {
   // ...
@@ -95,17 +101,20 @@ function setPointLengths(name:String,point:String) {
     },
     secondMain:{
       padding:"10px",
+     
       color:"white",
     },
     contentCaption:{
       fontSize:"40px",
       color:"white",
       textAllign:"center",
+      backgroundColor: 'rgb(42, 37, 37)',
     },
     contents:{
      fontSize:"20px",
      paddingLeft:"20px",
      color:"white",
+     backgroundColor: 'rgb(42, 37, 37)',
     },
    
 }
@@ -135,18 +144,19 @@ function GetContent(name:String) {
       secondMain:{
         padding:"10px",
         color:"white",
+       
       },
       contentCaption:{
         fontSize:"40px",
         color:"white",
         textAllign:"center",
-        
-        
+        backgroundColor: 'black',
       },
       contents:{
        fontSize:"20px",
        paddingLeft:"20px",
        color:"white",
+       backgroundColor: 'black',
       },
   
   }
@@ -208,9 +218,12 @@ function GetContent(name:String) {
               {project_content}
               <br />
               <br /> 
-              <ul>
+              <ul >
 
-              {project_points}
+              
+              <span style={styles.contents}>{project_points}</span>
+            
+             
                 {/* <li id='li'>Debbie had taken George for granted for more than fifteen years
               now.dddddddddd44 Debbie had taken George for granted for more than fifteen years
               now.dddddddddd44 </li>

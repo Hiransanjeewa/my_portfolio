@@ -14,7 +14,7 @@ const Home: React.FC<Props> = ({ htmlContent }) => {
     contents: {
       color: "white",
     },
-    container: {
+    containerr: {
       minHeight: "100vh", // Ensure the container takes at least the full viewport height
       display: "flex",
       flexDirection: "column",
@@ -33,7 +33,7 @@ const Home: React.FC<Props> = ({ htmlContent }) => {
   }
 
   return (
-    <div style={style.container}>
+    <div style={style.containerr}>
       <Header htmlContent=' '/>
 
       <div className="container-fluid text-light" id='homepage_body' style={style.mainContent}>

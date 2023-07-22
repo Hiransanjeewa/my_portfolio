@@ -18,16 +18,19 @@ function closeCollapse(collapsename:string):void{
 
 const Experience: React.FC<Props> = ({ htmlContent }) => {
   const style = {
-    content_caption:{
-      color:"white",
-      backgroundColor:"black",
+    content_caption: {
+      color: "white",
+      backgroundColor: "black",
     },
-    cards:{
-      backgroundColor:"black",
-     
-    }
-
-  }
+    cards: {
+      backgroundColor: "black",
+      margin: 0, // Add this line to remove margins
+      padding :0,
+    },
+    skills: {
+      marginRight: "0.5cm",
+    },
+  };
 
   
   // class Calculte {
@@ -87,22 +90,23 @@ const Experience: React.FC<Props> = ({ htmlContent }) => {
                     Download CV
                   </button> */}
 
-<div className="container-fluid text-light">
+<div className="container-fluid text-light" >
               <p>
               <button className="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample0" aria-expanded="false" aria-controls="multiCollapseExample0">DevOps</button>
-      <a className="btn btn-dark" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample0" onClick={() => closeCollapse('multiCollapseExample1')}>Frontend</a>
+      <a className="btn btn-dark"  data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample0" >Frontend</a>
       <button className="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="true" aria-controls="multiCollapseExample0">Backend</button>
       <button className="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample0">Other</button>
     </p>
     
-    <div className="row" id="cards">
     <div className="col" id="cards">
+    <div className="col" >
         <div className="collapse multi-collapse" id="multiCollapseExample0" >
           <div className="card card-body" id="cards"  style={style.cards}>
-          <img src={require('../components/skills/docker.jpg')} alt="xc " id="skills" style={{marginRight:'1cm'}}/>
-          <img src={require('../components/skills/aws.jpg')} alt=" xc" id="skills" style={{marginRight:'1cm'}}/>
-          <img src={require('../components/skills/kubernetes.jpg')} alt="xc " id="skills" style={{marginRight:'1cm'}}/>
-          <img src={require('../components/skills/github_actions.jpg')} alt="xc " id="skills" style={{marginRight:'1cm'}}/>
+          <img src={require('../components/skills/aws.jpg')} alt=" xc" id="skills" style={style.skills}/>
+          <img src={require('../components/skills/docker.jpg')} alt="xc " id="skills" style={style.skills}/>
+
+          <img src={require('../components/skills/kubernetes.jpg')} alt="xc " id="skills" style={style.skills}/>
+          <img src={require('../components/skills/github_actions.jpg')} alt="xc " id="skills" style={style.skills}/>
         </div>
         </div>
       </div>
@@ -111,9 +115,9 @@ const Experience: React.FC<Props> = ({ htmlContent }) => {
       <div className="col" id="cards">
         <div className="collapse multi-collapse" id="multiCollapseExample1" >
           <div className="card card-body" id="cards"  style={style.cards}>
-          <img src={require('../components/skills/react.jpg')} alt="xc " id="skills" style={{marginRight:'1cm'}}/>
-          <img src={require('../components/skills/redux.jpg')} alt=" xc" id="skills" style={{marginRight:'1cm'}}/>
-          <img src={require('../components/skills/javascript.jpg')} alt="xc " id="skills" style={{marginRight:'1cm'}}/>
+          <img src={require('../components/skills/react.jpg')} alt="xc " id="skills" style={style.skills}/>
+          <img src={require('../components/skills/redux.jpg')} alt=" xc" id="skills" style={style.skills}/>
+          <img src={require('../components/skills/javascript.jpg')} alt="xc " id="skills" style={style.skills}/>
           </div>
         </div>
       </div>
@@ -122,16 +126,16 @@ const Experience: React.FC<Props> = ({ htmlContent }) => {
       <div className="col" id="cards">
         <div className="collapse multi-collapse" id="multiCollapseExample2" >
           <div className="card card-body" id="cards" style={style.cards}>
-          <img src={require('../components/skills/spring.jpg')} alt="xc " id="skills" style={{marginRight:'1cm'}}/>
-          <img src={require('../components/skills/express.jpg')} alt=" xc" id="skills" style={{marginRight:'1cm'}}/>
+          <img src={require('../components/skills/spring.jpg')} alt="xc " id="skills" style={style.skills}/>
+          <img src={require('../components/skills/express.jpg')} alt=" xc" id="skills" style={style.skills}/>
           </div>
         </div>
       </div>
       <div className="col" id="cards">
         <div className="collapse multi-collapse" id="multiCollapseExample3">
           <div className="card card-body" id="cards" style={style.cards}>
-          <img src={require('../components/skills/sql.jpg')} alt="xc " id="skills" style={{marginRight:'1cm' }}/>
-          <img src={require('../components/skills/mongodb.jpg')} alt=" xc" id="skills" style={{marginRight:'1cm'}}/>
+          <img src={require('../components/skills/sql.jpg')} alt="xc " id="skills" style={style.skills}/>
+          <img src={require('../components/skills/mongodb.jpg')} alt=" xc" id="skills" style={style.skills}/>
          </div>
         </div>
       </div>

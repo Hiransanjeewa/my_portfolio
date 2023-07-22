@@ -1,5 +1,5 @@
 #main_div{
-    background-color:black;
+  
     text-align: center;
     padding-left: 0%;
     margin-left: 0%;
@@ -11,25 +11,25 @@
 } */
 #projectlink{
     text-decoration: none;
-    background-color:black;
+    
 }
 
 #img_div{
     text-align: center;
-    background-color:black;
+   
     
 }
 #main_caption{
 
 text-align: center;
-background-color:black;
+
 
 }
 #second_main_div{
     padding-left: 0%;
     text-align: center;
     margin-left:0%;
-    background-color:black;
+    
     
 }
 
@@ -38,16 +38,16 @@ background-color:black;
     
     padding-left: 0%;
     text-align: center;
-    background-color:black;
+   
 
 }
 #contents{
     text-align: left;
-    background-color:black;
+    
    
 }
 #li{
     margin-bottom: 1%;
-    background-color:black;
+    
 }
 
