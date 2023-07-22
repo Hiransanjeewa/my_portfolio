@@ -121,10 +121,6 @@ jobs:
          sudo apt install nodejs
          sudo apt install -y docker.io
      
-        
-
-         
-        
 
          # Removing previous verions
             
@@ -137,12 +133,16 @@ jobs:
          sudo docker rmi hiransanjeewa/portfolio_server:latest
          sudo docker rmi hiransanjeewa/portfolio_client:latest
 
+         sudo docker image prune
+         sudo docker container prune
+
 
          # Pull the Docker Hub images
          
          sudo docker pull hiransanjeewa/portfolio_server:latest
          sudo docker pull hiransanjeewa/portfolio_client:latest
          # Add more pull commands as needed
+
          
          
         
@@ -153,8 +153,7 @@ jobs:
          sudo docker run -d -p 8080:8080 --name my-server-container hiransanjeewa/portfolio_server:latest
 
          sudo docker run -d -p 3000:3000  --name my-client-container hiransanjeewa/portfolio_client:latest
-         sudo docker image prune
-         sudo docker container prune
+         
         
       
 
