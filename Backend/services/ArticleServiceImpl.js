@@ -10,7 +10,6 @@ async function getArticles(category) {
         ArticlesCount = Object.keys(articlesList).length
 
    
-        console.log(e)
     
     var response=[];
     //console.log(category)
