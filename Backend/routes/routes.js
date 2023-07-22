@@ -48,11 +48,11 @@ router.get('/api/getProjects',async (req, res) => {
 
 // Automated Medium articles updater
 const j = schedule.scheduleJob({hour: 23, minute: 55}, () => {
-    console.log('Job runs every day at 20.40AM');
-
-    //ArticleGetter.getArticles();
-   
-    console.log('Job runs every day at 20.40AM');
+    console.log('Job runs every day at 6.00PM');
+    // ArticleGetter.getArticles();
+    // Article receiver commented due because maximum api requests used for the monthe - july 
+    // It will be available from next month
+    console.log('Job runs every day at 6.00PM');
 });
 
 
