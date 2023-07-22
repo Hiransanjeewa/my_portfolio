@@ -20,6 +20,7 @@ const Experience: React.FC<Props> = ({ htmlContent }) => {
   const style = {
     content_caption:{
       color:"white",
+      backgroundColor:"black",
     },
     cards:{
       backgroundColor:"black",

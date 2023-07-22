@@ -20,6 +20,7 @@ const style ={
   },
   content_caption:{
     color:"white",
+    backgroundColor:"black",
   }
 }
 
