@@ -50,7 +50,7 @@ router.get('/api/getProjects',async (req, res) => {
 const j = schedule.scheduleJob({hour: 23, minute: 55}, () => {
     console.log('Job runs every day at 20.40AM');
 
-    ArticleGetter.getArticles();
+    //ArticleGetter.getArticles();
    
     console.log('Job runs every day at 20.40AM');
 });
