@@ -141,6 +141,7 @@ function GetContent(name:String) {
         color:"white",
         textAllign:"center",
         
+        
       },
       contents:{
        fontSize:"20px",
