@@ -31,6 +31,7 @@ const style = {
 const HtmlRenderer: React.FC<Props> = ({ blogData }) => {
 
   
+  
  //console.log(blogData.content); // Accessing and printing the _id property of each object in the blogData array
     const str:String = blogData.content.substring(0,500);
   //const image_url=blogData.url
