@@ -56,7 +56,7 @@ jobs:
     - name: Building React app...
       working-directory: ./Frontend/my-portfolio
       run: |
-        CI= npm run build
+        CI=false npm run build
         ls
 
 
