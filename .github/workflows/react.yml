@@ -39,7 +39,7 @@ jobs:
       working-directory: ./Frontend/my-portfolio
       run: |
             rm -rf node_modules
-            rm package-lock.json npm.lock
+            rm package-lock.json 
             npm cache clear --force
             npm install
             npm update
