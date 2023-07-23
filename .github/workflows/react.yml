@@ -43,6 +43,7 @@ jobs:
             npm cache clear --force
             npm install
             npm update
+            npm install webpack --save
            
 
     - name: Install dependencies...
