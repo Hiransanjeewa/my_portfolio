@@ -19,7 +19,7 @@ env:
 
 jobs:
  build-push-gcr:
-    name: Building Docker and Pushing images
+    name: Publishing to github pages
     runs-on: ubuntu-latest
 
     steps:
@@ -193,6 +193,16 @@ jobs:
   #     proxy_set_header Host $host;
   #     proxy_set_header X-Real-IP $remote_addr;
   #   }
+  # # }
+  # server {
+  #   listen 27017; # MongoDB default port
+
+  #   location / {
+  #     proxy_pass http://localhost:8080; # Backend container IP and port
+  #     proxy_set_header Host $host;
+  #     proxy_set_header X-Real-IP $remote_addr;
+  #   }
   # }
+
 # } in this settings how to run my containers
 # change the localhost with the public ip of the instance
