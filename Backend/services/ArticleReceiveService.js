@@ -13,7 +13,7 @@ async function getArticles() {
         method: 'GET',
         url: 'https://medium2.p.rapidapi.com/user/5bb14012dbd3/articles',
         headers: {
-            'X-RapidAPI-Key': '78f26e88dcmshf87d454d9d409f3p101091jsned77dfdafda3',
+            'X-RapidAPI-Key':  ${{ secrets.Rapid_Api_Key }} ,
             'X-RapidAPI-Host': 'medium2.p.rapidapi.com'
         }
     };
@@ -48,7 +48,7 @@ async function getArticles() {
                     method: 'GET',
                     url: 'https://medium2.p.rapidapi.com/article/' + article_id.article_id,
                     headers: {
-                        'X-RapidAPI-Key': '78f26e88dcmshf87d454d9d409f3p101091jsned77dfdafda3',
+                        'X-RapidAPI-Key':  ${{ secrets.Rapid_Api_Key }} ,
                         'X-RapidAPI-Host': 'medium2.p.rapidapi.com'
                     }
                 };
@@ -75,7 +75,7 @@ async function getArticles() {
                         method: 'GET',
                         url: 'https://medium2.p.rapidapi.com/article/' + article_id.article_id + '/content',
                         headers: {
-                            'X-RapidAPI-Key': '78f26e88dcmshf87d454d9d409f3p101091jsned77dfdafda3',
+                            'X-RapidAPI-Key':  ${{ secrets.Rapid_Api_Key }} ,
                             'X-RapidAPI-Host': 'medium2.p.rapidapi.com'
                         }
                     };
