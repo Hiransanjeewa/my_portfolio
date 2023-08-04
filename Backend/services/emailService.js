@@ -53,7 +53,7 @@ async function sendEmail(requestBody) {
                     host: "smtp.gmail.com",
                     auth: {
                         user: 'portfoliohiransanjeewa@gmail.com',
-                        pass: 'qclipffqmfktmqwm',
+                        pass:  ${{ secrets.Email_Access_Key }} ,
                     },
                     secure: true,
                 });
