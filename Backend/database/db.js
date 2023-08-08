@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const url = "mongodb://34.192.108.94:27017/my_portfolio";
+const url = "mongodb+srv://hiransanjeewaa:hiran12345@cluster.nh7evee.mongodb.net/my_portfolio";
 
 
 
