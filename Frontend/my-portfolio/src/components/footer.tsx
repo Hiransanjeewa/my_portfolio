@@ -29,6 +29,7 @@ const Footer: React.FC<Props> = ({ htmlContent }) => {
                     <div className="col-sm-6 col-md-2 item">
                         <h3>Blogs</h3>
                         <ul>
+                        <li><a href="blogs?query=devops">devops</a></li>
                             <li><a href="blogs?query=cloud-computing">Cloud computing</a></li>
                             <li><a href="blogs?query=web-development">Web development</a></li>
                             <li><a href="blogs">All Blogs</a></li>
