@@ -18,11 +18,11 @@ interface Props {
   projectData: Project;
 }
 
-const style ={
-  backgroudSetter: {
-    backgroundColor: 'white',
-  }
-}
+// const style ={
+//   backgroudSetter: {
+//     backgroundColor: 'white',
+//   }
+// }
 
  
 const Projectviewer: React.FC<Props> = ({ projectData}) => {
