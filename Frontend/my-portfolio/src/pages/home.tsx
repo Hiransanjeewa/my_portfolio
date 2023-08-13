@@ -40,9 +40,9 @@ const Home: React.FC<Props> = ({ htmlContent }) => {
         <div className="row">
           <div className="col col-lg-6 md-6" id='contents' style={style.contents}>
             {horizontalSpace}
-            <span style={{ fontSize: '150%' }}>Hi , I'm Sanjeewa,</span>
+            <span style={{ fontSize: '150%' }}>Hi , I'm Hiran Sanjeewa,</span>
             <p id='caption-1'>
-              Cloud & DevOps Enthusiast | Full-Stack Developer .
+              Cloud & DevOps Enthusiast
             </p>
             <p>
               I'm a Third year software Engineering Undergraduate at University of Kelaniya
