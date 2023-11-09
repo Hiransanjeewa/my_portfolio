@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.8bfc8b00.css",
-    "main.js": "/static/js/main.e7b9de59.js",
+    "main.css": "/static/css/main.1604b44a.css",
+    "main.js": "/static/js/main.ad0b7a22.js",
     "static/media/my_profile_image.jpg": "/static/media/my_profile_image.d063584a824595374a22.jpg",
     "static/media/Portfolio.jpg": "/static/media/Portfolio.c145aa684e6627510913.jpg",
     "static/media/Toy Land.jpg": "/static/media/Toy Land.72fabfce2f4e6b505a83.jpg",
     "static/media/Book Mart.jpg": "/static/media/Book Mart.5b3d202d44339c436583.jpg",
+    "static/media/profile_image_new.jpeg": "/static/media/profile_image_new.1175eeddbdb6163d4e03.jpeg",
     "index.html": "/index.html",
-    "main.8bfc8b00.css.map": "/static/css/main.8bfc8b00.css.map",
-    "main.e7b9de59.js.map": "/static/js/main.e7b9de59.js.map"
+    "main.1604b44a.css.map": "/static/css/main.1604b44a.css.map",
+    "main.ad0b7a22.js.map": "/static/js/main.ad0b7a22.js.map"
   },
   "entrypoints": [
-    "static/css/main.8bfc8b00.css",
-    "static/js/main.e7b9de59.js"
+    "static/css/main.1604b44a.css",
+    "static/js/main.ad0b7a22.js"
   ]
 }
