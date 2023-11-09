@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.1604b44a.css",
-    "main.js": "/static/js/main.ad0b7a22.js",
+    "main.js": "/static/js/main.ae8b0f4e.js",
     "static/media/my_profile_image.jpg": "/static/media/my_profile_image.d063584a824595374a22.jpg",
     "static/media/Portfolio.jpg": "/static/media/Portfolio.c145aa684e6627510913.jpg",
     "static/media/Toy Land.jpg": "/static/media/Toy Land.72fabfce2f4e6b505a83.jpg",
@@ -9,10 +9,10 @@
     "static/media/profile_image_new.jpeg": "/static/media/profile_image_new.1175eeddbdb6163d4e03.jpeg",
     "index.html": "/index.html",
     "main.1604b44a.css.map": "/static/css/main.1604b44a.css.map",
-    "main.ad0b7a22.js.map": "/static/js/main.ad0b7a22.js.map"
+    "main.ae8b0f4e.js.map": "/static/js/main.ae8b0f4e.js.map"
   },
   "entrypoints": [
     "static/css/main.1604b44a.css",
-    "static/js/main.ad0b7a22.js"
+    "static/js/main.ae8b0f4e.js"
   ]
 }
