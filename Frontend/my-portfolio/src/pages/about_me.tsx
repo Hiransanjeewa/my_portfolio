@@ -59,7 +59,7 @@ const style ={
       <div className="row ">
         <div className="col col-lg-6" >
 
-        <img src={require('./my_profile_image.jpg')} alt="profile" style={{ width: '65%',height: '90%px', fontWeight: 'bold' }}/>
+        <img src={require('./profile_image_new.jpeg')} alt="profile" style={{ width: '65%',height: '90%px', fontWeight: 'bold' }}/>
 
   
 

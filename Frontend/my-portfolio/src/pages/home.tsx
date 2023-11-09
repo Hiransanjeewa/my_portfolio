@@ -59,7 +59,7 @@ const Home: React.FC<Props> = ({ htmlContent }) => {
             <div style={{ width: "12%" }}>
             </div>
             <div style={{ width: "76%", marginTop: "3%", backgroundColor: 'black' }}>
-              <img src={require('./profile_image_new.jpeg')} alt="profile" style={{ width: '100%', height: '90%' }}/>
+              <img src={require('./my_profile_image.jpg')} alt="profile" style={{ width: '100%', height: '100%' }}/>
               <br/>
             </div>
           </div>
