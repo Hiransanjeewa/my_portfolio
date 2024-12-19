@@ -1,0 +1,27 @@
+
+#navbarSupportedContent{
+  margin-right:1%;
+  height: auto;
+}
+.mystyle{
+  padding-bottom: 100cm;
+ 
+};
+.header_main{
+  display: flex;
+}
+.navbar-custom {  
+  background-color: rgb(5, 6, 5);  
+}  
+
+.navbar-custom .navbar-brand,  
+.navbar-custom .navbar-text {  
+  color:aliceblue;
+}  
+
+
+
+
+
+
+

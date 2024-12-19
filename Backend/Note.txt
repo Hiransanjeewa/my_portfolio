@@ -1,0 +1,6 @@
+Install node js
+Install express
+npm init
+install mongoose
+install nodemon globally for devs
+setup start script
