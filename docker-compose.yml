@@ -12,3 +12,6 @@ services:
       context: ./Backend
       dockerfile: Dockerfile
     image: hiransanjeewa/portfolio_server:latest
+
+
+# New commit added
